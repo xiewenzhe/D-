@@ -1,0 +1,100 @@
+{
+  "selection_rule": "at least 3 fixed-task components, then weighted tardiness, joint makespan, total energy, total sorties",
+  "split_rule": {
+    "direct_only_urgent_areas": [
+      "S001",
+      "S006",
+      "S011"
+    ],
+    "split_sorties": [
+      "Q2-017",
+      "Q2-018",
+      "Q2-021",
+      "Q2-025"
+    ]
+  },
+  "split_transport_metrics": {
+    "sorties": 29,
+    "energy_kwh": 92.04880594625256,
+    "makespan_s": 14663.121341079655,
+    "weighted_tardiness_s": 899281.8570707948,
+    "late_boxes": 23,
+    "hard_deadline_violations": 0,
+    "unique_boxes": 80,
+    "multi_area_sorties": 5,
+    "resource_conflicts": 0
+  },
+  "candidates": [
+    {
+      "candidate": "time_priority_B",
+      "strict_three_group_feasible": true,
+      "components": [
+        [
+          "S001"
+        ],
+        [
+          "S002",
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S008",
+          "S009",
+          "S010",
+          "S012",
+          "S013",
+          "S014",
+          "S015"
+        ],
+        [
+          "S006"
+        ],
+        [
+          "S011"
+        ]
+      ],
+      "metrics": {
+        "sorties": 44,
+        "energy_kwh": 109.04033984158171,
+        "makespan_s": 18570.03911393417,
+        "weighted_tardiness_s": 1531411.5671666435,
+        "late_boxes": 35,
+        "hard_deadline_violations": 0,
+        "unique_boxes": 80,
+        "multi_area_sorties": 0,
+        "resource_conflicts": 0,
+        "relay_sorties": 14,
+        "relay_energy_kwh": 8.90719767401578,
+        "total_energy_kwh": 117.94753751559749,
+        "joint_makespan_s": 18706.977027228088,
+        "communication_samples": 58548,
+        "direct_samples": 36362,
+        "relayed_samples": 22186,
+        "communication_breaks": 0,
+        "minimum_link_margin_db": 0.00113420693413957,
+        "sample_step_s": 1,
+        "relay_resource_conflicts": 0,
+        "sample_validation_step_s": 1,
+        "continuous_validation_passed": false,
+        "transport_gateway_bidirectional": true,
+        "transport_relay_bidirectional": true,
+        "relay_gateway_bidirectional": true,
+        "validation": {
+          "passed": true,
+          "violations": []
+        },
+        "fixed_task_components": 4,
+        "candidate": "time_priority_B"
+      }
+    },
+    {
+      "candidate": "economy_priority_C",
+      "error": "No joint Q3 schedule across 8 initial relay pairs: Counter({'No relay-feasible transport start for Q2-022': 8})"
+    },
+    {
+      "candidate": "partition_aware_C",
+      "error": "No joint Q3 schedule across 8 initial relay pairs: Counter({'No relay-feasible transport start for Q2-027': 8})"
+    }
+  ],
+  "selected": "time_priority_B"
+}

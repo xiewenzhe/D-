@@ -1,0 +1,1113 @@
+ {
+  "alternatives": {
+    "2": {
+      "min_shortage": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001",
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S006",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 77,
+            "transport_sorties": 42,
+            "relay_sorties": 14,
+            "workload_s": 71443.86731193024,
+            "transport_energy_kwh": 105.37254098519549,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 4,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S011"
+            ],
+            "boxes": 3,
+            "transport_sorties": 2,
+            "relay_sorties": 0,
+            "workload_s": 2358.482115860502,
+            "transport_energy_kwh": 3.6677988563862245,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 0,
+              "battery_B": 0,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 4,
+          "battery_A": 6,
+          "drone_B": 2,
+          "battery_B": 4,
+          "drone_C": 3,
+          "battery_C": 4,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 0,
+          "drone_B": 0,
+          "drone_C": 1,
+          "battery_A": 0,
+          "battery_B": 0,
+          "battery_C": 0,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 1,
+        "redundancy": {
+          "drone_A": 0,
+          "drone_B": 0,
+          "drone_C": 1,
+          "battery_A": 0,
+          "battery_B": 0,
+          "battery_C": 0,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 1,
+        "workload_imbalance": 1.8721730603891913,
+        "relay_mission_replicas": 0
+      },
+      "most_balanced": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001",
+              "S006",
+              "S011"
+            ],
+            "boxes": 24,
+            "transport_sorties": 12,
+            "relay_sorties": 0,
+            "workload_s": 14357.148117924173,
+            "transport_energy_kwh": 17.038592068013827,
+            "allocation": {
+              "drone_A": 1,
+              "battery_A": 1,
+              "drone_B": 2,
+              "battery_B": 4,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 0,
+              "relay_component": 0
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 56,
+            "transport_sorties": 32,
+            "relay_sorties": 14,
+            "workload_s": 59445.20130986657,
+            "transport_energy_kwh": 92.00174777356789,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 3,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 5,
+          "battery_A": 7,
+          "drone_B": 4,
+          "battery_B": 7,
+          "drone_C": 4,
+          "battery_C": 6,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 1,
+          "drone_B": 2,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 11,
+        "redundancy": {
+          "drone_A": 1,
+          "drone_B": 2,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 11,
+        "workload_imbalance": 1.221859562507754,
+        "relay_mission_replicas": 0
+      },
+      "min_redundancy": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001",
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S006",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 77,
+            "transport_sorties": 42,
+            "relay_sorties": 14,
+            "workload_s": 71443.86731193024,
+            "transport_energy_kwh": 105.37254098519549,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 4,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S011"
+            ],
+            "boxes": 3,
+            "transport_sorties": 2,
+            "relay_sorties": 0,
+            "workload_s": 2358.482115860502,
+            "transport_energy_kwh": 3.6677988563862245,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 0,
+              "battery_B": 0,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 4,
+          "battery_A": 6,
+          "drone_B": 2,
+          "battery_B": 4,
+          "drone_C": 3,
+          "battery_C": 4,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 0,
+          "drone_B": 0,
+          "drone_C": 1,
+          "battery_A": 0,
+          "battery_B": 0,
+          "battery_C": 0,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 1,
+        "redundancy": {
+          "drone_A": 0,
+          "drone_B": 0,
+          "drone_C": 1,
+          "battery_A": 0,
+          "battery_B": 0,
+          "battery_C": 0,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 1,
+        "workload_imbalance": 1.8721730603891913,
+        "relay_mission_replicas": 0
+      },
+      "balanced": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001",
+              "S006",
+              "S011"
+            ],
+            "boxes": 24,
+            "transport_sorties": 12,
+            "relay_sorties": 0,
+            "workload_s": 14357.148117924173,
+            "transport_energy_kwh": 17.038592068013827,
+            "allocation": {
+              "drone_A": 1,
+              "battery_A": 1,
+              "drone_B": 2,
+              "battery_B": 4,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 0,
+              "relay_component": 0
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 56,
+            "transport_sorties": 32,
+            "relay_sorties": 14,
+            "workload_s": 59445.20130986657,
+            "transport_energy_kwh": 92.00174777356789,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 3,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 5,
+          "battery_A": 7,
+          "drone_B": 4,
+          "battery_B": 7,
+          "drone_C": 4,
+          "battery_C": 6,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 1,
+          "drone_B": 2,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 11,
+        "redundancy": {
+          "drone_A": 1,
+          "drone_B": 2,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 11,
+        "workload_imbalance": 1.221859562507754,
+        "relay_mission_replicas": 0
+      },
+      "one_extra_shortage": null
+    },
+    "3": {
+      "min_shortage": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001",
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 71,
+            "transport_sorties": 39,
+            "relay_sorties": 14,
+            "workload_s": 67731.77093188296,
+            "transport_energy_kwh": 100.88996015024789,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 4,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S006"
+            ],
+            "boxes": 6,
+            "transport_sorties": 3,
+            "relay_sorties": 0,
+            "workload_s": 3712.0963800472887,
+            "transport_energy_kwh": 4.4825808349475995,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 1,
+              "battery_B": 1,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          },
+          {
+            "group": 3,
+            "areas": [
+              "S011"
+            ],
+            "boxes": 3,
+            "transport_sorties": 2,
+            "relay_sorties": 0,
+            "workload_s": 2358.482115860502,
+            "transport_energy_kwh": 3.6677988563862245,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 0,
+              "battery_B": 0,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 4,
+          "battery_A": 6,
+          "drone_B": 3,
+          "battery_B": 5,
+          "drone_C": 4,
+          "battery_C": 5,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 0,
+          "drone_B": 1,
+          "drone_C": 2,
+          "battery_A": 0,
+          "battery_B": 1,
+          "battery_C": 1,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 5,
+        "redundancy": {
+          "drone_A": 0,
+          "drone_B": 1,
+          "drone_C": 2,
+          "battery_A": 0,
+          "battery_B": 1,
+          "battery_C": 1,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 5,
+        "workload_imbalance": 2.657366167454517,
+        "relay_mission_replicas": 0
+      },
+      "most_balanced": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001"
+            ],
+            "boxes": 15,
+            "transport_sorties": 7,
+            "relay_sorties": 0,
+            "workload_s": 8286.569622016383,
+            "transport_energy_kwh": 8.888212376680004,
+            "allocation": {
+              "drone_A": 1,
+              "battery_A": 1,
+              "drone_B": 2,
+              "battery_B": 3,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 56,
+            "transport_sorties": 32,
+            "relay_sorties": 14,
+            "workload_s": 59445.20130986657,
+            "transport_energy_kwh": 92.00174777356789,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 3,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          },
+          {
+            "group": 3,
+            "areas": [
+              "S006",
+              "S011"
+            ],
+            "boxes": 9,
+            "transport_sorties": 5,
+            "relay_sorties": 0,
+            "workload_s": 6070.57849590779,
+            "transport_energy_kwh": 8.150379691333823,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 1,
+              "battery_B": 1,
+              "drone_C": 1,
+              "battery_C": 2,
+              "relay": 0,
+              "relay_component": 0
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 5,
+          "battery_A": 7,
+          "drone_B": 5,
+          "battery_B": 7,
+          "drone_C": 4,
+          "battery_C": 6,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 1,
+          "drone_B": 3,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 12,
+        "redundancy": {
+          "drone_A": 1,
+          "drone_B": 3,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 12,
+        "workload_imbalance": 2.169631044043439,
+        "relay_mission_replicas": 0
+      },
+      "min_redundancy": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001",
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 71,
+            "transport_sorties": 39,
+            "relay_sorties": 14,
+            "workload_s": 67731.77093188296,
+            "transport_energy_kwh": 100.88996015024789,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 4,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S006"
+            ],
+            "boxes": 6,
+            "transport_sorties": 3,
+            "relay_sorties": 0,
+            "workload_s": 3712.0963800472887,
+            "transport_energy_kwh": 4.4825808349475995,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 1,
+              "battery_B": 1,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          },
+          {
+            "group": 3,
+            "areas": [
+              "S011"
+            ],
+            "boxes": 3,
+            "transport_sorties": 2,
+            "relay_sorties": 0,
+            "workload_s": 2358.482115860502,
+            "transport_energy_kwh": 3.6677988563862245,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 0,
+              "battery_B": 0,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 4,
+          "battery_A": 6,
+          "drone_B": 3,
+          "battery_B": 5,
+          "drone_C": 4,
+          "battery_C": 5,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 0,
+          "drone_B": 1,
+          "drone_C": 2,
+          "battery_A": 0,
+          "battery_B": 1,
+          "battery_C": 1,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 5,
+        "redundancy": {
+          "drone_A": 0,
+          "drone_B": 1,
+          "drone_C": 2,
+          "battery_A": 0,
+          "battery_B": 1,
+          "battery_C": 1,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 5,
+        "workload_imbalance": 2.657366167454517,
+        "relay_mission_replicas": 0
+      },
+      "balanced": {
+        "groups": [
+          {
+            "group": 1,
+            "areas": [
+              "S001"
+            ],
+            "boxes": 15,
+            "transport_sorties": 7,
+            "relay_sorties": 0,
+            "workload_s": 8286.569622016383,
+            "transport_energy_kwh": 8.888212376680004,
+            "allocation": {
+              "drone_A": 1,
+              "battery_A": 1,
+              "drone_B": 2,
+              "battery_B": 3,
+              "drone_C": 1,
+              "battery_C": 1,
+              "relay": 0,
+              "relay_component": 0
+            }
+          },
+          {
+            "group": 2,
+            "areas": [
+              "S002",
+              "S003",
+              "S004",
+              "S005",
+              "S007",
+              "S008",
+              "S009",
+              "S010",
+              "S012",
+              "S013",
+              "S014",
+              "S015"
+            ],
+            "boxes": 56,
+            "transport_sorties": 32,
+            "relay_sorties": 14,
+            "workload_s": 59445.20130986657,
+            "transport_energy_kwh": 92.00174777356789,
+            "allocation": {
+              "drone_A": 4,
+              "battery_A": 6,
+              "drone_B": 2,
+              "battery_B": 3,
+              "drone_C": 2,
+              "battery_C": 3,
+              "relay": 2,
+              "relay_component": 4
+            }
+          },
+          {
+            "group": 3,
+            "areas": [
+              "S006",
+              "S011"
+            ],
+            "boxes": 9,
+            "transport_sorties": 5,
+            "relay_sorties": 0,
+            "workload_s": 6070.57849590779,
+            "transport_energy_kwh": 8.150379691333823,
+            "allocation": {
+              "drone_A": 0,
+              "battery_A": 0,
+              "drone_B": 1,
+              "battery_B": 1,
+              "drone_C": 1,
+              "battery_C": 2,
+              "relay": 0,
+              "relay_component": 0
+            }
+          }
+        ],
+        "total_allocation": {
+          "drone_A": 5,
+          "battery_A": 7,
+          "drone_B": 5,
+          "battery_B": 7,
+          "drone_C": 4,
+          "battery_C": 6,
+          "relay": 2,
+          "relay_component": 4
+        },
+        "shortage": {
+          "drone_A": 1,
+          "drone_B": 3,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "shortage_total": 12,
+        "redundancy": {
+          "drone_A": 1,
+          "drone_B": 3,
+          "drone_C": 2,
+          "battery_A": 1,
+          "battery_B": 3,
+          "battery_C": 2,
+          "relay": 0,
+          "relay_component": 0
+        },
+        "redundancy_total": 12,
+        "workload_imbalance": 2.169631044043439,
+        "relay_mission_replicas": 0
+      },
+      "one_extra_shortage": null
+    }
+  },
+  "components": [
+    [
+      "S001"
+    ],
+    [
+      "S002",
+      "S003",
+      "S004",
+      "S005",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ],
+    [
+      "S006"
+    ],
+    [
+      "S011"
+    ]
+  ],
+  "stock": {
+    "drone_A": 4,
+    "drone_B": 2,
+    "drone_C": 2,
+    "battery_A": 6,
+    "battery_B": 4,
+    "battery_C": 4,
+    "relay": 2,
+    "relay_component": 6
+  },
+  "global_minimum": {
+    "drone_A": 4,
+    "battery_A": 6,
+    "drone_B": 2,
+    "battery_B": 4,
+    "drone_C": 2,
+    "battery_C": 4,
+    "relay": 2,
+    "relay_component": 4
+  },
+  "partitions": {
+    "2": {
+      "groups": [
+        {
+          "group": 1,
+          "areas": [
+            "S001",
+            "S002",
+            "S003",
+            "S004",
+            "S005",
+            "S006",
+            "S007",
+            "S008",
+            "S009",
+            "S010",
+            "S012",
+            "S013",
+            "S014",
+            "S015"
+          ],
+          "boxes": 77,
+          "transport_sorties": 42,
+          "relay_sorties": 14,
+          "workload_s": 71443.86731193024,
+          "transport_energy_kwh": 105.37254098519549,
+          "allocation": {
+            "drone_A": 4,
+            "battery_A": 6,
+            "drone_B": 2,
+            "battery_B": 4,
+            "drone_C": 2,
+            "battery_C": 3,
+            "relay": 2,
+            "relay_component": 4
+          }
+        },
+        {
+          "group": 2,
+          "areas": [
+            "S011"
+          ],
+          "boxes": 3,
+          "transport_sorties": 2,
+          "relay_sorties": 0,
+          "workload_s": 2358.482115860502,
+          "transport_energy_kwh": 3.6677988563862245,
+          "allocation": {
+            "drone_A": 0,
+            "battery_A": 0,
+            "drone_B": 0,
+            "battery_B": 0,
+            "drone_C": 1,
+            "battery_C": 1,
+            "relay": 0,
+            "relay_component": 0
+          }
+        }
+      ],
+      "total_allocation": {
+        "drone_A": 4,
+        "battery_A": 6,
+        "drone_B": 2,
+        "battery_B": 4,
+        "drone_C": 3,
+        "battery_C": 4,
+        "relay": 2,
+        "relay_component": 4
+      },
+      "shortage": {
+        "drone_A": 0,
+        "drone_B": 0,
+        "drone_C": 1,
+        "battery_A": 0,
+        "battery_B": 0,
+        "battery_C": 0,
+        "relay": 0,
+        "relay_component": 0
+      },
+      "shortage_total": 1,
+      "redundancy": {
+        "drone_A": 0,
+        "drone_B": 0,
+        "drone_C": 1,
+        "battery_A": 0,
+        "battery_B": 0,
+        "battery_C": 0,
+        "relay": 0,
+        "relay_component": 0
+      },
+      "redundancy_total": 1,
+      "workload_imbalance": 1.8721730603891913,
+      "relay_mission_replicas": 0
+    },
+    "3": {
+      "groups": [
+        {
+          "group": 1,
+          "areas": [
+            "S001",
+            "S002",
+            "S003",
+            "S004",
+            "S005",
+            "S007",
+            "S008",
+            "S009",
+            "S010",
+            "S012",
+            "S013",
+            "S014",
+            "S015"
+          ],
+          "boxes": 71,
+          "transport_sorties": 39,
+          "relay_sorties": 14,
+          "workload_s": 67731.77093188296,
+          "transport_energy_kwh": 100.88996015024789,
+          "allocation": {
+            "drone_A": 4,
+            "battery_A": 6,
+            "drone_B": 2,
+            "battery_B": 4,
+            "drone_C": 2,
+            "battery_C": 3,
+            "relay": 2,
+            "relay_component": 4
+          }
+        },
+        {
+          "group": 2,
+          "areas": [
+            "S006"
+          ],
+          "boxes": 6,
+          "transport_sorties": 3,
+          "relay_sorties": 0,
+          "workload_s": 3712.0963800472887,
+          "transport_energy_kwh": 4.4825808349475995,
+          "allocation": {
+            "drone_A": 0,
+            "battery_A": 0,
+            "drone_B": 1,
+            "battery_B": 1,
+            "drone_C": 1,
+            "battery_C": 1,
+            "relay": 0,
+            "relay_component": 0
+          }
+        },
+        {
+          "group": 3,
+          "areas": [
+            "S011"
+          ],
+          "boxes": 3,
+          "transport_sorties": 2,
+          "relay_sorties": 0,
+          "workload_s": 2358.482115860502,
+          "transport_energy_kwh": 3.6677988563862245,
+          "allocation": {
+            "drone_A": 0,
+            "battery_A": 0,
+            "drone_B": 0,
+            "battery_B": 0,
+            "drone_C": 1,
+            "battery_C": 1,
+            "relay": 0,
+            "relay_component": 0
+          }
+        }
+      ],
+      "total_allocation": {
+        "drone_A": 4,
+        "battery_A": 6,
+        "drone_B": 3,
+        "battery_B": 5,
+        "drone_C": 4,
+        "battery_C": 5,
+        "relay": 2,
+        "relay_component": 4
+      },
+      "shortage": {
+        "drone_A": 0,
+        "drone_B": 1,
+        "drone_C": 2,
+        "battery_A": 0,
+        "battery_B": 1,
+        "battery_C": 1,
+        "relay": 0,
+        "relay_component": 0
+      },
+      "shortage_total": 5,
+      "redundancy": {
+        "drone_A": 0,
+        "drone_B": 1,
+        "drone_C": 2,
+        "battery_A": 0,
+        "battery_B": 1,
+        "battery_C": 1,
+        "relay": 0,
+        "relay_component": 0
+      },
+      "redundancy_total": 5,
+      "workload_imbalance": 2.657366167454517,
+      "relay_mission_replicas": 0
+    }
+  },
+  "search": {
+    "2": {
+      "enumerated_partitions": 7,
+      "shortage_histogram": {
+        "1": 1,
+        "4": 2,
+        "8": 2,
+        "11": 2
+      }
+    },
+    "3": {
+      "enumerated_partitions": 6,
+      "shortage_histogram": {
+        "5": 1,
+        "9": 1,
+        "12": 4
+      }
+    }
+  },
+  "priority": "minimize shortage count, then workload imbalance, then added resource count",
+  "validation": {
+    "passed": true,
+    "violations": [],
+    "areas_checked": 15,
+    "partitions_checked": 13
+  }
+}

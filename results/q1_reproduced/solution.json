@@ -1,0 +1,3180 @@
+{
+  "metrics": {
+    "boxes": 80,
+    "sorties": 18,
+    "energy_kwh": 59.13129649413981,
+    "cumulative_work_s": 32776.01587845867,
+    "min_soc": 0.2308834976054961,
+    "constraint_violations": 0
+  },
+  "capacities": [
+    {
+      "area": "S001",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S001",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S001",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S002",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S002",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S002",
+      "model": "C",
+      "max_safe_kg": 68.8603417109698
+    },
+    {
+      "area": "S003",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S003",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S003",
+      "model": "C",
+      "max_safe_kg": 68.20648858323693
+    },
+    {
+      "area": "S004",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S004",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S004",
+      "model": "C",
+      "max_safe_kg": 63.69695544242859
+    },
+    {
+      "area": "S005",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S005",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S005",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S006",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S006",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S006",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S007",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S007",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S007",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S008",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S008",
+      "model": "B",
+      "max_safe_kg": 28.801233423873782
+    },
+    {
+      "area": "S008",
+      "model": "C",
+      "max_safe_kg": 58.904360411688685
+    },
+    {
+      "area": "S009",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S009",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S009",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S010",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S010",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S010",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S011",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S011",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S011",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S012",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S012",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S012",
+      "model": "C",
+      "max_safe_kg": 68.11719106510282
+    },
+    {
+      "area": "S013",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S013",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S013",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S014",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S014",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S014",
+      "model": "C",
+      "max_safe_kg": 80.0
+    },
+    {
+      "area": "S015",
+      "model": "A",
+      "max_safe_kg": 25.0
+    },
+    {
+      "area": "S015",
+      "model": "B",
+      "max_safe_kg": 30.0
+    },
+    {
+      "area": "S015",
+      "model": "C",
+      "max_safe_kg": 80.0
+    }
+  ],
+  "schedule": [
+    {
+      "area": "S001",
+      "model": "C",
+      "boxes": [
+        "S001-WAT-01",
+        "S001-WAT-02",
+        "S001-WAT-03",
+        "S001-FOD-01",
+        "S001-FOD-02",
+        "S001-FOD-03",
+        "S001-HYG-01",
+        "S001-HYG-02"
+      ],
+      "mass": 78.0,
+      "volume": 0.23500000000000001,
+      "energy": 2.995769268738302,
+      "duration": 1626.169078176492,
+      "soc": 0.6255288414077123,
+      "sortie": "Q1-001"
+    },
+    {
+      "area": "S001",
+      "model": "C",
+      "boxes": [
+        "S001-MED-01",
+        "S001-MED-02",
+        "S001-WAT-04",
+        "S001-WAT-05",
+        "S001-WAT-06",
+        "S001-WAT-07",
+        "S001-WAT-08"
+      ],
+      "mass": 76.0,
+      "volume": 0.159,
+      "energy": 2.917582313436876,
+      "duration": 1560.169078176492,
+      "soc": 0.6353022108203905,
+      "sortie": "Q1-002"
+    },
+    {
+      "area": "S002",
+      "model": "C",
+      "boxes": [
+        "S002-WAT-01",
+        "S002-WAT-02",
+        "S002-WAT-03",
+        "S002-FOD-01",
+        "S002-HYG-01"
+      ],
+      "mass": 56.0,
+      "volume": 0.14400000000000002,
+      "energy": 5.721224730330624,
+      "duration": 2041.8123952889034,
+      "soc": 0.284846908708672,
+      "sortie": "Q1-003"
+    },
+    {
+      "area": "S002",
+      "model": "B",
+      "boxes": [
+        "S002-MED-01",
+        "S002-WAT-04",
+        "S002-FOD-02"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.713422315309783,
+      "duration": 1816.6943105721066,
+      "soc": 0.3216444211725542,
+      "sortie": "Q1-004"
+    },
+    {
+      "area": "S003",
+      "model": "C",
+      "boxes": [
+        "S003-WAT-01",
+        "S003-WAT-02",
+        "S003-WAT-03",
+        "S003-FOD-01",
+        "S003-HYG-01"
+      ],
+      "mass": 56.0,
+      "volume": 0.14400000000000002,
+      "energy": 5.764965229334007,
+      "duration": 2370.0913697052206,
+      "soc": 0.2793793463332491,
+      "sortie": "Q1-005"
+    },
+    {
+      "area": "S003",
+      "model": "B",
+      "boxes": [
+        "S003-MED-01",
+        "S003-WAT-04",
+        "S003-FOD-02"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.7799175214626533,
+      "duration": 2080.5233236440226,
+      "soc": 0.3050206196343367,
+      "sortie": "Q1-006"
+    },
+    {
+      "area": "S004",
+      "model": "C",
+      "boxes": [
+        "S004-MED-01",
+        "S004-WAT-01",
+        "S004-WAT-02",
+        "S004-WAT-03",
+        "S004-FOD-01",
+        "S004-HYG-01"
+      ],
+      "mass": 59.0,
+      "volume": 0.156,
+      "energy": 6.152932019156031,
+      "duration": 2301.0566925260296,
+      "soc": 0.2308834976054961,
+      "sortie": "Q1-007"
+    },
+    {
+      "area": "S005",
+      "model": "C",
+      "boxes": [
+        "S005-MED-01",
+        "S005-WAT-01",
+        "S005-WAT-02",
+        "S005-WAT-03",
+        "S005-FOD-01",
+        "S005-HYG-01"
+      ],
+      "mass": 59.0,
+      "volume": 0.156,
+      "energy": 4.222192858303452,
+      "duration": 1877.1905243186134,
+      "soc": 0.4722258927120685,
+      "sortie": "Q1-008"
+    },
+    {
+      "area": "S006",
+      "model": "C",
+      "boxes": [
+        "S006-MED-01",
+        "S006-WAT-01",
+        "S006-WAT-02",
+        "S006-WAT-03",
+        "S006-FOD-01",
+        "S006-HYG-01"
+      ],
+      "mass": 59.0,
+      "volume": 0.156,
+      "energy": 2.5979878695585246,
+      "duration": 1561.5538687614226,
+      "soc": 0.6752515163051844,
+      "sortie": "Q1-009"
+    },
+    {
+      "area": "S007",
+      "model": "C",
+      "boxes": [
+        "S007-MED-01",
+        "S007-WAT-01",
+        "S007-WAT-02",
+        "S007-FOD-01",
+        "S007-HYG-01"
+      ],
+      "mass": 45.0,
+      "volume": 0.129,
+      "energy": 3.4108944067839166,
+      "duration": 1907.566462388859,
+      "soc": 0.5736381991520104,
+      "sortie": "Q1-010"
+    },
+    {
+      "area": "S008",
+      "model": "C",
+      "boxes": [
+        "S008-MED-01",
+        "S008-WAT-01",
+        "S008-WAT-02",
+        "S008-FOD-01",
+        "S008-HYG-01"
+      ],
+      "mass": 45.0,
+      "volume": 0.129,
+      "energy": 5.836011736470156,
+      "duration": 2199.7012178054806,
+      "soc": 0.2704985329412305,
+      "sortie": "Q1-011"
+    },
+    {
+      "area": "S009",
+      "model": "B",
+      "boxes": [
+        "S009-MED-01",
+        "S009-WAT-01",
+        "S009-FOD-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.096233749311384,
+      "duration": 1558.4417386822984,
+      "soc": 0.47594156267215404,
+      "sortie": "Q1-012"
+    },
+    {
+      "area": "S010",
+      "model": "B",
+      "boxes": [
+        "S010-MED-01",
+        "S010-WAT-01",
+        "S010-FOD-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 1.8231957080613705,
+      "duration": 1555.3795695782696,
+      "soc": 0.5442010729846574,
+      "sortie": "Q1-013"
+    },
+    {
+      "area": "S011",
+      "model": "B",
+      "boxes": [
+        "S011-MED-01",
+        "S011-WAT-01",
+        "S011-FOD-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 1.0739517669560235,
+      "duration": 1188.420472806553,
+      "soc": 0.7315120582609942,
+      "sortie": "Q1-014"
+    },
+    {
+      "area": "S012",
+      "model": "B",
+      "boxes": [
+        "S012-MED-01",
+        "S012-WAT-01",
+        "S012-FOD-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.7524143625554194,
+      "duration": 1922.7403747014223,
+      "soc": 0.31189640936114515,
+      "sortie": "Q1-015"
+    },
+    {
+      "area": "S013",
+      "model": "B",
+      "boxes": [
+        "S013-MED-01",
+        "S013-WAT-01",
+        "S013-FOD-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 1.8247592888917117,
+      "duration": 1510.4723313264003,
+      "soc": 0.5438101777770721,
+      "sortie": "Q1-016"
+    },
+    {
+      "area": "S014",
+      "model": "B",
+      "boxes": [
+        "S014-MED-01",
+        "S014-WAT-01",
+        "S014-FOD-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.1403884928397177,
+      "duration": 1869.7564204145128,
+      "soc": 0.4649028767900706,
+      "sortie": "Q1-017"
+    },
+    {
+      "area": "S015",
+      "model": "B",
+      "boxes": [
+        "S015-MED-01",
+        "S015-WAT-01",
+        "S015-FOD-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.3074528566398618,
+      "duration": 1828.276649585567,
+      "soc": 0.42313678584003456,
+      "sortie": "Q1-018"
+    }
+  ],
+  "sensitivity": [
+    {
+      "reserve": 0,
+      "feasible": true,
+      "sorties": 18,
+      "energy_kwh": 59.13129649413981,
+      "cumulative_work_s": 32776.01587845867,
+      "infeasible_areas": [],
+      "capacities": [
+        {
+          "area": "S001",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S001",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S002",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S003",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S004",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S004",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S005",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S005",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S006",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S006",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S007",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S007",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S008",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S008",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "max_safe_kg": 79.6776046231389
+        },
+        {
+          "area": "S009",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S009",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S010",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S010",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S011",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S011",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S012",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S012",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S013",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S013",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S014",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S014",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S015",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S015",
+          "model": "C",
+          "max_safe_kg": 80.0
+        }
+      ],
+      "schedule": [
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 78.0,
+          "volume": 0.23500000000000001,
+          "energy": 2.995769268738302,
+          "duration": 1626.169078176492,
+          "soc": 0.6255288414077123,
+          "sortie": "Q1-001"
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ],
+          "mass": 76.0,
+          "volume": 0.159,
+          "energy": 2.917582313436876,
+          "duration": 1560.169078176492,
+          "soc": 0.6353022108203905,
+          "sortie": "Q1-002"
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-FOD-01",
+            "S002-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.14400000000000002,
+          "energy": 5.721224730330624,
+          "duration": 2041.8123952889034,
+          "soc": 0.284846908708672,
+          "sortie": "Q1-003"
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04",
+            "S002-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.713422315309783,
+          "duration": 1816.6943105721066,
+          "soc": 0.3216444211725542,
+          "sortie": "Q1-004"
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-FOD-01",
+            "S003-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.14400000000000002,
+          "energy": 5.764965229334007,
+          "duration": 2370.0913697052206,
+          "soc": 0.2793793463332491,
+          "sortie": "Q1-005"
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04",
+            "S003-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7799175214626533,
+          "duration": 2080.5233236440226,
+          "soc": 0.3050206196343367,
+          "sortie": "Q1-006"
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 6.152932019156031,
+          "duration": 2301.0566925260296,
+          "soc": 0.2308834976054961,
+          "sortie": "Q1-007"
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.222192858303452,
+          "duration": 1877.1905243186134,
+          "soc": 0.4722258927120685,
+          "sortie": "Q1-008"
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.5979878695585246,
+          "duration": 1561.5538687614226,
+          "soc": 0.6752515163051844,
+          "sortie": "Q1-009"
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.4108944067839166,
+          "duration": 1907.566462388859,
+          "soc": 0.5736381991520104,
+          "sortie": "Q1-010"
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02",
+            "S008-FOD-01",
+            "S008-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 5.836011736470156,
+          "duration": 2199.7012178054806,
+          "soc": 0.2704985329412305,
+          "sortie": "Q1-011"
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.096233749311384,
+          "duration": 1558.4417386822984,
+          "soc": 0.47594156267215404,
+          "sortie": "Q1-012"
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8231957080613705,
+          "duration": 1555.3795695782696,
+          "soc": 0.5442010729846574,
+          "sortie": "Q1-013"
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0739517669560235,
+          "duration": 1188.420472806553,
+          "soc": 0.7315120582609942,
+          "sortie": "Q1-014"
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7524143625554194,
+          "duration": 1922.7403747014223,
+          "soc": 0.31189640936114515,
+          "sortie": "Q1-015"
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8247592888917117,
+          "duration": 1510.4723313264003,
+          "soc": 0.5438101777770721,
+          "sortie": "Q1-016"
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1403884928397177,
+          "duration": 1869.7564204145128,
+          "soc": 0.4649028767900706,
+          "sortie": "Q1-017"
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.3074528566398618,
+          "duration": 1828.276649585567,
+          "soc": 0.42313678584003456,
+          "sortie": "Q1-018"
+        }
+      ]
+    },
+    {
+      "reserve": 0.1,
+      "feasible": true,
+      "sorties": 18,
+      "energy_kwh": 59.13129649413981,
+      "cumulative_work_s": 32776.01587845867,
+      "infeasible_areas": [],
+      "capacities": [
+        {
+          "area": "S001",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S001",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S002",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "max_safe_kg": 78.5938951279968
+        },
+        {
+          "area": "S003",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "max_safe_kg": 78.23137357831001
+        },
+        {
+          "area": "S004",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S004",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "max_safe_kg": 74.88427572883666
+        },
+        {
+          "area": "S005",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S005",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S006",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S006",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S007",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S007",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S008",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S008",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "max_safe_kg": 71.43819326534867
+        },
+        {
+          "area": "S009",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S009",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S010",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S010",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S011",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S011",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S012",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S012",
+          "model": "C",
+          "max_safe_kg": 78.09189042076468
+        },
+        {
+          "area": "S013",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S013",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S014",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S014",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S015",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S015",
+          "model": "C",
+          "max_safe_kg": 80.0
+        }
+      ],
+      "schedule": [
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 78.0,
+          "volume": 0.23500000000000001,
+          "energy": 2.995769268738302,
+          "duration": 1626.169078176492,
+          "soc": 0.6255288414077123,
+          "sortie": "Q1-001"
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ],
+          "mass": 76.0,
+          "volume": 0.159,
+          "energy": 2.917582313436876,
+          "duration": 1560.169078176492,
+          "soc": 0.6353022108203905,
+          "sortie": "Q1-002"
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-FOD-01",
+            "S002-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.14400000000000002,
+          "energy": 5.721224730330624,
+          "duration": 2041.8123952889034,
+          "soc": 0.284846908708672,
+          "sortie": "Q1-003"
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04",
+            "S002-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.713422315309783,
+          "duration": 1816.6943105721066,
+          "soc": 0.3216444211725542,
+          "sortie": "Q1-004"
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-FOD-01",
+            "S003-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.14400000000000002,
+          "energy": 5.764965229334007,
+          "duration": 2370.0913697052206,
+          "soc": 0.2793793463332491,
+          "sortie": "Q1-005"
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04",
+            "S003-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7799175214626533,
+          "duration": 2080.5233236440226,
+          "soc": 0.3050206196343367,
+          "sortie": "Q1-006"
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 6.152932019156031,
+          "duration": 2301.0566925260296,
+          "soc": 0.2308834976054961,
+          "sortie": "Q1-007"
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.222192858303452,
+          "duration": 1877.1905243186134,
+          "soc": 0.4722258927120685,
+          "sortie": "Q1-008"
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.5979878695585246,
+          "duration": 1561.5538687614226,
+          "soc": 0.6752515163051844,
+          "sortie": "Q1-009"
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.4108944067839166,
+          "duration": 1907.566462388859,
+          "soc": 0.5736381991520104,
+          "sortie": "Q1-010"
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02",
+            "S008-FOD-01",
+            "S008-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 5.836011736470156,
+          "duration": 2199.7012178054806,
+          "soc": 0.2704985329412305,
+          "sortie": "Q1-011"
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.096233749311384,
+          "duration": 1558.4417386822984,
+          "soc": 0.47594156267215404,
+          "sortie": "Q1-012"
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8231957080613705,
+          "duration": 1555.3795695782696,
+          "soc": 0.5442010729846574,
+          "sortie": "Q1-013"
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0739517669560235,
+          "duration": 1188.420472806553,
+          "soc": 0.7315120582609942,
+          "sortie": "Q1-014"
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7524143625554194,
+          "duration": 1922.7403747014223,
+          "soc": 0.31189640936114515,
+          "sortie": "Q1-015"
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8247592888917117,
+          "duration": 1510.4723313264003,
+          "soc": 0.5438101777770721,
+          "sortie": "Q1-016"
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1403884928397177,
+          "duration": 1869.7564204145128,
+          "soc": 0.4649028767900706,
+          "sortie": "Q1-017"
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.3074528566398618,
+          "duration": 1828.276649585567,
+          "soc": 0.42313678584003456,
+          "sortie": "Q1-018"
+        }
+      ]
+    },
+    {
+      "reserve": 0.2,
+      "feasible": true,
+      "sorties": 18,
+      "energy_kwh": 59.13129649413981,
+      "cumulative_work_s": 32776.01587845867,
+      "infeasible_areas": [],
+      "capacities": [
+        {
+          "area": "S001",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S001",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S002",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "max_safe_kg": 68.8603417109698
+        },
+        {
+          "area": "S003",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "max_safe_kg": 68.20648858323693
+        },
+        {
+          "area": "S004",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S004",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "max_safe_kg": 63.69695544242859
+        },
+        {
+          "area": "S005",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S005",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S006",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S006",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S007",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S007",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S008",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S008",
+          "model": "B",
+          "max_safe_kg": 28.801233423873782
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "max_safe_kg": 58.904360411688685
+        },
+        {
+          "area": "S009",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S009",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S010",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S010",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S011",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S011",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S012",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S012",
+          "model": "C",
+          "max_safe_kg": 68.11719106510282
+        },
+        {
+          "area": "S013",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S013",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S014",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S014",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S015",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S015",
+          "model": "C",
+          "max_safe_kg": 80.0
+        }
+      ],
+      "schedule": [
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 78.0,
+          "volume": 0.23500000000000001,
+          "energy": 2.995769268738302,
+          "duration": 1626.169078176492,
+          "soc": 0.6255288414077123,
+          "sortie": "Q1-001"
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ],
+          "mass": 76.0,
+          "volume": 0.159,
+          "energy": 2.917582313436876,
+          "duration": 1560.169078176492,
+          "soc": 0.6353022108203905,
+          "sortie": "Q1-002"
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-FOD-01",
+            "S002-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.14400000000000002,
+          "energy": 5.721224730330624,
+          "duration": 2041.8123952889034,
+          "soc": 0.284846908708672,
+          "sortie": "Q1-003"
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04",
+            "S002-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.713422315309783,
+          "duration": 1816.6943105721066,
+          "soc": 0.3216444211725542,
+          "sortie": "Q1-004"
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-FOD-01",
+            "S003-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.14400000000000002,
+          "energy": 5.764965229334007,
+          "duration": 2370.0913697052206,
+          "soc": 0.2793793463332491,
+          "sortie": "Q1-005"
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04",
+            "S003-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7799175214626533,
+          "duration": 2080.5233236440226,
+          "soc": 0.3050206196343367,
+          "sortie": "Q1-006"
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 6.152932019156031,
+          "duration": 2301.0566925260296,
+          "soc": 0.2308834976054961,
+          "sortie": "Q1-007"
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.222192858303452,
+          "duration": 1877.1905243186134,
+          "soc": 0.4722258927120685,
+          "sortie": "Q1-008"
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.5979878695585246,
+          "duration": 1561.5538687614226,
+          "soc": 0.6752515163051844,
+          "sortie": "Q1-009"
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.4108944067839166,
+          "duration": 1907.566462388859,
+          "soc": 0.5736381991520104,
+          "sortie": "Q1-010"
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02",
+            "S008-FOD-01",
+            "S008-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 5.836011736470156,
+          "duration": 2199.7012178054806,
+          "soc": 0.2704985329412305,
+          "sortie": "Q1-011"
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.096233749311384,
+          "duration": 1558.4417386822984,
+          "soc": 0.47594156267215404,
+          "sortie": "Q1-012"
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8231957080613705,
+          "duration": 1555.3795695782696,
+          "soc": 0.5442010729846574,
+          "sortie": "Q1-013"
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0739517669560235,
+          "duration": 1188.420472806553,
+          "soc": 0.7315120582609942,
+          "sortie": "Q1-014"
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7524143625554194,
+          "duration": 1922.7403747014223,
+          "soc": 0.31189640936114515,
+          "sortie": "Q1-015"
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8247592888917117,
+          "duration": 1510.4723313264003,
+          "soc": 0.5438101777770721,
+          "sortie": "Q1-016"
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1403884928397177,
+          "duration": 1869.7564204145128,
+          "soc": 0.4649028767900706,
+          "sortie": "Q1-017"
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.3074528566398618,
+          "duration": 1828.276649585567,
+          "soc": 0.42313678584003456,
+          "sortie": "Q1-018"
+        }
+      ]
+    },
+    {
+      "reserve": 0.3,
+      "feasible": true,
+      "sorties": 20,
+      "energy_kwh": 67.22759022628547,
+      "cumulative_work_s": 36586.17708672312,
+      "infeasible_areas": [],
+      "capacities": [
+        {
+          "area": "S001",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S001",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S002",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "max_safe_kg": 26.74592748982832
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "max_safe_kg": 52.95160688459873
+        },
+        {
+          "area": "S003",
+          "model": "A",
+          "max_safe_kg": 24.73729430930689
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "max_safe_kg": 25.42655037716031
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "max_safe_kg": 51.79575879126787
+        },
+        {
+          "area": "S004",
+          "model": "A",
+          "max_safe_kg": 20.169042301131412
+        },
+        {
+          "area": "S004",
+          "model": "B",
+          "max_safe_kg": 23.441810875665396
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "max_safe_kg": 44.74712545983493
+        },
+        {
+          "area": "S005",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S005",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S006",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S006",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S007",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S007",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S008",
+          "model": "A",
+          "max_safe_kg": 14.213145367102697
+        },
+        {
+          "area": "S008",
+          "model": "B",
+          "max_safe_kg": 21.000826572999358
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "max_safe_kg": 36.813740096986294
+        },
+        {
+          "area": "S009",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S009",
+          "model": "C",
+          "max_safe_kg": 79.15353380143642
+        },
+        {
+          "area": "S010",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S010",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S011",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S011",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S012",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "max_safe_kg": 25.984082501381636
+        },
+        {
+          "area": "S012",
+          "model": "C",
+          "max_safe_kg": 51.755932653322816
+        },
+        {
+          "area": "S013",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S013",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S014",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S014",
+          "model": "C",
+          "max_safe_kg": 79.90369750186801
+        },
+        {
+          "area": "S015",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S015",
+          "model": "C",
+          "max_safe_kg": 73.00767618231475
+        }
+      ],
+      "schedule": [
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 78.0,
+          "volume": 0.23500000000000001,
+          "energy": 2.995769268738302,
+          "duration": 1626.169078176492,
+          "soc": 0.6255288414077123,
+          "sortie": "Q1-001"
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ],
+          "mass": 76.0,
+          "volume": 0.159,
+          "energy": 2.917582313436876,
+          "duration": 1560.169078176492,
+          "soc": 0.6353022108203905,
+          "sortie": "Q1-002"
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-FOD-01",
+            "S002-HYG-01"
+          ],
+          "mass": 42.0,
+          "volume": 0.117,
+          "energy": 5.248650253105372,
+          "duration": 1975.8123952889034,
+          "soc": 0.3439187183618285,
+          "sortie": "Q1-003"
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-03",
+            "S002-WAT-04",
+            "S002-FOD-02"
+          ],
+          "mass": 39.0,
+          "volume": 0.094,
+          "energy": 5.170924003207205,
+          "duration": 1975.8123952889034,
+          "soc": 0.35363449959909943,
+          "sortie": "Q1-004"
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-FOD-01",
+            "S003-HYG-01"
+          ],
+          "mass": 42.0,
+          "volume": 0.117,
+          "energy": 5.288246690703555,
+          "duration": 2304.0913697052206,
+          "soc": 0.33896916366205565,
+          "sortie": "Q1-005"
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-03",
+            "S003-WAT-04",
+            "S003-FOD-02"
+          ],
+          "mass": 39.0,
+          "volume": 0.094,
+          "energy": 5.209161935462669,
+          "duration": 2304.0913697052206,
+          "soc": 0.34885475806716637,
+          "sortie": "Q1-006"
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 42.0,
+          "volume": 0.117,
+          "energy": 5.51850097961584,
+          "duration": 2169.0566925260296,
+          "soc": 0.31018737754801995,
+          "sortie": "Q1-007"
+        },
+        {
+          "area": "S004",
+          "model": "B",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-03"
+          ],
+          "mass": 17.0,
+          "volume": 0.039,
+          "energy": 2.576522393652098,
+          "duration": 1921.6436371061075,
+          "soc": 0.35586940158697555,
+          "sortie": "Q1-008"
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.222192858303452,
+          "duration": 1877.1905243186134,
+          "soc": 0.4722258927120685,
+          "sortie": "Q1-009"
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.5979878695585246,
+          "duration": 1561.5538687614226,
+          "soc": 0.6752515163051844,
+          "sortie": "Q1-010"
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.4108944067839166,
+          "duration": 1907.566462388859,
+          "soc": 0.5736381991520104,
+          "sortie": "Q1-011"
+        },
+        {
+          "area": "S008",
+          "model": "B",
+          "boxes": [
+            "S008-FOD-01",
+            "S008-HYG-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.063,
+          "energy": 2.589346024931452,
+          "duration": 1901.8314403803504,
+          "soc": 0.352663493767137,
+          "sortie": "Q1-012"
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02"
+          ],
+          "mass": 31.0,
+          "volume": 0.066,
+          "energy": 5.463415003530725,
+          "duration": 2067.7012178054806,
+          "soc": 0.3170731245586593,
+          "sortie": "Q1-013"
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.096233749311384,
+          "duration": 1558.4417386822984,
+          "soc": 0.47594156267215404,
+          "sortie": "Q1-014"
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8231957080613705,
+          "duration": 1555.3795695782696,
+          "soc": 0.5442010729846574,
+          "sortie": "Q1-015"
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0739517669560235,
+          "duration": 1188.420472806553,
+          "soc": 0.7315120582609942,
+          "sortie": "Q1-016"
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7524143625554194,
+          "duration": 1922.7403747014223,
+          "soc": 0.31189640936114515,
+          "sortie": "Q1-017"
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8247592888917117,
+          "duration": 1510.4723313264003,
+          "soc": 0.5438101777770721,
+          "sortie": "Q1-018"
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1403884928397177,
+          "duration": 1869.7564204145128,
+          "soc": 0.4649028767900706,
+          "sortie": "Q1-019"
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.3074528566398618,
+          "duration": 1828.276649585567,
+          "soc": 0.42313678584003456,
+          "sortie": "Q1-020"
+        }
+      ]
+    },
+    {
+      "reserve": 0.4,
+      "feasible": false,
+      "sorties": null,
+      "energy_kwh": null,
+      "cumulative_work_s": null,
+      "infeasible_areas": [
+        "S004",
+        "S008"
+      ],
+      "capacities": [
+        {
+          "area": "S001",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S001",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S002",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "max_safe_kg": 15.702467928640544
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "max_safe_kg": 19.220363469794393
+        },
+        {
+          "area": "S003",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "max_safe_kg": 12.863964687567204
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "max_safe_kg": 17.30510151013732
+        },
+        {
+          "area": "S004",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S004",
+          "model": "B",
+          "max_safe_kg": 8.66654371842742
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S005",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S005",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "max_safe_kg": 72.48029870912433
+        },
+        {
+          "area": "S006",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S006",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S007",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S007",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S008",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S008",
+          "model": "B",
+          "max_safe_kg": 1.3967085792683065
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S009",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S009",
+          "model": "C",
+          "max_safe_kg": 65.9969215746969
+        },
+        {
+          "area": "S010",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S010",
+          "model": "C",
+          "max_safe_kg": 79.15462077595294
+        },
+        {
+          "area": "S011",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S011",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S012",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "max_safe_kg": 14.142428117338568
+        },
+        {
+          "area": "S012",
+          "model": "C",
+          "max_safe_kg": 16.697859540581703
+        },
+        {
+          "area": "S013",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S013",
+          "model": "C",
+          "max_safe_kg": 78.68350054137409
+        },
+        {
+          "area": "S014",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S014",
+          "model": "C",
+          "max_safe_kg": 66.75713471136987
+        },
+        {
+          "area": "S015",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "max_safe_kg": 27.198961582034826
+        },
+        {
+          "area": "S015",
+          "model": "C",
+          "max_safe_kg": 56.365579245612025
+        }
+      ],
+      "schedule": []
+    },
+    {
+      "reserve": 0.5,
+      "feasible": false,
+      "sorties": null,
+      "energy_kwh": null,
+      "cumulative_work_s": null,
+      "infeasible_areas": [
+        "S002",
+        "S003",
+        "S004",
+        "S008",
+        "S012"
+      ],
+      "capacities": [
+        {
+          "area": "S001",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S001",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S001",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S002",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S002",
+          "model": "B",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S002",
+          "model": "C",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S003",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S003",
+          "model": "B",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S003",
+          "model": "C",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S004",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S004",
+          "model": "B",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S004",
+          "model": "C",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S005",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S005",
+          "model": "B",
+          "max_safe_kg": 25.768830883316696
+        },
+        {
+          "area": "S005",
+          "model": "C",
+          "max_safe_kg": 51.43622294999659
+        },
+        {
+          "area": "S006",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S006",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S006",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S007",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S007",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S007",
+          "model": "C",
+          "max_safe_kg": 66.65765648707747
+        },
+        {
+          "area": "S008",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S008",
+          "model": "B",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S008",
+          "model": "C",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S009",
+          "model": "A",
+          "max_safe_kg": 16.64003401529044
+        },
+        {
+          "area": "S009",
+          "model": "B",
+          "max_safe_kg": 21.99197814334184
+        },
+        {
+          "area": "S009",
+          "model": "C",
+          "max_safe_kg": 39.5305098220706
+        },
+        {
+          "area": "S010",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S010",
+          "model": "B",
+          "max_safe_kg": 29.758066590875387
+        },
+        {
+          "area": "S010",
+          "model": "C",
+          "max_safe_kg": 62.72452869452536
+        },
+        {
+          "area": "S011",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S011",
+          "model": "B",
+          "max_safe_kg": 30.0
+        },
+        {
+          "area": "S011",
+          "model": "C",
+          "max_safe_kg": 80.0
+        },
+        {
+          "area": "S012",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S012",
+          "model": "B",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S012",
+          "model": "C",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S013",
+          "model": "A",
+          "max_safe_kg": 25.0
+        },
+        {
+          "area": "S013",
+          "model": "B",
+          "max_safe_kg": 29.686964575666934
+        },
+        {
+          "area": "S013",
+          "model": "C",
+          "max_safe_kg": 62.038064347580075
+        },
+        {
+          "area": "S014",
+          "model": "A",
+          "max_safe_kg": 13.858078507473692
+        },
+        {
+          "area": "S014",
+          "model": "B",
+          "max_safe_kg": 20.293422625400126
+        },
+        {
+          "area": "S014",
+          "model": "C",
+          "max_safe_kg": 40.78990123234689
+        },
+        {
+          "area": "S015",
+          "model": "A",
+          "max_safe_kg": null
+        },
+        {
+          "area": "S015",
+          "model": "B",
+          "max_safe_kg": 13.476989606861025
+        },
+        {
+          "area": "S015",
+          "model": "C",
+          "max_safe_kg": 19.319079546257854
+        }
+      ],
+      "schedule": []
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "violations": [],
+    "feasible_scenarios_checked": 4,
+    "box_homogeneity_checked": true
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "time_priority": {
+    "sorties": 44,
+    "energy_kwh": 109.04033984158171,
+    "makespan_s": 11387.515518205564,
+    "weighted_tardiness_s": 446846.5694927805,
+    "late_boxes": 19,
+    "hard_deadline_violations": 0,
+    "unique_boxes": 80,
+    "multi_area_sorties": 0,
+    "resource_conflicts": 0,
+    "starts_tested": 90,
+    "feasible_starts": 90,
+    "selected_seed": 5,
+    "batch_cap_model": "B",
+    "max_stops": 1,
+    "initial_score": [
+      475078.4949400059,
+      11965.173205936117,
+      109.455490754554,
+      44
+    ],
+    "best_score": [
+      446846.5694927805,
+      11387.515518205564,
+      109.04033984158171,
+      44
+    ],
+    "search_summary": [
+      {
+        "cap_model": "B",
+        "max_stops": 1,
+        "starts_tested": 15,
+        "feasible_starts": 15,
+        "initial_score": [
+          475078.4949400059,
+          11965.173205936117,
+          109.455490754554,
+          44
+        ],
+        "best_score": [
+          446846.5694927805,
+          11387.515518205564,
+          109.04033984158171,
+          44
+        ]
+      },
+      {
+        "cap_model": "B",
+        "max_stops": 2,
+        "starts_tested": 15,
+        "feasible_starts": 15,
+        "initial_score": [
+          511491.30988245294,
+          11948.72711155954,
+          106.62392103592272,
+          40
+        ],
+        "best_score": [
+          471233.35970568546,
+          11891.732108502207,
+          106.5938479489102,
+          40
+        ]
+      },
+      {
+        "cap_model": "B",
+        "max_stops": 3,
+        "starts_tested": 15,
+        "feasible_starts": 15,
+        "initial_score": [
+          511491.30988245294,
+          11948.72711155954,
+          106.62392103592272,
+          40
+        ],
+        "best_score": [
+          471233.35970568546,
+          11891.732108502207,
+          106.5938479489102,
+          40
+        ]
+      },
+      {
+        "cap_model": "C",
+        "max_stops": 1,
+        "starts_tested": 15,
+        "feasible_starts": 15,
+        "initial_score": [
+          861649.2642205475,
+          13000.608615077974,
+          88.92015745767813,
+          31
+        ],
+        "best_score": [
+          861649.2642205475,
+          13000.608615077974,
+          88.92015745767813,
+          31
+        ]
+      },
+      {
+        "cap_model": "C",
+        "max_stops": 2,
+        "starts_tested": 15,
+        "feasible_starts": 15,
+        "initial_score": [
+          1487621.6339414772,
+          16663.495337387165,
+          92.84532542140354,
+          25
+        ],
+        "best_score": [
+          1228598.580430323,
+          16853.961987348503,
+          92.761782218539,
+          25
+        ]
+      },
+      {
+        "cap_model": "C",
+        "max_stops": 3,
+        "starts_tested": 15,
+        "feasible_starts": 15,
+        "initial_score": [
+          1344094.1934750103,
+          15353.533621584866,
+          88.49961483807903,
+          24
+        ],
+        "best_score": [
+          1344094.1934750103,
+          15353.533621584866,
+          88.39353475622143,
+          24
+        ]
+      }
+    ],
+    "validation": {
+      "passed": true,
+      "violations": []
+    }
+  },
+  "economy_priority": {
+    "sorties": 25,
+    "energy_kwh": 92.761782218539,
+    "makespan_s": 16853.961987348503,
+    "weighted_tardiness_s": 1228598.580430323,
+    "late_boxes": 29,
+    "hard_deadline_violations": 0,
+    "unique_boxes": 80,
+    "multi_area_sorties": 9,
+    "resource_conflicts": 0,
+    "starts_tested": 15,
+    "feasible_starts": 15,
+    "selected_seed": 1,
+    "batch_cap_model": "C",
+    "max_stops": 2,
+    "initial_score": [
+      1487621.6339414772,
+      16663.495337387165,
+      92.84532542140354,
+      25
+    ],
+    "best_score": [
+      1228598.580430323,
+      16853.961987348503,
+      92.761782218539,
+      25
+    ],
+    "search_summary": [
+      {
+        "cap_model": "C",
+        "max_stops": 2,
+        "starts_tested": 15,
+        "feasible_starts": 15,
+        "initial_score": [
+          1487621.6339414772,
+          16663.495337387165,
+          92.84532542140354,
+          25
+        ],
+        "best_score": [
+          1228598.580430323,
+          16853.961987348503,
+          92.761782218539,
+          25
+        ]
+      }
+    ],
+    "validation": {
+      "passed": true,
+      "violations": []
+    }
+  }
+}

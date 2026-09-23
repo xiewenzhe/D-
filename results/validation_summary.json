@@ -1,0 +1,24 @@
+{
+  "q1": {
+    "passed": true,
+    "violations": [],
+    "feasible_scenarios_checked": 4,
+    "box_homogeneity_checked": true
+  },
+  "q2": {
+    "passed": true,
+    "violations": []
+  },
+  "q3": {
+    "passed": true,
+    "violations": [],
+    "sampled_continuity_only": true,
+    "continuous_validation_passed": false
+  },
+  "q4": {
+    "passed": true,
+    "violations": [],
+    "areas_checked": 15,
+    "partitions_checked": 13
+  }
+}
