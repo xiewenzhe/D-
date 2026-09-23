@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-23T10:59:12.854030+00:00",
+  "random_seed": 0,
+  "input_files": [
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\数据\\无人机应急物资运输基础数据\\中继无人机数据.xlsx",
+      "sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04",
+      "bytes": 11082
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx",
+      "sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+      "bytes": 17474
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\数据\\无人机应急物资运输基础数据\\调度中心与服务区.xlsx",
+      "sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+      "bytes": 11017
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\数据\\无人机应急物资运输基础数据\\运输无人机数据.xlsx",
+      "sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+      "bytes": 11746
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\数据\\无人机应急物资运输基础数据\\通信链路参数.xlsx",
+      "sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81",
+      "bytes": 10485
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif",
+      "sha256": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03",
+      "bytes": 7867096
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\results\\q2\\schedule.json",
+      "sha256": "e703087426e4d3cf03ce5532a15111786e138f7cc3034683483f9b775670c356",
+      "bytes": 66867
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\results\\q2_improved\\schedule.json",
+      "sha256": "3aa2c2795a3b2b05ebc8fdc896ae13a610876eccd8535643c496cbca4d49a4cf",
+      "bytes": 29541
+    },
+    {
+      "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\results\\q2_improved\\summary.json",
+      "sha256": "28321eeb049f2f4ad078c241fe8d1b127a1688ad5d307f2709e14df2c79c2abd",
+      "bytes": 879
+    }
+  ],
+  "runtime": {
+    "name": "python",
+    "version": "3.13.2",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "dependencies": {
+      "numpy": "2.2.3",
+      "pandas": "3.0.6",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "tifffile": "2026.9.20"
+    }
+  },
+  "key_parameters": {
+    "source_route_count": 44,
+    "design_extra_fade_margin_db": 1,
+    "site_height_levels": [
+      75,
+      150,
+      225,
+      300
+    ],
+    "relay_profile_sample_step_s": 5,
+    "relay_initial_pair_limit": 30,
+    "q3_verify_step_s": 1,
+    "continuous_initial_step_s": 30,
+    "continuous_min_step_s": 0.0001,
+    "optimality": "not_proven"
+  },
+  "reproduce_command": ".\\.venv\\Scripts\\python.exe code\\reproduce_q3.py"
+}

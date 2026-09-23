@@ -1,0 +1,12 @@
+{
+  "nodes": 16,
+  "boxes": 80,
+  "mass": 758,
+  "volume": 2.0109999999999992,
+  "hard_boxes": 31,
+  "dem_shape": [
+    1309,
+    1486
+  ],
+  "dem_nodata": 0
+}

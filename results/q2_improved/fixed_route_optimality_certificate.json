@@ -1,0 +1,8 @@
+{
+  "status": "OPTIMAL",
+  "route_set_unchanged": true,
+  "objective": 4281382.0,
+  "best_bound": 4281382.0,
+  "solver_response_file": "results/q2_improved/solver_response_fixed_routes.txt",
+  "scope": "fixed 24 transport routes; optimize integer start times and physical drone/battery schedule"
+}

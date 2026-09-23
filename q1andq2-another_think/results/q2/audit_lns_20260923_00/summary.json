@@ -1,0 +1,19 @@
+{
+  "name": "audit_lns_20260923_00",
+  "profile": "balanced",
+  "weights": {
+    "makespan": 100,
+    "completion": 1,
+    "tardiness": 100,
+    "wh": 10,
+    "sorties": 10000
+  },
+  "status": "UNKNOWN",
+  "wall_s": 6.243093400000362,
+  "candidate_count": 1776,
+  "seed": 20260923,
+  "threads": 8,
+  "time_limit_s": 8.0,
+  "best_bound": 0.0,
+  "scope": "restricted candidate pool, integer-second conservative intervals"
+}

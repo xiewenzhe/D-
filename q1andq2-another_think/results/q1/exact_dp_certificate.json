@@ -1,0 +1,92 @@
+[
+  {
+    "site": "S001",
+    "patterns": 201,
+    "states": 165,
+    "feasible": true
+  },
+  {
+    "site": "S002",
+    "patterns": 76,
+    "states": 31,
+    "feasible": true
+  },
+  {
+    "site": "S003",
+    "patterns": 76,
+    "states": 31,
+    "feasible": true
+  },
+  {
+    "site": "S004",
+    "patterns": 51,
+    "states": 17,
+    "feasible": true
+  },
+  {
+    "site": "S005",
+    "patterns": 51,
+    "states": 17,
+    "feasible": true
+  },
+  {
+    "site": "S006",
+    "patterns": 51,
+    "states": 17,
+    "feasible": true
+  },
+  {
+    "site": "S007",
+    "patterns": 43,
+    "states": 13,
+    "feasible": true
+  },
+  {
+    "site": "S008",
+    "patterns": 43,
+    "states": 13,
+    "feasible": true
+  },
+  {
+    "site": "S009",
+    "patterns": 20,
+    "states": 5,
+    "feasible": true
+  },
+  {
+    "site": "S010",
+    "patterns": 20,
+    "states": 5,
+    "feasible": true
+  },
+  {
+    "site": "S011",
+    "patterns": 20,
+    "states": 5,
+    "feasible": true
+  },
+  {
+    "site": "S012",
+    "patterns": 20,
+    "states": 5,
+    "feasible": true
+  },
+  {
+    "site": "S013",
+    "patterns": 20,
+    "states": 5,
+    "feasible": true
+  },
+  {
+    "site": "S014",
+    "patterns": 20,
+    "states": 5,
+    "feasible": true
+  },
+  {
+    "site": "S015",
+    "patterns": 20,
+    "states": 5,
+    "feasible": true
+  }
+]

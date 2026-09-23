@@ -1,0 +1,1212 @@
+[
+  {
+    "g": "A",
+    "boxes": [
+      "S003-MED-01",
+      "S003-WAT-04"
+    ],
+    "order": [
+      "S003"
+    ],
+    "mass": 17,
+    "volume": 0.039,
+    "duration": 2262.629278762021,
+    "flight": 1692.629278762021,
+    "energy": 2.981982455502602,
+    "soc": 0.3373372321105328,
+    "charge": 1361.4615982563073,
+    "completion": {
+      "S003-MED-01": 1409.2879727143438,
+      "S003-WAT-04": 1409.2879727143438
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S003",
+        "load": 17,
+        "start_offset": 360,
+        "end_offset": 1199.2879727143438,
+        "energy": 1.6154500999355985
+      },
+      {
+        "origin": "S003",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1409.2879727143438,
+        "end_offset": 2262.629278762021,
+        "energy": 1.366532355567004
+      }
+    ],
+    "latest_start": 5790.712027285656,
+    "start": 0,
+    "return": 2262.629278762021,
+    "reserved_return": 2263,
+    "battery_ready": 3625,
+    "id": "Q2-001",
+    "drone": "U01",
+    "battery": "A-BAT-01"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S009-MED-01",
+      "S009-WAT-01"
+    ],
+    "order": [
+      "S009"
+    ],
+    "mass": 17,
+    "volume": 0.039,
+    "duration": 1688.6132318313291,
+    "flight": 1118.6132318313291,
+    "energy": 2.254822899893944,
+    "soc": 0.4989282444680124,
+    "charge": 1151.393282191584,
+    "completion": {
+      "S009-MED-01": 1125.8966159156646,
+      "S009-WAT-01": 1125.8966159156646
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S009",
+        "load": 17,
+        "start_offset": 360,
+        "end_offset": 915.8966159156646,
+        "energy": 1.211145535807087
+      },
+      {
+        "origin": "S009",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1125.8966159156646,
+        "end_offset": 1688.6132318313291,
+        "energy": 1.043677364086857
+      }
+    ],
+    "latest_start": 9674.103384084336,
+    "start": 0,
+    "return": 1688.6132318313291,
+    "reserved_return": 1689,
+    "battery_ready": 2841,
+    "id": "Q2-002",
+    "drone": "U02",
+    "battery": "A-BAT-02"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S011-FOD-01",
+      "S011-MED-01"
+    ],
+    "order": [
+      "S011"
+    ],
+    "mass": 11,
+    "volume": 0.04,
+    "duration": 1222.0229466578785,
+    "flight": 652.0229466578785,
+    "energy": 1.1156977653985924,
+    "soc": 0.7520671632447572,
+    "charge": 822.3126877818156,
+    "completion": {
+      "S011-FOD-01": 893.198139995606,
+      "S011-MED-01": 893.198139995606
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S011",
+        "load": 11,
+        "start_offset": 360,
+        "end_offset": 683.198139995606,
+        "energy": 0.5881858204089017
+      },
+      {
+        "origin": "S011",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 893.198139995606,
+        "end_offset": 1222.0229466578785,
+        "energy": 0.5275119449896909
+      }
+    ],
+    "latest_start": 9906.801860004394,
+    "start": 0,
+    "return": 1222.0229466578785,
+    "reserved_return": 1223,
+    "battery_ready": 2045,
+    "id": "Q2-003",
+    "drone": "U03",
+    "battery": "A-BAT-03"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S014-MED-01",
+      "S014-WAT-01"
+    ],
+    "order": [
+      "S014"
+    ],
+    "mass": 17,
+    "volume": 0.039,
+    "duration": 1990.4098116553153,
+    "flight": 1420.4098116553153,
+    "energy": 2.2909774387668644,
+    "soc": 0.4908939024962523,
+    "charge": 1161.837926754872,
+    "completion": {
+      "S014-MED-01": 1272.7615724943244,
+      "S014-WAT-01": 1272.7615724943244
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S014",
+        "load": 17,
+        "start_offset": 360,
+        "end_offset": 1062.7615724943244,
+        "energy": 1.2516147790067202
+      },
+      {
+        "origin": "S014",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1272.7615724943244,
+        "end_offset": 1990.4098116553153,
+        "energy": 1.0393626597601442
+      }
+    ],
+    "latest_start": 2327.2384275056756,
+    "start": 0,
+    "return": 1990.4098116553153,
+    "reserved_return": 1991,
+    "battery_ready": 3153,
+    "id": "Q2-004",
+    "drone": "U04",
+    "battery": "A-BAT-04"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S010-FOD-01",
+      "S010-MED-01",
+      "S010-WAT-01"
+    ],
+    "order": [
+      "S010"
+    ],
+    "mass": 25,
+    "volume": 0.067,
+    "duration": 1555.3795658311296,
+    "flight": 925.3795658311298,
+    "energy": 1.823195698089688,
+    "soc": 0.544201075477578,
+    "charge": 1456.7181358388646,
+    "completion": {
+      "S010-FOD-01": 1085.2264495822315,
+      "S010-MED-01": 1085.2264495822315,
+      "S010-WAT-01": 1085.2264495822315
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S010",
+        "load": 25,
+        "start_offset": 390,
+        "end_offset": 845.2264495822316,
+        "energy": 1.1190228622135616
+      },
+      {
+        "origin": "S010",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1085.2264495822315,
+        "end_offset": 1555.3795658311296,
+        "energy": 0.7041728358761263
+      }
+    ],
+    "latest_start": 2514.7735504177685,
+    "start": 0,
+    "return": 1555.3795658311296,
+    "reserved_return": 1556,
+    "battery_ready": 3013,
+    "id": "Q2-005",
+    "drone": "U05",
+    "battery": "B-BAT-01"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S013-FOD-01",
+      "S013-MED-01",
+      "S013-WAT-01"
+    ],
+    "order": [
+      "S013"
+    ],
+    "mass": 25,
+    "volume": 0.067,
+    "duration": 1510.4723251020891,
+    "flight": 880.4723251020891,
+    "energy": 1.8247592723279173,
+    "soc": 0.5438101819180207,
+    "charge": 1457.395684675431,
+    "completion": {
+      "S013-FOD-01": 1062.7694958843779,
+      "S013-MED-01": 1062.7694958843779,
+      "S013-WAT-01": 1062.7694958843779
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S013",
+        "load": 25,
+        "start_offset": 390,
+        "end_offset": 822.7694958843779,
+        "energy": 1.1203295029224047
+      },
+      {
+        "origin": "S013",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1062.7694958843779,
+        "end_offset": 1510.4723251020891,
+        "energy": 0.7044297694055125
+      }
+    ],
+    "latest_start": 2537.2305041156224,
+    "start": 0,
+    "return": 1510.4723251020891,
+    "reserved_return": 1511,
+    "battery_ready": 2968,
+    "id": "Q2-006",
+    "drone": "U06",
+    "battery": "B-BAT-02"
+  },
+  {
+    "g": "C",
+    "boxes": [
+      "S001-FOD-01",
+      "S001-FOD-02",
+      "S001-HYG-01",
+      "S001-HYG-02",
+      "S001-MED-01",
+      "S001-MED-02",
+      "S001-WAT-01",
+      "S001-WAT-02",
+      "S001-WAT-03"
+    ],
+    "order": [
+      "S001"
+    ],
+    "mass": 76,
+    "volume": 0.231,
+    "duration": 1692.1690773291593,
+    "flight": 618.1690773291593,
+    "energy": 2.917582307581756,
+    "soc": 0.6353022115522805,
+    "charge": 1623.511874970059,
+    "completion": {
+      "S001-FOD-01": 1380.2695386645796,
+      "S001-FOD-02": 1380.2695386645796,
+      "S001-HYG-01": 1380.2695386645796,
+      "S001-HYG-02": 1380.2695386645796,
+      "S001-MED-01": 1380.2695386645796,
+      "S001-MED-02": 1380.2695386645796,
+      "S001-WAT-01": 1380.2695386645796,
+      "S001-WAT-02": 1380.2695386645796,
+      "S001-WAT-03": 1380.2695386645796
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S001",
+        "load": 76,
+        "start_offset": 570,
+        "end_offset": 876.2695386645796,
+        "energy": 1.954336397837541
+      },
+      {
+        "origin": "S001",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1380.2695386645796,
+        "end_offset": 1692.1690773291593,
+        "energy": 0.963245909744215
+      }
+    ],
+    "latest_start": 2219.7304613354204,
+    "start": 0,
+    "return": 1692.1690773291593,
+    "reserved_return": 1693,
+    "battery_ready": 3316,
+    "id": "Q2-007",
+    "drone": "U07",
+    "battery": "C-BAT-01"
+  },
+  {
+    "g": "C",
+    "boxes": [
+      "S006-FOD-01",
+      "S006-HYG-01",
+      "S006-MED-01",
+      "S006-WAT-01",
+      "S006-WAT-02",
+      "S006-WAT-03"
+    ],
+    "order": [
+      "S006"
+    ],
+    "mass": 59,
+    "volume": 0.156,
+    "duration": 1561.5538679616648,
+    "flight": 685.5538679616647,
+    "energy": 2.597987864912184,
+    "soc": 0.675251516885977,
+    "charge": 1536.95504674705,
+    "completion": {
+      "S006-FOD-01": 1209.4219339808324,
+      "S006-HYG-01": 1209.4219339808324,
+      "S006-MED-01": 1209.4219339808324,
+      "S006-WAT-01": 1209.4219339808324,
+      "S006-WAT-02": 1209.4219339808324,
+      "S006-WAT-03": 1209.4219339808324
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S006",
+        "load": 59,
+        "start_offset": 480,
+        "end_offset": 813.4219339808323,
+        "energy": 1.6040451674359941
+      },
+      {
+        "origin": "S006",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1209.4219339808324,
+        "end_offset": 1561.5538679616648,
+        "energy": 0.9939426974761897
+      }
+    ],
+    "latest_start": 2390.5780660191676,
+    "start": 0,
+    "return": 1561.5538679616648,
+    "reserved_return": 1562,
+    "battery_ready": 3099,
+    "id": "Q2-008",
+    "drone": "U08",
+    "battery": "C-BAT-02"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S009-FOD-01",
+      "S012-MED-01"
+    ],
+    "order": [
+      "S009",
+      "S012"
+    ],
+    "mass": 11,
+    "volume": 0.04,
+    "duration": 2374.324524282884,
+    "flight": 1654.3245242828839,
+    "energy": 3.0827317488039756,
+    "soc": 0.31494850026578325,
+    "charge": 1390.5669496544817,
+    "completion": {
+      "S009-FOD-01": 1095.8966159156646,
+      "S012-MED-01": 1599.7094874611598
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S009",
+        "load": 11,
+        "start_offset": 360,
+        "end_offset": 915.8966159156646,
+        "energy": 1.1413314133498977
+      },
+      {
+        "origin": "S009",
+        "destination": "S012",
+        "load": 3,
+        "start_offset": 1095.8966159156646,
+        "end_offset": 1419.7094874611598,
+        "energy": 0.5757433390591246
+      },
+      {
+        "origin": "S012",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1599.7094874611598,
+        "end_offset": 2374.324524282884,
+        "energy": 1.3656569963949532
+      }
+    ],
+    "latest_start": 2000.2905125388402,
+    "start": 1223,
+    "return": 3597.324524282884,
+    "reserved_return": 3598,
+    "battery_ready": 4988,
+    "id": "Q2-009",
+    "drone": "U03",
+    "battery": "A-BAT-05"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S007-FOD-01",
+      "S007-MED-01",
+      "S007-WAT-02"
+    ],
+    "order": [
+      "S007"
+    ],
+    "mass": 25,
+    "volume": 0.067,
+    "duration": 1636.2753989804244,
+    "flight": 1006.2753989804244,
+    "energy": 1.7800228341026476,
+    "soc": 0.5549942914743381,
+    "charge": 1438.009894777814,
+    "completion": {
+      "S007-FOD-01": 1125.7776994902122,
+      "S007-MED-01": 1125.7776994902122,
+      "S007-WAT-02": 1125.7776994902122
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S007",
+        "load": 25,
+        "start_offset": 390,
+        "end_offset": 885.7776994902122,
+        "energy": 1.0920272168365286
+      },
+      {
+        "origin": "S007",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1125.7776994902122,
+        "end_offset": 1636.2753989804244,
+        "energy": 0.6879956172661189
+      }
+    ],
+    "latest_start": 2474.2223005097876,
+    "start": 1511,
+    "return": 3147.275398980424,
+    "reserved_return": 3148,
+    "battery_ready": 4586,
+    "id": "Q2-010",
+    "drone": "U06",
+    "battery": "B-BAT-03"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S007-HYG-01",
+      "S007-WAT-01"
+    ],
+    "order": [
+      "S007"
+    ],
+    "mass": 20,
+    "volume": 0.062,
+    "duration": 1576.2753989804244,
+    "flight": 1006.2753989804244,
+    "energy": 1.6564938184286104,
+    "soc": 0.5858765453928474,
+    "charge": 1384.4806546523978,
+    "completion": {
+      "S007-HYG-01": 1065.7776994902122,
+      "S007-WAT-01": 1065.7776994902122
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S007",
+        "load": 20,
+        "start_offset": 360,
+        "end_offset": 855.7776994902122,
+        "energy": 0.9684982011624914
+      },
+      {
+        "origin": "S007",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1065.7776994902122,
+        "end_offset": 1576.2753989804244,
+        "energy": 0.6879956172661189
+      }
+    ],
+    "latest_start": 2534.2223005097876,
+    "start": 1556,
+    "return": 3132.275398980424,
+    "reserved_return": 3133,
+    "battery_ready": 4517,
+    "id": "Q2-011",
+    "drone": "U05",
+    "battery": "B-BAT-04"
+  },
+  {
+    "g": "C",
+    "boxes": [
+      "S002-FOD-01",
+      "S002-HYG-01",
+      "S002-MED-01",
+      "S002-WAT-01",
+      "S002-WAT-02",
+      "S002-WAT-04"
+    ],
+    "order": [
+      "S002"
+    ],
+    "mass": 59,
+    "volume": 0.156,
+    "duration": 2107.812384815261,
+    "flight": 1231.8123848152609,
+    "energy": 5.853071690166629,
+    "soc": 0.2683660387291714,
+    "charge": 2418.5402494201285,
+    "completion": {
+      "S002-FOD-01": 1487.3161924076303,
+      "S002-HYG-01": 1487.3161924076303,
+      "S002-MED-01": 1487.3161924076303,
+      "S002-WAT-01": 1487.3161924076303,
+      "S002-WAT-02": 1487.3161924076303,
+      "S002-WAT-04": 1487.3161924076303
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S002",
+        "load": 59,
+        "start_offset": 480,
+        "end_offset": 1091.3161924076303,
+        "energy": 3.5490031639191337
+      },
+      {
+        "origin": "S002",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1487.3161924076303,
+        "end_offset": 2107.812384815261,
+        "energy": 2.304068526247495
+      }
+    ],
+    "latest_start": 2112.6838075923697,
+    "start": 1562,
+    "return": 3669.812384815261,
+    "reserved_return": 3670,
+    "battery_ready": 6089,
+    "id": "Q2-012",
+    "drone": "U08",
+    "battery": "C-BAT-03"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S002-FOD-02",
+      "S002-WAT-03"
+    ],
+    "order": [
+      "S002"
+    ],
+    "mass": 22,
+    "volume": 0.055,
+    "duration": 2003.7379819346033,
+    "flight": 1433.7379819346033,
+    "energy": 3.018690934658349,
+    "soc": 0.32917979229814476,
+    "charge": 1372.066270012412,
+    "completion": {
+      "S002-FOD-02": 1283.8089909673017,
+      "S002-WAT-03": 1283.8089909673017
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S002",
+        "load": 22,
+        "start_offset": 360,
+        "end_offset": 1073.8089909673017,
+        "energy": 1.6609558874943249
+      },
+      {
+        "origin": "S002",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1283.8089909673017,
+        "end_offset": 2003.7379819346033,
+        "energy": 1.357735047164024
+      }
+    ],
+    "latest_start": Infinity,
+    "start": 1689,
+    "return": 3692.7379819346033,
+    "reserved_return": 3693,
+    "battery_ready": 5065,
+    "id": "Q2-013",
+    "drone": "U02",
+    "battery": "A-BAT-06"
+  },
+  {
+    "g": "C",
+    "boxes": [
+      "S001-FOD-03",
+      "S001-WAT-04",
+      "S001-WAT-05",
+      "S001-WAT-06",
+      "S001-WAT-07",
+      "S001-WAT-08"
+    ],
+    "order": [
+      "S001"
+    ],
+    "mass": 78,
+    "volume": 0.163,
+    "duration": 1494.1690773291593,
+    "flight": 618.1690773291593,
+    "energy": 2.9957692627227734,
+    "soc": 0.6255288421596533,
+    "charge": 1644.6875086540845,
+    "completion": {
+      "S001-FOD-03": 1182.2695386645796,
+      "S001-WAT-04": 1182.2695386645796,
+      "S001-WAT-05": 1182.2695386645796,
+      "S001-WAT-06": 1182.2695386645796,
+      "S001-WAT-07": 1182.2695386645796,
+      "S001-WAT-08": 1182.2695386645796
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S001",
+        "load": 78,
+        "start_offset": 480,
+        "end_offset": 786.2695386645796,
+        "energy": 2.0325233529785582
+      },
+      {
+        "origin": "S001",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1182.2695386645796,
+        "end_offset": 1494.1690773291593,
+        "energy": 0.963245909744215
+      }
+    ],
+    "latest_start": Infinity,
+    "start": 1693,
+    "return": 3187.1690773291593,
+    "reserved_return": 3188,
+    "battery_ready": 4832,
+    "id": "Q2-014",
+    "drone": "U07",
+    "battery": "C-BAT-04"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S012-FOD-01",
+      "S012-WAT-01"
+    ],
+    "order": [
+      "S012"
+    ],
+    "mass": 22,
+    "volume": 0.055,
+    "duration": 2109.090073643448,
+    "flight": 1539.0900736434478,
+    "energy": 3.0584574094509085,
+    "soc": 0.32034279789979814,
+    "charge": 1383.5543627302625,
+    "completion": {
+      "S012-FOD-01": 1334.4750368217237,
+      "S012-WAT-01": 1334.4750368217237
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S012",
+        "load": 22,
+        "start_offset": 360,
+        "end_offset": 1124.4750368217237,
+        "energy": 1.6928004130559553
+      },
+      {
+        "origin": "S012",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1334.4750368217237,
+        "end_offset": 2109.090073643448,
+        "energy": 1.3656569963949532
+      }
+    ],
+    "latest_start": 2265.5249631782763,
+    "start": 2045,
+    "return": 4154.090073643448,
+    "reserved_return": 4155,
+    "battery_ready": 5538,
+    "id": "Q2-015",
+    "drone": "U04",
+    "battery": "A-BAT-03"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S003-FOD-01",
+      "S003-WAT-01"
+    ],
+    "order": [
+      "S003"
+    ],
+    "mass": 22,
+    "volume": 0.055,
+    "duration": 2262.629278762021,
+    "flight": 1692.629278762021,
+    "energy": 3.0835927685358975,
+    "soc": 0.31475716254757835,
+    "charge": 1390.8156886881482,
+    "completion": {
+      "S003-FOD-01": 1409.2879727143438,
+      "S003-WAT-01": 1409.2879727143438
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S003",
+        "load": 22,
+        "start_offset": 360,
+        "end_offset": 1199.2879727143438,
+        "energy": 1.7170604129688936
+      },
+      {
+        "origin": "S003",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1409.2879727143438,
+        "end_offset": 2262.629278762021,
+        "energy": 1.366532355567004
+      }
+    ],
+    "latest_start": 5790.712027285656,
+    "start": 2841,
+    "return": 5103.6292787620205,
+    "reserved_return": 5104,
+    "battery_ready": 6495,
+    "id": "Q2-016",
+    "drone": "U01",
+    "battery": "A-BAT-02"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S008-FOD-01",
+      "S008-MED-01",
+      "S008-WAT-01"
+    ],
+    "order": [
+      "S008"
+    ],
+    "mass": 25,
+    "volume": 0.067,
+    "duration": 1961.8314356603312,
+    "flight": 1331.8314356603312,
+    "energy": 2.975216526368167,
+    "soc": 0.25619586840795827,
+    "charge": 1955.9271614262054,
+    "completion": {
+      "S008-FOD-01": 1291.1423844968322,
+      "S008-MED-01": 1291.1423844968322,
+      "S008-WAT-01": 1291.1423844968322
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S008",
+        "load": 25,
+        "start_offset": 390,
+        "end_offset": 1051.1423844968322,
+        "energy": 1.7959739347412533
+      },
+      {
+        "origin": "S008",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1291.1423844968322,
+        "end_offset": 1961.8314356603312,
+        "energy": 1.1792425916269136
+      }
+    ],
+    "latest_start": 5908.857615503168,
+    "start": 3133,
+    "return": 5094.831435660331,
+    "reserved_return": 5095,
+    "battery_ready": 7051,
+    "id": "Q2-017",
+    "drone": "U05",
+    "battery": "B-BAT-02"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S015-FOD-01",
+      "S015-MED-01",
+      "S015-WAT-01"
+    ],
+    "order": [
+      "S015"
+    ],
+    "mass": 25,
+    "volume": 0.067,
+    "duration": 1828.276637426976,
+    "flight": 1198.2766374269763,
+    "energy": 2.3074528242840895,
+    "soc": 0.42313679392897763,
+    "charge": 1666.5628905231054,
+    "completion": {
+      "S015-FOD-01": 1217.578318713488,
+      "S015-MED-01": 1217.578318713488,
+      "S015-WAT-01": 1217.578318713488
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S015",
+        "load": 25,
+        "start_offset": 390,
+        "end_offset": 977.5783187134881,
+        "energy": 1.4250332501134857
+      },
+      {
+        "origin": "S015",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1217.578318713488,
+        "end_offset": 1828.276637426976,
+        "energy": 0.8824195741706039
+      }
+    ],
+    "latest_start": 5982.4216812865125,
+    "start": 3148,
+    "return": 4976.276637426976,
+    "reserved_return": 4977,
+    "battery_ready": 6643,
+    "id": "Q2-018",
+    "drone": "U06",
+    "battery": "B-BAT-01"
+  },
+  {
+    "g": "C",
+    "boxes": [
+      "S004-FOD-01",
+      "S004-HYG-01",
+      "S004-MED-01",
+      "S004-WAT-01",
+      "S004-WAT-02",
+      "S004-WAT-03"
+    ],
+    "order": [
+      "S004"
+    ],
+    "mass": 59,
+    "volume": 0.156,
+    "duration": 2301.0566924832005,
+    "flight": 1425.0566924832005,
+    "energy": 6.152932018907209,
+    "soc": 0.23088349763659888,
+    "charge": 2499.7524217873693,
+    "completion": {
+      "S004-FOD-01": 1583.4983462416003,
+      "S004-HYG-01": 1583.4983462416003,
+      "S004-MED-01": 1583.4983462416003,
+      "S004-WAT-01": 1583.4983462416003,
+      "S004-WAT-02": 1583.4983462416003,
+      "S004-WAT-03": 1583.4983462416003
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S004",
+        "load": 59,
+        "start_offset": 480,
+        "end_offset": 1187.4983462416003,
+        "energy": 3.7342215048587453
+      },
+      {
+        "origin": "S004",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1583.4983462416003,
+        "end_offset": 2301.0566924832005,
+        "energy": 2.4187105140484637
+      }
+    ],
+    "latest_start": 5616.5016537584,
+    "start": 3188,
+    "return": 5489.0566924832,
+    "reserved_return": 5490,
+    "battery_ready": 7989,
+    "id": "Q2-019",
+    "drone": "U07",
+    "battery": "C-BAT-02"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S003-FOD-02",
+      "S003-WAT-03"
+    ],
+    "order": [
+      "S003"
+    ],
+    "mass": 22,
+    "volume": 0.055,
+    "duration": 2262.629278762021,
+    "flight": 1692.629278762021,
+    "energy": 3.0835927685358975,
+    "soc": 0.31475716254757835,
+    "charge": 1390.8156886881482,
+    "completion": {
+      "S003-FOD-02": 1409.2879727143438,
+      "S003-WAT-03": 1409.2879727143438
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S003",
+        "load": 22,
+        "start_offset": 360,
+        "end_offset": 1199.2879727143438,
+        "energy": 1.7170604129688936
+      },
+      {
+        "origin": "S003",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1409.2879727143438,
+        "end_offset": 2262.629278762021,
+        "energy": 1.366532355567004
+      }
+    ],
+    "latest_start": Infinity,
+    "start": 3598,
+    "return": 5860.6292787620205,
+    "reserved_return": 5861,
+    "battery_ready": 7252,
+    "id": "Q2-020",
+    "drone": "U03",
+    "battery": "A-BAT-04"
+  },
+  {
+    "g": "C",
+    "boxes": [
+      "S005-FOD-01",
+      "S005-HYG-01",
+      "S005-MED-01",
+      "S005-WAT-01",
+      "S005-WAT-02",
+      "S005-WAT-03"
+    ],
+    "order": [
+      "S005"
+    ],
+    "mass": 59,
+    "volume": 0.156,
+    "duration": 1877.1905245257808,
+    "flight": 1001.1905245257809,
+    "energy": 4.222192859507031,
+    "soc": 0.4722258925616212,
+    "charge": 1976.8438994498208,
+    "completion": {
+      "S005-FOD-01": 1373.2302622628904,
+      "S005-HYG-01": 1373.2302622628904,
+      "S005-MED-01": 1373.2302622628904,
+      "S005-WAT-01": 1373.2302622628904,
+      "S005-WAT-02": 1373.2302622628904,
+      "S005-WAT-03": 1373.2302622628904
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S005",
+        "load": 59,
+        "start_offset": 480,
+        "end_offset": 977.2302622628905,
+        "energy": 2.5626257007137268
+      },
+      {
+        "origin": "S005",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1373.2302622628904,
+        "end_offset": 1877.1905245257808,
+        "energy": 1.6595671587933043
+      }
+    ],
+    "latest_start": 9426.76973773711,
+    "start": 3670,
+    "return": 5547.19052452578,
+    "reserved_return": 5548,
+    "battery_ready": 7525,
+    "id": "Q2-021",
+    "drone": "U08",
+    "battery": "C-BAT-01"
+  },
+  {
+    "g": "A",
+    "boxes": [
+      "S011-WAT-01",
+      "S014-FOD-01"
+    ],
+    "order": [
+      "S011",
+      "S014"
+    ],
+    "mass": 22,
+    "volume": 0.055,
+    "duration": 2597.3386476032065,
+    "flight": 1877.3386476032065,
+    "energy": 3.154325153206589,
+    "soc": 0.2990388548429803,
+    "charge": 1411.2494887041255,
+    "completion": {
+      "S011-WAT-01": 863.198139995606,
+      "S014-FOD-01": 1879.6904084422154
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S011",
+        "load": 22,
+        "start_offset": 360,
+        "end_offset": 683.198139995606,
+        "energy": 0.6637866735102959
+      },
+      {
+        "origin": "S011",
+        "destination": "S014",
+        "load": 8,
+        "start_offset": 863.198139995606,
+        "end_offset": 1699.6904084422154,
+        "energy": 1.4511758199361484
+      },
+      {
+        "origin": "S014",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1879.6904084422154,
+        "end_offset": 2597.3386476032065,
+        "energy": 1.0393626597601442
+      }
+    ],
+    "latest_start": 9936.801860004394,
+    "start": 3693,
+    "return": 6290.3386476032065,
+    "reserved_return": 6291,
+    "battery_ready": 7702,
+    "id": "Q2-022",
+    "drone": "U02",
+    "battery": "A-BAT-01"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S003-HYG-01",
+      "S003-WAT-02"
+    ],
+    "order": [
+      "S003"
+    ],
+    "mass": 20,
+    "volume": 0.062,
+    "duration": 2020.5233035434708,
+    "flight": 1450.5233035434708,
+    "energy": 2.5854849682882994,
+    "soc": 0.35362875792792514,
+    "charge": 1787.0434862582633,
+    "completion": {
+      "S003-HYG-01": 1288.2349851050687,
+      "S003-WAT-02": 1288.2349851050687
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S003",
+        "load": 20,
+        "start_offset": 360,
+        "end_offset": 1078.2349851050687,
+        "energy": 1.492953562921025
+      },
+      {
+        "origin": "S003",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1288.2349851050687,
+        "end_offset": 2020.5233035434708,
+        "energy": 1.0925314053672746
+      }
+    ],
+    "latest_start": Infinity,
+    "start": 4977,
+    "return": 6997.52330354347,
+    "reserved_return": 6998,
+    "battery_ready": 8785,
+    "id": "Q2-023",
+    "drone": "U06",
+    "battery": "B-BAT-04"
+  },
+  {
+    "g": "B",
+    "boxes": [
+      "S008-HYG-01",
+      "S008-WAT-02"
+    ],
+    "order": [
+      "S008"
+    ],
+    "mass": 20,
+    "volume": 0.062,
+    "duration": 1901.8314356603312,
+    "flight": 1331.8314356603314,
+    "energy": 2.76344125526511,
+    "soc": 0.30913968618372245,
+    "charge": 1864.1578772815476,
+    "completion": {
+      "S008-HYG-01": 1231.1423844968322,
+      "S008-WAT-02": 1231.1423844968322
+    },
+    "legs": [
+      {
+        "origin": "O01",
+        "destination": "S008",
+        "load": 20,
+        "start_offset": 360,
+        "end_offset": 1021.1423844968323,
+        "energy": 1.5841986636381966
+      },
+      {
+        "origin": "S008",
+        "destination": "O01",
+        "load": 0,
+        "start_offset": 1231.1423844968322,
+        "end_offset": 1901.8314356603312,
+        "energy": 1.1792425916269136
+      }
+    ],
+    "latest_start": Infinity,
+    "start": 5095,
+    "return": 6996.831435660331,
+    "reserved_return": 6997,
+    "battery_ready": 8861,
+    "id": "Q2-024",
+    "drone": "U05",
+    "battery": "B-BAT-03"
+  }
+]

@@ -1,0 +1,4 @@
+﻿id,name,mass,capacity,volume,speed,range0,rangeF,battery,reserve,prep,load,service,unload,up,down,efficiency,descent_eff,count,batteries,charge_full
+A,中轻载标准测试多旋翼,70.0,25,0.06,12,25000,20000,4.5,0.2,300,30,150,30,3.0,2.5,0.72,0,4,6,1800
+B,中载标准测试多旋翼,65.0,30,0.073,15,28000,16000,4.0,0.2,300,30,150,30,3.0,2.5,0.72,0,2,4,2400
+C,重载标准测试多旋翼,69.9,80,0.25,15,26000,12000,8.0,0.2,300,30,180,36,2.5,2.0,0.72,0,2,4,3000

@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name":"第一题 精确求解","type":"debugpy","request":"launch","program":"${workspaceFolder}/src/q1.py","console":"integratedTerminal"},
+    {"name":"第二题 联合调度","type":"debugpy","request":"launch","program":"${workspaceFolder}/src/q2.py","args":["--seconds","60"],"console":"integratedTerminal"},
+    {"name":"结果 独立复核","type":"debugpy","request":"launch","program":"${workspaceFolder}/src/validate.py","console":"integratedTerminal"}
+  ]
+}
