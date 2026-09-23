@@ -1,0 +1,15 @@
+{
+  "sorties": 24,
+  "relay_sorties": 5,
+  "weighted_tardiness_s": 8546.904194575873,
+  "joint_makespan_s": 8772.338661139183,
+  "energy_kwh": 69.62086339630387,
+  "relay_energy_kwh": 4.214518171097729,
+  "total_energy_kwh": 73.8353815674016,
+  "hard_deadline_violations": 0,
+  "resource_conflicts": 0,
+  "relay_resource_conflicts": 0,
+  "communication_breaks": 0,
+  "continuous_validation_passed": true,
+  "continuous_min_margin_lower_bound_db": 0.00897600853298286
+}

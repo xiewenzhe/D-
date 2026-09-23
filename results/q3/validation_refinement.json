@@ -1,6 +1,0 @@
-{
-  "time_step_s": 0.5,
-  "communication_samples": 116745,
-  "communication_breaks": 0,
-  "minimum_link_margin_db_above_strict_gate": 0.0006653190780241403
-}

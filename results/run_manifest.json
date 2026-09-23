@@ -1,62 +1,14 @@
 {
-  "solver_version": "D-2026-09-23-audit",
-  "algorithm": "Q1 count-state DP; Q2 bounded 1/2/3-stop templates and 15 starts; Q3 transport alternatives plus relay search; Q4 exact fixed-task partition enumeration",
-  "seed": 5,
-  "parameters": {
-    "q2_max_stops": [
-      1,
-      2,
-      3
-    ],
-    "q2_trials": 15,
-    "q3_sample_step_s": 5,
-    "relay_height_levels": [
-      0.25,
-      0.5,
-      0.75,
-      1.0
-    ],
-    "relay_grid_stride": null,
-    "validation_step_s": [
-      1,
-      0.5
-    ]
-  },
-  "q2_starts": 90,
-  "q3_candidates": [
-    "time_priority_B",
-    "economy_priority_C",
-    "partition_aware_C"
-  ],
-  "q3_sample_step_s": 5,
-  "validation_step_s": 1,
-  "refined_validation_step_s": 0.5,
-  "los_planning_step_m": 7.5,
-  "los_validation": "exact DEM supercover",
-  "extra_design_margin_db": 1.0,
-  "q3_initial_sites": [
-    "SS010",
-    "NS011"
-  ],
-  "python": "3.13.5",
-  "numpy": "2.1.3",
-  "scipy": "1.15.3",
-  "openpyxl": "3.1.5",
-  "tifffile": "2025.2.18",
-  "sha256": {
-    "数据\\镇龙乡地理空间数据\\镇龙乡及周边地理数据\\数字高程模型数据（DEM）\\镇龙乡及周边30米DEM.tif": "741fe6de0b2bcaffd0f4007f574ee698d46197094f52cc954b532c4f90fc7c03",
-    "数据\\无人机应急物资运输基础数据\\中继无人机数据.xlsx": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04",
-    "数据\\无人机应急物资运输基础数据\\物资需求与配送时限.xlsx": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
-    "数据\\无人机应急物资运输基础数据\\调度中心与服务区.xlsx": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
-    "数据\\无人机应急物资运输基础数据\\运输无人机数据.xlsx": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
-    "数据\\无人机应急物资运输基础数据\\通信链路参数.xlsx": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81",
-    "code\\common.py": "48005000bf2eb83c9f3ef4cb38ab7be220ea8b0354b1ae465a1cf9280fa2aa1f",
-    "code\\plot_results.py": "aa5228c649842234e41f88a5e494564bd4ea926b35736506838037754f2a52a1",
-    "code\\problem1.py": "a2fec3ddecb2640e4eb8ce587b6fb346d5cc10716caabab71504d61cb82a467e",
-    "code\\problem2.py": "d789d9a615191d5ecbdef30d9f912222cc5be860271fc6b603bbd99f26bd8a1d",
-    "code\\problem3.py": "3dd73fd74864a59a8f23020cf7a37f3d5d55ce164a3f5bc8f4483660ca00aa0a",
-    "code\\problem4.py": "bc11781fd7a111c8796e79da463b21123b227d2adb069543da2b8a6a700b9300",
-    "code\\run_all.py": "38a87738b6d5043f02ad66848136575283ae2498138f8ea376ee924b3f193cf9",
-    "code\\write_details.py": "0fe902e80ca53f2201a850909b652783c807b9d2097a35763d090854f1abb39e"
-  }
+  "version": "D-current-Q3",
+  "q3_method": "beam_plus_certified_window_retiming",
+  "q3_source": "results/q2_improved/schedule.json",
+  "q3_source_sha256": "3aa2c2795a3b2b05ebc8fdc896ae13a610876eccd8535643c496cbca4d49a4cf",
+  "q3_solution_sha256": "61113b97e0cbd02c3d69f56f64068ddd7823d305764cf6593cbee56cf9d32a7a",
+  "q3_certificate_sha256": "9ef9a2ed8f938a2744edc3343f6895bea7834e71d6136e361033a66786762604",
+  "q4_solution_sha256": "66bf41241baad966845e88d28ddd8f1a66a888b800860494b2b96689c0e1d69a",
+  "word_sha256": "0a4f507b91a02a0ea4264973dd432cdcb5b8916c61c24214719665f326d57685",
+  "search_width": 160,
+  "sample_step_s": 10,
+  "communication_margin_db": 8.0,
+  "global_optimality_proven": false
 }

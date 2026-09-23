@@ -1,10 +1,9 @@
 """Terrain-aware bidirectional communication and relay planning for Problem 3."""
 from __future__ import annotations
-from collections import defaultdict, Counter
-import json
+from collections import defaultdict
 import math
 import numpy as np
-from common import ROOT, G, EPS, distance_m, charge_seconds
+from common import G, EPS, distance_m, charge_seconds
 
 
 def transport_position(route, absolute_t, physics, models):
@@ -94,7 +93,7 @@ def direct_samples(schedule, physics, models, comm, step=5):
     return out
 
 
-def candidate_sites(physics, relay_model, comm):
+def _base_sites(physics, relay_model, comm):
     """DEM sites at each task node and selected midpoints; altitude is as high as allowed."""
     terrain = physics.terrain
     raw = []
@@ -133,27 +132,6 @@ def candidate_sites(physics, relay_model, comm):
             sites.append(site)
     return sites
 
-
-def coverage(samples, sites, physics, comm):
-    gaps = [s for s in samples if not s["direct"]]
-    covers = {}
-    for site in sites:
-        cover = []
-        for idx, s in enumerate(gaps):
-            good, _, _ = link(s["position"], "transport", site, "relay_access", physics.terrain, comm)
-            if good:
-                cover.append(idx)
-        covers[site["id"]] = set(cover)
-    return gaps, covers
-
-
-def summarize_coverage(schedule, physics, models, relay_model, comm, step=10):
-    samples = direct_samples(schedule, physics, models, comm, step)
-    sites = candidate_sites(physics, relay_model, comm)
-    gaps, covers = coverage(samples, sites, physics, comm)
-    return samples, sites, gaps, covers
-
-_base_sites = candidate_sites
 
 def candidate_sites(physics, relay_model, comm, height_levels=(0.25, 0.50, 0.75, 1.0)):
     sites = _base_sites(physics, relay_model, comm)
@@ -252,31 +230,6 @@ def profiles(routes, physics, models, sites, comm, step=5):
     return result
 
 
-def partition_aware_batches(schedule, boxes, physics, models, comm):
-    """Split mixed routes only when an urgent area's whole route needs no relay.
-
-    This creates a real Q3 batching alternative while keeping every box intact.
-    The communication and partition checks decide whether it is ultimately selected.
-    """
-    urgent = [r for r in schedule if r["class"] == "urgent" and len(r["order"]) == 1]
-    sampled = direct_samples(urgent, physics, models, comm, step=5)
-    needs_relay = {row["sortie"] for row in sampled if not row["direct"]}
-    safe_areas = {r["order"][0] for r in urgent if r["sortie"] not in needs_relay}
-    batches = []
-    split_ids = []
-    for route in schedule:
-        areas = list(route["order"])
-        if len(areas) > 1 and any(a in safe_areas for a in areas) and any(a not in safe_areas for a in areas):
-            for area in areas:
-                ids = [bid for bid in route["boxes"] if boxes[bid]["area"] == area]
-                batches.append({"boxes": ids, "order": [area], "class": "regular"})
-            split_ids.append(route["sortie"])
-        else:
-            batches.append({"boxes": list(route["boxes"]), "order": areas, "class": route["class"]})
-    assert Counter(i for r in batches for i in r["boxes"]) == Counter({i: 1 for i in boxes})
-    return batches, {"direct_only_urgent_areas": sorted(safe_areas), "split_sorties": split_ids}
-
-
 def hover_limit(site, relay_model):
     capacity = relay_model["battery"] * (1 - relay_model["reserve_pct"] / 100)
     return (capacity - site["flight_energy"]) * 3600 / (relay_model["hover_power"] + relay_model["comm_power"]) - relay_model["link_time"]
@@ -371,116 +324,6 @@ def _try_existing(profile, start, missions, relay_model, energy_stock):
     return None
 
 
-def plan_relay(routes, boxes, models, drones, batteries, physics, relay_model, relays, energy_stock, comm,
-               sample_step=5, pair_limit=40, height_levels=(0.25,0.5,0.75,1.0),
-               allow_start_shift=True):
-    sites = candidate_sites(physics, relay_model, comm, height_levels=height_levels)
-    prof = profiles(routes, physics, models, sites, comm, sample_step)
-    site_by_id = {s["id"]: s for s in sites}
-    future_scores = {s["id"]: _future_site_score(s["id"], prof) for s in sites}
-    first = routes[:8]
-    assert len(first) == 8 and all(abs(r["start"]) < EPS for r in first)
-    pairs = initial_pairs(first, prof, sites, relay_model)
-    errors = Counter()
-    best_solution = None
-    best_score = None
-    for pair in pairs[:pair_limit]:
-        try:
-            missions = []
-            components = {f"RE{j:02d}": [] for j in range(1, energy_stock["count"] + 1)}
-            # Send gaps jointly covered by both sites to the site useful for more future samples.
-            a, b = pair
-            aids = [a["id"], b["id"]]
-            gap_assign = defaultdict(list)
-            for route in first:
-                p = prof[route["sortie"]]
-                for j, (t, _) in enumerate(p["gaps"]):
-                    covered = [sid for sid in aids if j in p["cover"][sid]]
-                    sid = max(covered, key=lambda k: future_scores[k])
-                    gap_assign[sid].append(t)
-            for rid, site in zip(relays, pair):
-                need = gap_assign[site["id"]]
-                if not need:
-                    continue
-                component = next(k for k, h in components.items() if not h)
-                mission = new_mission(site, min(need), max(need), rid, component, 0, 0,
-                                      relay_model, energy_stock)
-                if mission is None:
-                    raise RuntimeError("Initial relay cannot arrive or lacks energy")
-                missions.append(mission)
-                components[component].append(mission)
-            free_d = {did: 0.0 for did in drones}
-            free_b = {g: {f"{g}{j:02d}": 0.0 for j in range(1, stock["count"] + 1)}
-                      for g, stock in batteries.items()}
-            result = []
-            previous_start = 0.0
-            for idx, base in enumerate(routes):
-                p = prof[base["sortie"]]
-                offsets = {i: t - base["start"] for i, t in base["delivery"].items()}
-                earliest = max(previous_start, free_d[base["drone"]], free_b[base["model"]][base["battery"]])
-                due_last = min((hard_due(boxes[i]) - offsets[i] for i in base["boxes"] if hard_due(boxes[i]) is not None),
-                               default=math.inf)
-                upper = min(due_last, earliest + (6000 if due_last < math.inf else 22000))
-                if not allow_start_shift:
-                    if base["start"] + EPS < earliest:
-                        raise RuntimeError("Fixed transport start violates resource readiness")
-                    earliest = upper = base["start"]
-                selected = None
-                for tick in range(max(1, math.ceil((upper - earliest) / 30) + 1)):
-                    start = earliest + 30 * tick
-                    if start > upper + EPS:
-                        break
-                    if idx < 8 and start > EPS:
-                        break
-                    if not p["gaps"]:
-                        selected = (start, "none", None)
-                        break
-                    existing = _try_existing(p, start, missions, relay_model, energy_stock)
-                    if existing is not None:
-                        selected = (start, "extend", existing)
-                        break
-                    full = [site_by_id[sid] for sid, cover in p["cover"].items() if len(cover) == len(p["gaps"])]
-                    ranked = sorted(full, key=lambda x: (-future_scores[x["id"]], x["flight_energy"]))[:40]
-                    first_need = start + p["gaps"][0][0]
-                    last_need = start + p["gaps"][-1][0]
-                    possibilities = [(site, _asset_choice(site, first_need, last_need, missions, relays,
-                                                          components, relay_model, energy_stock)) for site in ranked]
-                    possibilities = [(site, plan) for site, plan in possibilities if plan is not None]
-                    if possibilities:
-                        site, plan = min(possibilities, key=lambda x: (x[1]["service_start"],
-                                          -future_scores[x[0]["id"]], x[1]["energy"]))
-                        selected = (start, "new", plan)
-                        break
-                if selected is None:
-                    raise RuntimeError(f"No relay-feasible transport start for {base['sortie']}")
-                start, action, payload = selected
-                if action == "extend":
-                    for mission, end in payload:
-                        if not update_mission(mission, end, relay_model, energy_stock):
-                            raise RuntimeError("Relay endurance exceeded")
-                elif action == "new":
-                    missions.append(payload)
-                    components[payload["component"]].append(payload)
-                rec = dict(base)
-                rec["start"] = start
-                rec["end"] = start + base["duration"]
-                rec["delivery"] = {i: start + offset for i, offset in offsets.items()}
-                rec["battery_ready"] = rec["end"] + charge_seconds(rec["soc"], batteries[rec["model"]]["full_charge"])
-                result.append(rec)
-                free_d[rec["drone"]] = rec["end"]
-                free_b[rec["model"]][rec["battery"]] = rec["battery_ready"]
-                previous_start = start
-            score = _plan_score(result, missions, boxes)
-            if best_score is None or score < best_score:
-                best_score = score
-                best_solution = (result, missions, sites, prof, pair)
-        except RuntimeError as exc:
-            errors[str(exc)] += 1
-    if best_solution is not None:
-        return best_solution
-    raise RuntimeError(f"No joint Q3 schedule across {min(len(pairs),pair_limit)} initial relay pairs: {errors}")
-
-
 def validate_joint(schedule, missions, boxes, models, drones, batteries, physics,
                    relay_model, relays, energy_stock, comm, step=2):
     from problem2 import validate as validate_transport
@@ -564,27 +407,6 @@ def validate_joint(schedule, missions, boxes, models, drones, batteries, physics
                 "relay_gateway_bidirectional": True,
                 "validation": {"passed": True, "violations": []}}
     return combined, coverage_rows
-
-
-def save_joint(schedule, missions, metrics, coverage_rows):
-    import csv
-    out = ROOT / "results" / "q3"
-    out.mkdir(parents=True, exist_ok=True)
-    clean_missions = [{**m, "site": m["site"]} for m in missions]
-    (out / "solution.json").write_text(json.dumps({"metrics": metrics, "transport": schedule,
-                                                     "relays": clean_missions}, ensure_ascii=False, indent=2),
-                                       encoding="utf-8")
-    with (out / "communication_samples.csv").open("w", newline="", encoding="utf-8-sig") as f:
-        w = csv.DictWriter(f, fieldnames=list(coverage_rows[0])); w.writeheader(); w.writerows(coverage_rows)
-    return out
-
-
-def _plan_score(schedule, missions, boxes):
-    tardiness = sum(boxes[i]["priority"] * max(0, t - boxes[i]["desired"])
-                    for r in schedule for i, t in r["delivery"].items()
-                    if boxes[i]["desired"] is not None)
-    makespan = max(max(r["end"] for r in schedule), max(m["end"] for m in missions))
-    return tardiness, makespan, sum(m["energy"] for m in missions), len(missions)
 
 
 def los_obstructed_exact(a, b, terrain):

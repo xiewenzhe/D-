@@ -18,10 +18,6 @@ from common import ROOT, Physics, Terrain, read_inputs
 from problem3 import candidate_sites, direct_samples, link
 from run_q3_joint import load
 
-SKILL = ROOT.parents[1] / "math_model_skill" / "math-modeling-skill"
-sys.path.insert(0, str(SKILL / "tools" / "figure" / "scripts"))
-from export_figure import export_figure  # noqa: E402
-
 FIG = ROOT / "figures"
 BLUE, ORANGE, GREEN, GREY = "#0072B2", "#E69F00", "#009E73", "#666666"
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False,
@@ -29,8 +25,9 @@ plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.righ
 
 
 def save(fig, name, size=(6.6, 3.8)):
-    export_figure(fig, basename=str(FIG / name), formats=["pdf", "svg", "png"],
-                  size_inches=size, dpi=300, grayscale_preview=False)
+    fig.set_size_inches(*size)
+    for suffix in ("pdf", "svg", "png"):
+        fig.savefig(FIG / f"{name}.{suffix}", dpi=300, bbox_inches="tight")
     preview = FIG / "previews"
     preview.mkdir(exist_ok=True)
     Image.open(FIG / f"{name}.png").convert("L").save(preview / f"{name}_grayscale.png", dpi=(300, 300))
@@ -39,9 +36,9 @@ def save(fig, name, size=(6.6, 3.8)):
 
 def main():
     FIG.mkdir(parents=True, exist_ok=True)
-    data = json.loads((ROOT / "results" / "q3_joint" / "solution.json").read_text(encoding="utf-8"))
-    cert = json.loads((ROOT / "results" / "q3_joint" / "continuous_certificate.json").read_text(encoding="utf-8"))
-    box = pd.read_csv(ROOT / "results" / "q3_joint" / "box_deliveries.csv")
+    data = json.loads((ROOT / "results" / "q3" / "solution.json").read_text(encoding="utf-8"))
+    cert = json.loads((ROOT / "results" / "q3" / "continuous_certificate.json").read_text(encoding="utf-8"))
+    box = pd.read_csv(ROOT / "results" / "q3" / "box_deliveries.csv")
     trs, rel = data["transport"], data["relays"]
     q2, boxes, models, drones, batteries, phys, relay_model, relays, stocks, comm = load()
 

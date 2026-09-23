@@ -7,18 +7,17 @@
   },
   "q2": {
     "passed": true,
-    "violations": []
+    "hard_violations": 0
   },
   "q3": {
     "passed": true,
-    "violations": [],
-    "sampled_continuity_only": true,
-    "continuous_validation_passed": false
+    "continuous_validation_passed": true,
+    "unresolved_intervals": 0
   },
   "q4": {
     "passed": true,
     "violations": [],
     "areas_checked": 15,
-    "partitions_checked": 13
+    "partitions_checked": 4
   }
 }
