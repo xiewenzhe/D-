@@ -1,0 +1,14 @@
+{
+  "announcement.html": {
+    "url": "https://cpipc.acge.org.cn/cw/contestNews/detail/4/2c90801ca06f016101a0a47e06b77d9b?page=0",
+    "sha256": "3c8977c6a69508353759f817bd7a4474c72c019f225a69cf46c37cba4cb8b881"
+  },
+  "format_2026.docx": {
+    "url": "https://cpipc.acge.org.cn/sysFile/downFile.do?fileId=97a93e3a9e074738aea95eea986508f2",
+    "sha256": "46d2e2a87e90608ace764203d5326d7c7e41f01a5eb79986724a6f159fd70e16"
+  },
+  "template_2026.doc": {
+    "url": "https://cpipc.acge.org.cn/sysFile/downFile.do?fileId=a730b312331e492baad17b248bad6b51",
+    "sha256": "195b06cf670ec1aeb796bfd07e6d3e98e36d16db119308dcf4d0756319fe2e29"
+  }
+}

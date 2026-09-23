@@ -1,0 +1,4 @@
+{
+    "latex-workshop.latex.outDir": "%DIR%",
+    "latex-workshop.view.pdf.viewer": "tab"
+}

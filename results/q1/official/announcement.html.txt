@@ -1,0 +1,1433 @@
+
+    
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    中国研究生创新实践系列大赛管理平台
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+        
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+        
+        
+            
+                
+                    
+                        
+                        2026承办单位：西安交通大学
+                    
+                    
+                        
+                        
+                            
+                                English
+                            
+                            
+                        
+
+                        
+                    
+                    
+                    
+                        
+                        
+                            证书验真
+                        
+                        
+                        
+                    
+                    
+                    
+                        
+                            
+                            返回首页
+                        
+                    
+                    
+                    
+                        
+                            
+                            
+                                注册丨
+                                登录
+                            
+                        
+
+                    
+                    
+                
+            
+            
+                
+                    
+                        
+                            赛事介绍
+                        
+                    
+                    
+                        
+                            组织架构
+                        
+                    
+                    
+                        
+                            常见问题
+                        
+                    
+                    
+                        
+                            联系我们
+                        
+                    
+                    
+                    
+                        
+                            我要报名
+                        
+                    
+                    
+                
+            
+        
+
+    
+    
+        
+            
+        
+        
+    
+
+
+    
+        
+            
+        
+        
+            
+                赛事介绍
+            
+            
+                组织架构
+            
+            
+                常见问题
+            
+            
+                联系我们
+            
+            
+            
+                我要报名
+            
+            
+        
+    
+
+
+
+
+
+
+    .no-padding{
+        padding: 0 !important;
+    }
+
+    .accountType-margin{
+        margin-left: 0.4rem;
+    }
+
+
+
+    
+    
+        
+        
+            登录
+        
+        
+        
+        
+            
+            
+        
+        
+            
+                账号
+                
+            
+            
+                密码
+                
+            
+            
+                账户类型
+            
+            
+                
+                        
+                    
+            
+            
+                
+                找回密码
+            
+            提交
+        
+        
+            还没有参赛账号，立即注册 >
+            还没有单位账号，申请创建 >
+        
+    
+
+
+
+    function showErrorMsg(msg) {
+        $("#warnMsg").hide();
+        $("#alertMsg").show().find(".error-msg").text(msg);
+    }
+
+    // 检测手机号码是否对应多账户
+    function changeAccount(value){
+        if(value){
+            if(StringUtils.validate(value,"phone").isValid){
+                var url = new Url("login/checkIsHasMoreAccountByMobile");
+                url.addParam("loginId", value);
+                $.req({
+                    url : url,
+                    modal : false,
+                    success : function(rtn){
+                        if(rtn == AppConstant.YES){
+                            get("accountType").show();
+                            $(".accountTypeDesc").show();
+                        }else{
+                            get("accountType").hide();
+                            $(".accountTypeDesc").hide();
+                        }
+                    }
+                });
+            }else{
+                get("accountType").hide();
+                $(".accountTypeDesc").hide();
+            }
+        }
+    }
+
+    $(function () {
+
+        $("#loginId").off("change").on("change", function() {
+            changeAccount($(this).val().trim());
+        });
+
+        $("#codeImg").click(function() {
+            $(".bgiconCls").hide();
+
+            var codeInp = get("codeValue");
+            codeInp.clear().focus();
+            var time = new Date().getTime();
+            $(this).attr("src", "login/getIdentifyingCode?time=" + time);
+        });
+
+        var _timer = null;
+
+        $("#codeValue").next("div").find("input").attr("maxLength", 4).on("keydown", function() {
+            if (_timer) {
+                clearTimeout(_timer);
+            }
+
+            var target = event.target || event.srcElement;
+            _timer = setTimeout(function(e) {
+                var value = $(target).val();
+                var codeFlag = $(".bgiconCls");
+                if (value.length == 4) {
+                    var url = new Url("login/checkIdentifyingCode", "code", value);
+                    $.req({
+                        url : url,
+                        modal : false
+                    },  function(rtn) {
+                        var flag = rtn.code == 1;
+                        if (!flag) {
+                            get("codeValue").focus();
+                            if (rtn.code == 4) {
+                                $("#codeImg").click();
+                            }
+                        }
+
+                        codeFlag.show().toggleClass("icon-check", flag).toggleClass("icon-remove", !flag);
+                    });
+                } else {
+                    codeFlag.hide();
+                }
+            }, 100);
+        });
+
+        $("#submitLoginBtn").off("click").on("click", function(e) {
+            // 阻止默认行为（关键代码）
+            e.preventDefault();
+            var $loginInp = $("#loginId");
+            var loginId = $loginInp.val();
+            if (!loginId) {
+                $loginInp.focus();
+                showErrorMsg('用户名不能为空');
+                return;
+            }
+
+            var $passwordInp = $("#password");
+            var password = $passwordInp.val();
+            if (!password) {
+                showErrorMsg('密码不能为空');
+                $passwordInp.focus();
+                return;
+            }
+
+            var codeInp = get("codeValue");
+            var needValidCode = !codeInp.isHidden();
+            if (needValidCode) {
+                var codeValue = codeInp.getValue();
+                if (! codeValue) {
+                    showErrorMsg('验证码不能为空');
+                    codeInp.focus();
+                    return;
+                }
+
+                var codeFlag = $(".bgiconCls");
+                if (codeFlag.hasClass("icon-remove")) {
+                    showErrorMsg('验证码不正确');
+                    codeInp.focus();
+                    return;
+                }
+            }
+
+            var accountTypeInp = get("accountType");
+            var needAccountType = !accountTypeInp.isHidden();
+            if (needAccountType) {
+                var accountType = accountTypeInp.getValue();
+                if (!accountTypeInp.validate()) {
+                    showErrorMsg('请选择登录账户类型');
+                    return;
+                }
+            }
+
+            var url = new Url("login/signin", "user", {
+                loginId : loginId,
+                password : $.md5(password)
+            });
+
+            if (needValidCode) {
+                url.addParam("code", codeInp.getValue());
+            }
+
+            if(needAccountType){
+                url.addParam("accountType", get("accountType").getValue());
+            }
+
+            $.req({
+                url: url,
+                headers: {screenWidth: window.screen.width, screenHeight: window.screen.height},
+                onLoadSuccess: function (rtn) {
+                    if (rtn.code === 1) {
+                        var redirectUrl = $(".id4_tc").data("redirectUrl") || "";
+                        if (redirectUrl == null || redirectUrl == "") {
+                            window.location.href = rtn.data;
+                        } else {
+                            window.location.href = redirectUrl;
+                        }
+
+                    } else if (rtn.code === 3) {
+                        showErrorMsg(rtn.msg);
+                        codeInp.focus();
+                        $("#codeImg").click();
+                        return;
+                    } else if (rtn.code === 9) {
+                        // 多账户
+                        showErrorMsg(rtn.msg);
+                        get("accountType").show();
+                        $(".accountTypeDesc").show();
+                        get("accountType").validate();
+                    } else {
+                        if (rtn.code === 6) {
+                            codeInp.toggle(true);
+                        }
+                        showErrorMsg(rtn.msg);
+                        $("#codeImg").click();
+                        return;
+                    }
+                }
+            });
+        });
+    });
+
+
+
+    function switchLanguage(lang) {
+        // 判断一下是否开放了英文访问
+        var language = '1';
+        var isOpenEnglish = '1';
+        if (AppConstant.LANGUAGE_CN == language &&  AppConstant.YES !=isOpenEnglish ) {
+            lang = "zh";
+        } else {
+            var baseUrl = $.util.getBaseUrl()+'cw/hp/'+'4';
+            var newUrl = baseUrl + '?lang=' + lang;
+            window.location.href = newUrl;
+        }
+    }
+
+    function registerContest(competeId) {
+        $.req({
+            url: "contestant/checkSignIn",
+            modal: true,
+            success: function(rtn) {
+                if(AppConstant.YES == rtn) {//已登录
+                    var url = new Url("contestant/checkCompeteReg");
+                    url.addParam("competeId", competeId);
+                    $.req({
+                        url: url,
+                        modal: true,
+                        success: function(rtn) {
+                            var flag = rtn.code == 1;
+                            if (flag) {
+                                $.openDialog({
+                                    url : "contestant/registerNote",
+                                    width : 800,
+                                    height : "auto",
+                                    title : "报名",
+                                    falign : 'center',
+                                    closeBtn : false,
+                                    buttons : [ {
+                                        text : '填写报名信息',
+                                        size : 'lg',
+                                        onClick : function() {
+                                            fillRegister(competeId);
+                                        }
+                                    } ]
+                                });
+                            } else {
+                                $.alert("当前大赛未到报名时间，请从大赛官网上确认大赛的报名信息");
+                            }
+                        }
+                    });
+                } else {
+                    _login($.util.getBaseUrl() + "/login/enterMain");
+                }
+            }
+        });
+    }
+
+    function certificateValidation(){
+        $.openDialog({
+            url : "contestant/enterCertificateValidation",
+            title : "证书验真",
+            closeBtn : false
+        });
+    }
+    // 证书验真研电赛->学生
+    function certificateValidationYds(){
+        $.openDialog({
+            url : "contestant/enterCertificateValidationYds",
+            title : "证书验真",
+            closeBtn : false
+        });
+    }
+
+    function fillRegister(competeId) {
+        $.req({
+            url: "contestant/checkRegister",
+            modal: true,
+            success: function(rtn) {
+                if(AppConstant.USER_TYPE_STUDENT == rtn) {
+
+                    //提示信息，只有队长才可以组队
+                    $.confirm("若您是队长，请点击【确认】按钮继续报名流程；若您为队员，请耐心等待队长的邀请，待队长建立队伍后，系统将给您发送短信通知到您，您在【我的赛事】中接受邀请即可。",function(flag){
+                        if(flag){
+                            $.closeDialog();
+                            var url = $.util.getBaseUrl() + "login/enterMain/contestant/myContest";
+
+                            $('<form>', {
+                                method: 'POST',
+                                action: url,
+                                css: { display: 'none' }
+                            }).append($('<input>', {
+                                type: 'hidden',
+                                name: 'competeId',
+                                value: competeId
+                            })).appendTo('body').submit();
+                        }
+                    });
+
+                } else {
+                    $.alert("仅参赛队员（学生）具有报名权限");
+                }
+            }
+        });
+    }
+
+
+
+        
+            
+                
+                    
+                    首页 / 中国研究生数学建模竞赛 / 大赛通知
+                
+                
+                    
+                        
+                            
+                            
+                                
+                                    
+                                    
+                                    
+                                
+                            
+                        
+                        返回
+                    
+                    
+                        “华为杯”第二十三届中国研究生数学建模竞赛开赛公告
+                        
+                            发布时间：2026-09-15
+                            来源：中国研究生数学建模竞赛
+                            
+                                阅读次数：66968
+                            
+                            
+                        
+                    
+                    
+                            各研究生培养单位、各参赛队：
+
+为了保证2026年“华为杯”第二十三届中国研究生数学建模竞赛顺利举行，现将竞赛开赛的相关事项通知如下：
+
+一、时间节点
+
+1.加密赛题开始下载时间：2026年9月22日8:00，截止时间：2026年9月27日12:00；
+
+2.赛题解密密码公布时间：2026年9月23日8:00，截止时间：2026年9月27日12:00；
+
+3.竞赛开始时间：2026年9月23日8:00，截止时间：2026年9月27日12:00；
+
+4.上传竞赛论文MD5码开始时间：2026年9月26日12:00，截止时间：2026年9月27日12:00；
+
+5.竞赛论文PDF格式上传开始时间：2026年9月27日14:00，截止时间：2026年9月28日24:00；
+
+6.附件上传时间：2026年9月29日8:00，截止时间：2026年9月30日24:00；
+
+7.查看论文时间：2026年9月29日8:00，截止时间：2026年9月30日12:00。
+
+二、队伍编号的生成
+
+队伍编号是参赛队提交论文的重要信息码之一，将在2026年9月22日8:00公布，届时队长可登录中国研究生创新实践系列大赛管理平台，进入“个人中心—我的赛事—下载试题/上传论文”功能中查看队伍编号，请各参赛队队长查看后牢记队伍编号。
+
+三、竞赛试题下载及论文上传流程
+
+竞赛试题统一通过中国研究生创新实践系列大赛管理平台发布，队长登录账号，进入“个人中心—我的赛事”功能进行竞赛试题的下载及论文上传。
+
+具体流程详见《“华为杯”第二十三届中国研究生数学建模竞赛下载试题及上传论文操作手册》（附件1），请务必仔细阅读。
+
+四、论文要求
+
+（一）格式要求
+
+论文首先网上评审，后集中评审，请务必依照《“华为杯”第二十三届中国研究生数学建模竞赛论文格式规范》（附件2）、使用《“华为杯”第二十三届中国研究生数学建模竞赛论文模板》（附件3）进行论文编写，具体要求如下：
+
+1.上传竞赛网站的电子版论文（包括摘要）必须为pdf格式，不得压缩。
+
+2.论文命名格式：参赛试题编号+队伍编号，如*26000010001.pdf，其中*为参赛试题编号，用A、B、C、D、E、F表示。
+
+3.论文必须按附件3模板进行编写，并确保提交的论文的首页为封皮（不可删除，包含团队相关信息，且4个logo图标不能替换），第二页起为摘要页和正文页。除首页外其他页面中不允许出现单位、参赛人员姓名、队伍编号等信息，否则视为违规，论文无效。
+
+4.使用“统一摘要页”（附件3）。摘要是竞赛论文的重要组成部分，提醒参赛研究生注意，摘要需包含：建模思路、主要方法、模型、结果与结论、创新点等。摘要内容不超过两页。
+
+（二）提交要求
+
+因参赛队伍较多，为缓解网络压力，本届大赛采用“提交论文的MD5识别码—提交论文pdf文件—提交附件（按照赛题的实际要求）”三步分时段依次进行，具体要求为：
+
+1.竞赛提交论文的MD5识别码的开始时间是2026年9月26日12:00，截止时间是2026年9月27日12:00，请参赛研究生队在此时段之间提交识别码（注意：MD5识别码与提交论文对应，一旦提交MD5识别码，相应论文禁止修改，否则论文将无法成功上传）。
+
+重要提醒：请务必仔细阅读附件1：《“华为杯”第二十三届中国研究生数学建模竞赛下载试题/上传论文操作手册》中2.5章节，严格按照要求使用最终论文PDF文件生成论文MD5码并提交，提交后切勿对最终论文PDF进行任何操作，否则论文将无法成功上传。
+
+2.竞赛提交论文的开始时间为2026年9月27日14:00，截止时间是2026年9月28日24:00，请参赛研究生队在此期间内于竞赛系统中提交论文，必须上传pdf文档，无需上传其他附件。论文上传成功后请务必点击【提交】按钮，提交成功后，后台方能收到论文。
+
+3.赛题中有明确要求上传附件或赛题虽然无明确要求，但参赛队认为上传附件有利于评审专家理解本参赛队研究成果的，并在论文中注明上传了附件，参赛队伍可在2026年9月29日8:00—9月30日24:00期间在系统上传程序、计算结果等论文附件的压缩包。压缩包命名格式为：参赛试题编号+队伍编号，如*26000010001.rar，其中*为参赛试题编号，用A、B、C、D、E、F表示。附件大小不得超过50M。
+
+五、竞赛纪律及违规处理
+
+1.参赛单位应责成有关职能部门负责竞赛的组织和纪律监督工作，保证本单位竞赛的规范、真实与公正。
+
+2.各参赛队应遵守竞赛纪律，竞赛期间严禁参赛队伍与任何教师交流赛题相关的任何问题，严禁与队外任何人进行任何形式（包括网上）的赛题交流讨论，严禁抄袭、买卖论文，否则一律视为严重违反竞赛纪律。
+
+3.各参赛队可使用人工智能产品，仅作为答题的辅助工具，而非主导手段，不能代替参赛队伍的独立思考和竞赛答题的主体工作。所有参赛队应遵守科学道德与学术规范，正文、数学模型、公式引用等所有引用文献、引用程序（包括人工智能产品）均按规定注明来源（具体要求参见附件4）。竞赛专家委员会将对所有论文进行查重处理，重复率高于某阈值（由专家委员会确定）的论文，一般直接判定为“违规论文”，必要时进行人工判断，确定其是否为“违规论文”，引用他人程序也需明确标注引用来源，否则发现程序雷同，按抄袭认定为“违规论文”。
+
+4.各参赛队不得在竞赛期间将参赛论文进行网上查重，否则造成论文泄露，后果自负。
+
+5.违纪情况一经核实认证后，将取消违纪队伍的参赛或获奖资格，强制停赛一年，并通报其参赛单位进行相应处罚。
+
+六、其他注意事项
+
+1.此次竞赛论文，全部线上提交，请参赛队伍尽量提前提交，避开最终截止时间点的高峰，如因错过截止时间导致的问题，组委会一概不予处理。
+
+2.参赛队若在“提交论文的MD5识别码”环节遇到网络问题等不可控因素无法在截止时间（9月27日12:00）前上传，请将系统上传失败或错误的截图、论文MD5码、与MD5码相对应的论文pdf文件、队伍编号等相关信息发送至承办方邮箱：xjtusxjm2026@163.com，邮件发送截止时间为9月27日13:00，超过截止时间邮件无效。
+
+若确实由于网络原因提交失败，系统后台会有相关记录，组委会将比对系统后台记录与邮件内容，决定是否给予该队伍参赛资格。
+
+3.竞赛期间仅开放数学建模网（www.shumo.com）论坛上提问（QQ群在竞赛期间禁言），如果对赛题的文字理解方面有问题，可以在论坛上提问，专家委员会将组织命题人员在网上解答，不应回答的，概不回答。请参赛研究生在提问前事先查看已经回答的问题以免重复。
+
+4.竞赛奖励：竞赛设立一等奖、二等奖、三等奖、企业专项奖、“数模之星”冠亚季军、“数模之星”提名等奖项。其中一、二、三等奖获奖队数原则上不超过参赛队总数的1.5%、13%、20%。国（境）内外参赛队分开评奖，具体数量由组委会根据参赛情况确定。
+
+ 
+
+竞赛承办单位（西安交通大学）联系方式：
+
+电话：029-88965737、18092211302
+
+电子邮箱：xjtusxjm2026@163.com
+
+竞赛组委会秘书处（东南大学）联系方式：
+
+电话：025-83793783
+
+电子邮箱：gscpc3@seu.edu.cn
+
+附件：
+
+附件1：“华为杯”第二十三届中国研究生数学建模竞赛下载试题及上传论文操作手册
+
+附件2：“华为杯”第二十三届中国研究生数学建模竞赛论文格式规范
+
+附件3：“华为杯”第二十三届中国研究生数学建模竞赛论文模板
+
+附件4：“华为杯”第二十三届中国研究生数学建模竞赛人工智能工具及输出使用规定
+
+ 
+
+中国研究生数学建模竞赛组委会
+
+“华为杯”第二十三届中国研究生数学建模竞赛执行委员会
+
+西安交通大学研究生院
+
+2026年9月16日
+                    
+                
+            
+        
+    
+    
+
+
+
+    
+        
+            
+                
+            
+
+            
+                
+                    
+                        大赛概况
+                        
+                    
+                    
+                        大赛沿革
+                        组织机构
+                        信息公开
+                        合作单位
+                    
+                
+                
+                    
+                        主题赛事
+                        
+                    
+                    
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            智慧城市技术与创意设计大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            未来飞行器创新大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            数学建模竞赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            电子设计竞赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            创“芯”大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            创“芯”大赛-EDA精英挑战赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            人工智能创新大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            机器人创新设计大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            能源装备创新设计大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            公共管理案例大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                    乡村振兴科技强农+创新大赛
+                                    
+                                
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            网络安全创新大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            “双碳”创新与创意大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            金融科技创新大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            “美丽中国”创新设计大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            企业管理创新大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            操作系统开源创新大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            “文化中国”两创大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            国际中文教育案例大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                            智能建造创新大赛
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                    
+                
+                
+                    
+                        大赛资讯
+                        
+                    
+                    
+                        大赛文件
+                        大赛新闻
+                        大赛通知
+                    
+                
+                
+                    
+                        赛程安排
+                    
+                
+                
+                    
+                        联系我们
+                    
+                
+            
+
+            
+                
+                    
+                    
+                        
+                            
+                        
+                        
+                        
+                    
+                
+                
+                    
+                    
+                        
+                            
+                        
+                        
+                        
+                    
+                
+                
+                    
+                    
+                        
+                            
+                        
+                        
+                        
+                    
+                
+                
+                    
+                    
+                        
+                            
+                        
+                        
+                        
+                    
+                
+            
+        
+         
+            
+                大赛概况
+                
+                    
+                        
+                            大赛沿革
+                        
+                    
+                    
+                        
+                            组织机构
+                        
+                    
+                    
+                        
+                            信息公开
+                        
+                    
+                    
+                        
+                            合作单位
+                        
+                    
+                
+            
+            
+                主题赛事
+                
+                    
+                        
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    智慧城市技术与创意设计大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    未来飞行器创新大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    数学建模竞赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    电子设计竞赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    创“芯”大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    创“芯”大赛-EDA精英挑战赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    人工智能创新大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    机器人创新设计大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    能源装备创新设计大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    公共管理案例大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    
+                                        
+                                            乡村振兴科技强农+创新大赛
+                                            
+                                        
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    网络安全创新大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    “双碳”创新与创意大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    金融科技创新大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    “美丽中国”创新设计大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    企业管理创新大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    操作系统开源创新大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    “文化中国”两创大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    国际中文教育案例大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                        
+                                        
+                                            
+                                                
+                                                
+                                                    智能建造创新大赛
+                                                    
+                                                
+                                            
+                                        
+                                    
+                                
+                            
+                        
+                    
+                
+            
+            
+                大赛资讯
+                
+                    
+                        
+                            大赛文件
+                        
+                    
+                    
+                        
+                            大赛新闻
+                        
+                    
+                    
+                        
+                            大赛通知
+                        
+                    
+                
+                赛程安排
+                
+                    联系我们 
+                
+            
+        
+    
+    
+    
+        
+
+        
+        
+            京ICP备19019038号-2 版权所有：中国学位与研究生教育学会
+        
+    
+    
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

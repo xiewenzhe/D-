@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "contest": "generic",
+  "main_tex": "paper.tex",
+  "template": {
+    "path": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\overleaf文件",
+    "source": "user-provided-overleaf",
+    "version": "gmcmthesis-2025-user-template",
+    "sha256": "955c486841661a636f01f5498c5d17730c09b826716edfb7c6c1766396a39c30"
+  },
+  "template_files": {
+    "figures/logo.pdf": "d796142281d7f08ccc554478ccbdb55ea80fc412a338d6a8287fe0856d8ca625",
+    "figures/title.pdf": "0f9f96d0472b87b625702e9b0f0201362ed815673f1d95027bdf8381bbe1ec09",
+    "gmcm.bst": "9bc50567b04b859fdac949125106e24182c373d13794d53db4856ce3cbbcd8a4",
+    "gmcmthesis.cls": "3f5c389290b1bb5a2f4bc8ae17e482d8dc6d0801c934e7e8cf74130197b656d6",
+    "paper.tex": "392edf1c3863ebb614ce1ad50a9376f89de29cbb078f604a2efc5a8081d3c9f8",
+    "reference.bib": "ba77544c363b149daffa43d334089a6bf9160e79216178ac900eb47b9b707710"
+  },
+  "resource_bindings": [],
+  "created_at": "2026-09-23T03:25:20.183441+00:00"
+}
