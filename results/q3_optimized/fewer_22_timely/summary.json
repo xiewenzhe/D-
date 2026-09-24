@@ -1,0 +1,28 @@
+{
+  "weighted_tardiness_s": 3927.615750149298,
+  "joint_makespan_s": 8947.338661139183,
+  "energy_kwh": 68.7588313445425,
+  "relay_energy_kwh": 4.435059284131386,
+  "total_energy_kwh": 73.19389062867388,
+  "sorties": 22,
+  "relay_sorties": 5,
+  "hard_deadline_violations": 0,
+  "resource_conflicts": 0,
+  "relay_resource_conflicts": 0,
+  "communication_breaks": 0,
+  "continuous_validation_passed": true,
+  "continuous_min_margin_lower_bound_db": 0.00897600853298286,
+  "changes": {
+    "removed_sorties": [
+      "Q2-003",
+      "Q2-022",
+      "Q2-023"
+    ],
+    "new_sortie": "Q3-M01",
+    "Q2_015_and_Q2_019_advance_s": 25.0,
+    "long_relay_service_end_s": 8337.72062631652
+  },
+  "q4_three_group_feasible": true,
+  "q4_two_group_shortage": 2,
+  "q4_three_group_shortage": 5
+}

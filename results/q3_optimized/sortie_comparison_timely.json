@@ -1,0 +1,113 @@
+{
+  "base": "timely",
+  "source_sha256": "5e551eb97e163b4d82e7efaedd20c71be817e1e9ec93f37b61104b391e2b8672",
+  "source_metrics": {
+    "sorties": 24,
+    "relay_sorties": 5,
+    "weighted_tardiness_s": 3927.615750149298,
+    "joint_makespan_s": 8947.338661139183,
+    "total_energy_kwh": 73.89544153381775
+  },
+  "fewer_23_timely": {
+    "weighted_tardiness_s": 3927.615750149298,
+    "joint_makespan_s": 8947.338661139183,
+    "energy_kwh": 69.13966249992615,
+    "relay_energy_kwh": 4.085880200474828,
+    "total_energy_kwh": 73.22554270040098,
+    "sorties": 23,
+    "relay_sorties": 5,
+    "hard_deadline_violations": 0,
+    "resource_conflicts": 0,
+    "relay_resource_conflicts": 0,
+    "communication_breaks": 0,
+    "continuous_validation_passed": true,
+    "continuous_min_margin_lower_bound_db": 0.00897600853298286,
+    "changes": {
+      "removed_sortie": "Q2-003",
+      "merged_into": "Q2-021",
+      "new_order": [
+        "S011",
+        "S005"
+      ]
+    },
+    "q4_three_group_feasible": true,
+    "q4_two_group_shortage": 2,
+    "q4_three_group_shortage": 4
+  },
+  "fewer_22_timely": {
+    "weighted_tardiness_s": 3927.615750149298,
+    "joint_makespan_s": 8947.338661139183,
+    "energy_kwh": 68.7588313445425,
+    "relay_energy_kwh": 4.435059284131386,
+    "total_energy_kwh": 73.19389062867388,
+    "sorties": 22,
+    "relay_sorties": 5,
+    "hard_deadline_violations": 0,
+    "resource_conflicts": 0,
+    "relay_resource_conflicts": 0,
+    "communication_breaks": 0,
+    "continuous_validation_passed": true,
+    "continuous_min_margin_lower_bound_db": 0.00897600853298286,
+    "changes": {
+      "removed_sorties": [
+        "Q2-003",
+        "Q2-022",
+        "Q2-023"
+      ],
+      "new_sortie": "Q3-M01",
+      "Q2_015_and_Q2_019_advance_s": 25.0,
+      "long_relay_service_end_s": 8337.72062631652
+    },
+    "q4_three_group_feasible": true,
+    "q4_two_group_shortage": 2,
+    "q4_three_group_shortage": 5
+  },
+  "fewer_21_timely": {
+    "weighted_tardiness_s": 3927.615750149298,
+    "joint_makespan_s": 8947.338661139183,
+    "energy_kwh": 66.38569117493203,
+    "relay_energy_kwh": 4.435059284131386,
+    "total_energy_kwh": 70.82075045906342,
+    "sorties": 21,
+    "relay_sorties": 5,
+    "hard_deadline_violations": 0,
+    "resource_conflicts": 0,
+    "relay_resource_conflicts": 0,
+    "communication_breaks": 0,
+    "continuous_validation_passed": true,
+    "continuous_min_margin_lower_bound_db": 0.00897600853298286,
+    "changes": {
+      "removed_sortie": "Q2-001",
+      "merged_into": "Q3-M01",
+      "combined_S003_boxes": 6
+    },
+    "q4_three_group_feasible": true,
+    "q4_two_group_shortage": 2,
+    "q4_three_group_shortage": 5
+  },
+  "q3_only_20_timely": {
+    "weighted_tardiness_s": 7638.176758571117,
+    "joint_makespan_s": 8947.338661139183,
+    "energy_kwh": 66.7037865825348,
+    "relay_energy_kwh": 4.435059284131386,
+    "total_energy_kwh": 71.13884586666619,
+    "sorties": 20,
+    "relay_sorties": 5,
+    "hard_deadline_violations": 0,
+    "resource_conflicts": 0,
+    "relay_resource_conflicts": 0,
+    "communication_breaks": 0,
+    "continuous_validation_passed": true,
+    "continuous_min_margin_lower_bound_db": 0.00897600853298286,
+    "changes": {
+      "removed_sortie": "Q2-011",
+      "merged_into": "Q2-008",
+      "new_order": [
+        "S006",
+        "S007"
+      ]
+    },
+    "q4_three_group_feasible": false,
+    "q4_indivisible_groups": 2
+  }
+}
