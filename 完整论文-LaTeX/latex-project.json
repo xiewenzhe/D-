@@ -72,6 +72,20 @@
       "sha256": "11ec90493030bdc92017cf9422124b470aba99c0a1962c94ed5b1a0d1a795687",
       "hash_mode": "content",
       "bound_at": "2026-09-24T02:13:32.453286+00:00"
+    },
+    {
+      "source": "figures/q1_reserve_sensitivity.pdf",
+      "destination": "figures/q1_reserve_sensitivity.pdf",
+      "sha256": "296b66b48649522f261cd14f39f8a6556d843f9d96bcf368cdaf84ba30146572",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T07:31:27.431416+00:00"
+    },
+    {
+      "source": "figures/result_q4_inventory_comparison.pdf",
+      "destination": "figures/result_q4_inventory_comparison.pdf",
+      "sha256": "f75477a10f46508bf84f46ad7e09400756cdd348f85571b7c3d3ed0d0f75453a",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T07:31:43.002647+00:00"
     }
   ],
   "created_at": "2026-09-23T03:25:20.183441+00:00"
