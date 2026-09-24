@@ -11,7 +11,6 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 from PIL import Image
 
 from common import ROOT, Physics, Terrain, read_inputs
@@ -114,10 +113,13 @@ def main():
     iv = cert["intervals"]
     methods = Counter(x["method"] for x in iv)
     fig, ax = plt.subplots()
-    ax.bar(methods.keys(), methods.values(), color=[BLUE, ORANGE][:len(methods)])
+    proof_keys = (("obstruction_worst_case", "Worst-case loss"),
+                  ("swept_dem_clearance", "Swept DEM clearance"))
+    ax.bar([label for _, label in proof_keys],
+           [methods[key] for key, _ in proof_keys], color=[BLUE, ORANGE])
     ax.set(ylabel="Certified intervals", xlabel="Certification method")
-    for i, (k,v) in enumerate(methods.items()):
-        ax.text(i, v+10, str(v), ha="center", fontsize=8)
+    for i, (key, _) in enumerate(proof_keys):
+        ax.text(i, methods[key]+10, str(methods[key]), ha="center", fontsize=8)
     save(fig, "process_q3_certificate_methods")
 
     # Result 1: simultaneous transport and relay service occupancy.
@@ -130,9 +132,13 @@ def main():
         ax.broken_barh([(m["launch"]/3600,(m["end"]-m["launch"])/3600)],
                        (y-.39,.76), facecolors=ORANGE, alpha=.85)
     ax.axhline(len(trs)-.5, color=GREY, linewidth=.8)
-    ax.set(xlabel="Time from start (h)", ylabel="Transport sorties (lower), relay sorties (upper)",
-           ylim=(-1,len(trs)+len(rel)), yticks=[0,10,20,30,40,50,57],
-           yticklabels=["T1","T11","T21","T31","T41","R7","R14"])
+    transport_ticks = sorted(set(range(0, len(trs), 5)) | {len(trs) - 1})
+    relay_ticks = list(range(len(trs), len(trs) + len(rel)))
+    ax.set(xlabel="Time from start (h)", ylabel="Transport sorties (lower), relay missions (upper)",
+           ylim=(-1, len(trs) + len(rel)),
+           yticks=transport_ticks + relay_ticks,
+           yticklabels=[f"T{j + 1}" for j in transport_ticks]
+                       + [f"R{j + 1}" for j in range(len(rel))])
     save(fig, "result_q3_joint_timeline", (6.6, 5.0))
 
     # Result 2: delivery performance as observed box-level points.
@@ -160,20 +166,7 @@ def main():
         ax.tick_params(axis="y",labelsize=7)
     save(fig,"result_q3_q2_comparison",(7.3,2.8))
 
-    # Flow chart: actual source, physics, relay search, validation and outputs.
-    fig,ax=plt.subplots(figsize=(7,2.9)); ax.axis("off")
-    boxes_flow=[("Inputs\n5 XLSX + DEM",.02), ("Route\nheuristic",.185),
-                ("DEM / link\ncoverage",.35),("Relay\nsearch",.515),
-                ("Continuous\nvalidation",.68),("Q3 tables\n+ certificate",.845)]
-    for label,x in boxes_flow:
-        patch=FancyBboxPatch((x,.36),.135,.31,boxstyle="round,pad=0.005",
-                             edgecolor=BLUE,facecolor="#E8F1F7",lw=1)
-        ax.add_patch(patch); ax.text(x+.0675,.515,label,ha="center",va="center",fontsize=7)
-    for x in [.155,.32,.485,.65,.815]:
-        ax.add_patch(FancyArrowPatch((x+.004,.515),(x+.025,.515),arrowstyle="->",
-                                     mutation_scale=10,color=GREY,linewidth=1))
-    ax.set(xlim=(0,1),ylim=(0,1))
-    save(fig,"flow_overall_model",(7,2.9))
+    # The four-question overview is maintained by overall_model_flow.py.
 
 
 if __name__ == "__main__":

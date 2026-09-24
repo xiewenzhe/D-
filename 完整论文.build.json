@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-24T02:04:25.380902+00:00",
+  "passed": true,
+  "main_tex": "paper.tex",
+  "project_root": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\完整论文-LaTeX",
+  "source_sha256": "462b6998f5acdc880ef22a12b1891db46d6040c9d7573ccc032607bf58f191b4",
+  "compiled_source_sha256": "462b6998f5acdc880ef22a12b1891db46d6040c9d7573ccc032607bf58f191b4",
+  "post_build_source_sha256": "462b6998f5acdc880ef22a12b1891db46d6040c9d7573ccc032607bf58f191b4",
+  "pdf_sha256": "f9051c3efa8c95447a2312f89a66ffdeb6488b4f0e0ac7a6c4143a4a3dd0b016",
+  "project_manifest_sha256": "ae6efa820a6558d3e0ab36991e280846c739d474de6cfb9327b271c99933c154",
+  "engine": "xelatex",
+  "tools": {
+    "latexmk": {
+      "path": null,
+      "version": null
+    },
+    "xelatex": {
+      "path": "C:\\Users\\xwz\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE",
+      "version": "xelatex: security risk: running with elevated privileges"
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\xwz\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-output-directory=build",
+        "paper.tex"
+      ],
+      "cwd": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\完整论文-LaTeX",
+      "returncode": 0,
+      "duration_seconds": 3.408
+    },
+    {
+      "command": [
+        "C:\\Users\\xwz\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.EXE",
+        "-no-shell-escape",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-output-directory=build",
+        "paper.tex"
+      ],
+      "cwd": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\完整论文-LaTeX",
+      "returncode": 0,
+      "duration_seconds": 3.19
+    }
+  ],
+  "warnings": [
+    "LaTeX Warning: You have requested release `2026/06/01' of LaTeX,",
+    "Package heavenlyclouds Warning: 用楷书代替隶书 on input line 297.",
+    "Package hyperref Warning: Option `hyperfootnotes' has already been used,",
+    "Package hyperref Warning: Option `hyperindex' has already been used,",
+    "Package hyperref Warning: Token not allowed in a PDF string (Unicode):"
+  ],
+  "allowed_warnings": [
+    "LaTeX Warning: You have requested release `2026/06/01' of LaTeX,",
+    "Package heavenlyclouds Warning: 用楷书代替隶书 on input line 297.",
+    "Package hyperref Warning: Option `hyperfootnotes' has already been used,",
+    "Package hyperref Warning: Option `hyperindex' has already been used,",
+    "Package hyperref Warning: Token not allowed in a PDF string (Unicode):"
+  ],
+  "warning_override": {
+    "patterns": [
+      "LaTeX Warning: You have requested release",
+      "Package heavenlyclouds Warning: 用楷书代替隶书",
+      "Package hyperref Warning: Option .hyperfootnotes. has already been used",
+      "Package hyperref Warning: Option .hyperindex. has already been used",
+      "Package hyperref Warning: Token not allowed in a PDF string"
+    ],
+    "reason": "沿用用户指定example.tex所用的gmcmthesis模板；已核实这些警告分别来自现有CTeX与LaTeX内核版本、模板隶书回退和重复超链接选项或书签字距，对正文公式、图表及PDF页面无影响；正文溢出已消除。"
+  },
+  "issues": [],
+  "reproduce": "C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\.venv\\Scripts\\python.exe C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\math_model_skill\\math-modeling-skill\\tools\\latex\\scripts\\latex_paper.py build C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\完整论文-LaTeX\\paper.tex --engine xelatex --timeout 180 --publish C:\\Users\\xwz\\Desktop\\华为杯数学建模\\2026\\中文题目\\D题\\完整论文.pdf --allow-warning \"LaTeX Warning: You have requested release\" --allow-warning \"Package heavenlyclouds Warning: 用楷书代替隶书\" --allow-warning \"Package hyperref Warning: Option .hyperfootnotes. has already been used\" --allow-warning \"Package hyperref Warning: Option .hyperindex. has already been used\" --allow-warning \"Package hyperref Warning: Token not allowed in a PDF string\" --override-reason 沿用用户指定example.tex所用的gmcmthesis模板；已核实这些警告分别来自现有CTeX与LaTeX内核版本、模板隶书回退和重复超链接选项或书签字距，对正文公式、图表及PDF页面无影响；正文溢出已消除。 --overwrite"
+}

@@ -1,17 +1,37 @@
-\contentsline {section}{\numberline {1}问题重述}{4}{section.1}%
-\contentsline {subsection}{\numberline {1\hskip 0.05em\relax .\hskip 0.05em\relax 1}引言}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1\hskip 0.05em\relax .\hskip 0.05em\relax 2}问题的提出}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}模型的假设}{6}{section.2}%
-\contentsline {section}{\numberline {3}符号说明}{6}{section.3}%
-\contentsline {section}{\numberline {4}模型的建立}{6}{section.4}%
-\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 1}问题一分析}{6}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 2}算法示例}{6}{subsection.4.2}%
-\contentsline {section}{\numberline {5}表格}{7}{section.5}%
-\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 1}表格}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 2}问题三分析}{10}{subsection.5.2}%
-\contentsline {section}{\numberline {6}模型评价}{10}{section.6}%
-\contentsline {section}{附录 \numberline {A}MATLAB 源程序}{11}{appendix.1.A}%
-\contentsline {subsection}{\numberline {A\hskip 0.05em\relax .\hskip 0.05em\relax 1}第1问程序}{11}{subsection.1.A.1}%
-\contentsline {section}{附录 \numberline {B}Python 源程序}{12}{appendix.1.B}%
-\contentsline {subsection}{\numberline {B\hskip 0.05em\relax .\hskip 0.05em\relax 1}第2问程序}{12}{subsection.1.B.1}%
+\contentsline {section}{\numberline {1}问题重述与数据}{4}{section.1}%
+\contentsline {section}{\numberline {2}统一假设与物理模型}{4}{section.2}%
+\contentsline {subsection}{\numberline {2\hskip 0.05em\relax .\hskip 0.05em\relax 1}符号与边界}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2\hskip 0.05em\relax .\hskip 0.05em\relax 2}航段时间、能耗和充电}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}问题一：单点安全载荷与组批}{5}{section.3}%
+\contentsline {section}{\numberline {4}问题二的建模与求解}{6}{section.4}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 1}问题二分析}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 2}基本约定与候选架次构造}{6}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 2\hskip 0.05em\relax .\hskip 0.05em\relax 1}逐航段载荷、时间和能源}{6}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 3}货箱覆盖、时限与共享资源模型}{7}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 1}一次交付和时限}{7}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 2}运输机与共享电池的双区间占用}{7}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 4}优化目标与求解方法}{8}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 1}整数化加权目标}{8}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 2}候选池求解与固定路线重排}{8}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 5}计算结果与分析}{8}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 1}运输任务与机型分工}{8}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 2}送达时效与安全余量}{9}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 6}正确性与最优性范围检验}{10}{subsection.4.6}%
+\contentsline {section}{\numberline {5}问题三的建模与求解}{10}{section.5}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 1}问题三分析}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 2}通信链路与连续覆盖模型}{11}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 2\hskip 0.05em\relax .\hskip 0.05em\relax 1}双向链路预算}{11}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 2\hskip 0.05em\relax .\hskip 0.05em\relax 2}直连或单中继两跳保障}{12}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 3}中继任务与能源资源模型}{12}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 1}候选悬停点与预筛}{12}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 2}一次中继架次的时间与电量}{13}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 4}联合求解与时间细化}{13}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 1}搜索状态与排序}{13}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 2}连续时间通信证书}{13}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 5}联合调度结果与分析}{14}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 1}中间方案与正式方案}{14}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 2}交付代价与通信保障}{14}{subsubsection.5.5.2}%
+\contentsline {section}{\numberline {6}问题四：固定任务分区}{16}{section.6}%
+\contentsline {section}{\numberline {7}模型评价与结果复现}{17}{section.7}%
+\contentsline {section}{参考文献}{17}{section*.15}%
 \contentsfinish 

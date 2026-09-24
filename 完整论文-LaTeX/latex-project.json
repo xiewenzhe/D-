@@ -16,6 +16,63 @@
     "paper.tex": "392edf1c3863ebb614ce1ad50a9376f89de29cbb078f604a2efc5a8081d3c9f8",
     "reference.bib": "ba77544c363b149daffa43d334089a6bf9160e79216178ac900eb47b9b707710"
   },
-  "resource_bindings": [],
+  "resource_bindings": [
+    {
+      "source": "figures/result_q2_resources.pdf",
+      "destination": "figures/result_q2_resources.pdf",
+      "sha256": "6a8133bb817cc6ec04e8c4e0207f4ae4a38cb8b4039138b31ed8b8892e7df79b",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T01:49:20.086682+00:00"
+    },
+    {
+      "source": "figures/result_q2_hard_deadline_margin.pdf",
+      "destination": "figures/result_q2_hard_deadline_margin.pdf",
+      "sha256": "95314102506580349c0c0cb838f464a03e29c88a518f2da020bf4c7529ddd254",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T01:49:20.205037+00:00"
+    },
+    {
+      "source": "figures/flow_overall_model.pdf",
+      "destination": "figures/flow_overall_model.pdf",
+      "sha256": "d841bd46f7d9ff44803f88c13adad6ff6fc9c50c4596c82a8a48fa5e488eefcb",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T02:11:10.900691+00:00"
+    },
+    {
+      "source": "figures/raw_q3_q2_direct_outages.pdf",
+      "destination": "figures/raw_q3_q2_direct_outages.pdf",
+      "sha256": "0e1f39e38b86df09f8a7cbf7337725bb9a9eacc141339392eb5d4aea3dbf08a6",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T02:13:31.916059+00:00"
+    },
+    {
+      "source": "figures/process_q3_candidate_coverage.pdf",
+      "destination": "figures/process_q3_candidate_coverage.pdf",
+      "sha256": "c034d628440e9eb0755d6fcbb801dee7b10e4823a104785ca8915265a9b0ecb4",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T02:13:32.050572+00:00"
+    },
+    {
+      "source": "figures/process_q3_certificate_methods.pdf",
+      "destination": "figures/process_q3_certificate_methods.pdf",
+      "sha256": "e2b780685d42b9ecf41d7fabf8410fb5237859cc9eb661cd98762c1a2f443abc",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T02:13:32.176410+00:00"
+    },
+    {
+      "source": "figures/result_q3_joint_timeline.pdf",
+      "destination": "figures/result_q3_joint_timeline.pdf",
+      "sha256": "393888d0c3383371b20cbee1245b79789cf695c3b3443e2872a2974dbb62c8ac",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T02:13:32.315705+00:00"
+    },
+    {
+      "source": "figures/result_q3_box_delivery.pdf",
+      "destination": "figures/result_q3_box_delivery.pdf",
+      "sha256": "11ec90493030bdc92017cf9422124b470aba99c0a1962c94ed5b1a0d1a795687",
+      "hash_mode": "content",
+      "bound_at": "2026-09-24T02:13:32.453286+00:00"
+    }
+  ],
   "created_at": "2026-09-23T03:25:20.183441+00:00"
 }

@@ -1,489 +1,366 @@
-% !Mode:: "TeX:UTF-8"
-%!TEX program  = xelatex
-
+% !TEX program = xelatex
 \documentclass[bwprint,fontset=fandol]{gmcmthesis}
-
 \hypersetup{hidelinks}
-\usepackage[framemethod=TikZ]{mdframed}
-
-%\usepackage{fontspec}  % for Consolas & Courier New
-%\lstset{basicstyle=\small\fontspec{Consolas}}
-%\lstset{basicstyle=\small\fontspec{Courier New}}
-%\setmonofont{Consolas}
-%\setcounter{tocdepth}{3}   % 调整目录深度
+\pdfstringdefDisableCommands{\def\kern#1{}}
 \usepackage{siunitx}
-\usepackage{colortbl}
-\definecolor{color1}{rgb}{0.78,0.88,0.99}
-\definecolor{color2}{rgb}{0.36,0.62,0.84}
-%\definecolor{color3}{rgb}{0.8235,0.8706,0.9373}
-\definecolor{color3}{rgb}{0.88,0.92,0.96}
-\definecolor{color4}{rgb}{0.96,0.97,0.98}%{0.9176,0.9373,0.9686}
-
-% 算法
-\usepackage[noend]{algpseudocode}
-\usepackage{algorithmicx,algorithm}
-\floatname{algorithm}{算法}
-\renewcommand{\algorithmicrequire}{\textbf{输入:}}
-\renewcommand{\algorithmicensure}{\textbf{输出:}}
-
-%\numberwithin{equation}{section}
-%\numberwithin{figure}{section}
-%\numberwithin{table}{section}
-
-
-\newcommand{\red}[1]{\textcolor{red}{#1}}
-\newcommand{\blue}[1]{\textcolor{blue}{#1}}
-
-
-%===================== 建模论文题目 ======================
-
-\title{山区洪涝灾害下无人机运输与通信协同优化
-}
-\baominghao{\hspace{6em} 26106350114} %参赛队号
-\schoolname{\hspace{5.8em} 西南大学} %学校名称
-\membera{\hspace{6em} 谢文哲} %队员A
-\memberb{\hspace{6em} 章林怡} %队员B
-\memberc{\hspace{6em} 刘宇豪} %队员C
-
-%=======================================================
-
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\emergencystretch=3em
+\title{山区洪涝灾害下无人机运输与通信协同优化}
+\baominghao{\hspace{6em}26106350114}
+\schoolname{\hspace{5.8em}西南大学}
+\membera{\hspace{6em}谢文哲}
+\memberb{\hspace{6em}章林怡}
+\memberc{\hspace{6em}刘宇豪}
 
 \begin{document}
-
-%生成标题
 \maketitle
-
-%填写摘要
 \begin{abstract}
+针对山区洪涝灾害中道路与通信同时受损的物资配送任务，本文使用题给服务区、货箱、异构无人机、能源设备和30\,m数字高程模型（DEM），依次求解单点安全载荷与组批、多机多架次运输、通信中继联合调度及固定任务分区。四问共用按地形确定的爬升--巡航--下降航段、载荷相关能耗、返航余量和分段充电模型。
 
-山区洪涝灾害往往伴随着\textbf{道路阻断、通信受损与能源受限}等多重约束，使传统地面运输难以及时完成应急物资配送。无人机具有机动性强、受地面道路影响小等优势，但其实际救援能力同时受到载荷、地形、能耗、配送时限、通信覆盖以及设备周转等因素制约。针对山区洪涝灾害场景下无人机应急运输与通信保障的协同优化问题，本文结合服务区空间位置、数字高程模型（DEM）、货箱需求、异构无人机参数、电池资源及无线通信链路参数，建立了由\textbf{单点运输能力分析、多机多架次调度、运输--通信联合调度和任务分区资源配置}构成的递进式优化模型，并从运输效率、任务及时性、能源消耗和资源占用等多个维度对方案进行评价。
+问题一以二分法求45个机型--服务区组合的安全载荷，并以动态规划处理80个不可拆货箱，得到18个架次和59.131\,kWh运输能耗。问题二先生成物理可行的多点候选架次，再以CP-SAT选择路线、安排运输机与共享电池，并在固定路线后重排任务开始时刻。所得24个运输架次唯一交付全部80箱，其中2个架次跨服务区；加权迟到为0，运输能耗69.580\,kWh，完工时间6997.523\,s。固定这24条路线后的整数秒资源排程有最优性证书，但全路线空间没有全局最优证明。
 
-针对问题一，为准确刻画不同机型在山区地形条件下的运输能力，首先利用\textbf{DEM栅格采样}提取调度中心与各服务区直线路径上的最高地形高程，并按照“爬升--巡航--下降”的飞行过程建立时间与能耗计算模型。在载荷影响等效航程且返航需保留安全能量余量的条件下，利用\textbf{二分搜索}求解各“机型--服务区”组合的最大安全载荷。在此基础上，将不可拆货箱的组批过程转化为同时考虑载质量、装载体积与安全能量约束的\textbf{多维装箱优化问题}，以架次数、总运输能耗和累计作业时间构造分层多目标优化模型，获得各服务区的货箱组批与机型选择方案。同时改变返航安全余量进行敏感性分析，刻画安全冗余增加对最大可运输载荷及架次数的影响规律。
-
-针对问题二，在单架次可访问多个服务区的条件下，进一步考虑\textbf{异构无人机、共享电池、配送时限与多架次周转}之间的耦合关系。本文构建带容量、能量和时间窗约束的异构多旅行车辆路径模型，将货箱组批、服务区访问顺序、运输机型、实体无人机、电池资源及架次开始时刻进行联合决策。为降低大规模组合搜索的复杂度，采用\textbf{“可行架次生成--资源调度优化”两阶段求解框架}：首先生成满足载荷、体积和能量限制的候选运输架次，再结合医疗物资期望送达时间和首批保障截止时间，通过自适应邻域搜索与整数优化对路线及资源时序进行协调。模型能够输出逐架次运输路线、逐箱送达时刻以及无人机和电池占用情况，并通过任务时序和资源冲突检验保证方案的实际可执行性。
-
-针对问题三，在运输调度基础上进一步引入山区地形遮挡和无线传播约束。首先依据运输无人机的连续飞行轨迹，结合DEM完成\textbf{视距（LOS）遮挡判定}，并根据双向链路预算计算运输无人机与固定网关之间的实时通信可用性。对于直连链路失效区段，在DEM覆盖区域内生成满足悬停高度约束的候选中继位置，并预计算“运输无人机--中继无人机--固定网关”两段链路的可服务关系，从而将连续空间中继部署问题转化为有限候选位置上的\textbf{时空覆盖问题}。进一步建立运输无人机与中继无人机联合调度模型，同时优化运输架次、中继悬停位置、服务时段及能源组件配置，在保证运输无人机\textbf{全飞行过程连续通信}的前提下，综合降低物资延误、联合任务完成时间、运输与中继总能耗以及设备使用强度，并通过时间离散精度的敏感性分析验证通信判定结果的稳定性。
-
-针对问题四，为研究灾后分区独立救援条件下的资源配置问题，根据问题三中已经确定的运输架次和通信保障关系构建\textbf{服务区任务耦合图}。若多个服务区位于同一运输架次或存在不可分割的联合保障关系，则将其合并为不可拆分的任务单元，并分别建立两分区和三分区优化模型。在保持原运输与中继任务安排不变的条件下，以\textbf{资源配置规模、资源冗余、组间工作量均衡和现有库存缺口}为主要评价指标进行分区优化；同时基于任务占用时间区间计算各分区运输无人机、共享电池、中继无人机及能源组件的最大并发需求，从而得到各分区独立执行所需的最小资源配置，并识别潜在资源瓶颈及其形成原因。
-
-综上，本文将\textbf{地形约束、运输调度、能源周转与连续通信保障}统一纳入山区应急无人机救援决策框架，在保证货箱不可拆分、任务时限、返航安全以及通信连续性的基础上，实现了由单架次能力分析到多机协同、再到运输--通信联合优化与灾区资源分区配置的逐层扩展。所建立模型具有明确的物理含义和较好的可解释性，可为山区洪涝灾害条件下无人机应急运输与通信资源协同配置提供定量化决策依据。
-
-\keywords{山区洪涝灾害\quad  无人机应急运输\quad 异构多架次调度\quad  通信中继  \quad  协同优化}
+问题三在题给DEM和双向链路预算下建立运输机直连网关或由中继两跳保障的全时段约束。有限宽度搜索与经验证的时间窗口细化得到24个运输架次、5个中继架次，联合完工时间8772.339\,s，总能耗73.835\,kWh，加权迟到8546.904优先系数秒；80箱唯一交付，硬时限、资源冲突和通信中断均为0。逐秒回代和覆盖全部36198.242\,s运输作业时间的连续通信证书均通过。问题四在固定第三问任务与保障关系下枚举分区，两组、三组独立执行分别至少存在2、4项现有库存缺口。本文的运输与中继方案属于已验证的可行启发式解。
+\keywords{山区应急运输\quad 异构无人机\quad 多架次调度\quad 通信中继\quad 连续时间验证}
 \end{abstract}
 
 \pagestyle{plain}
-
-%目录 不推荐加
 \maketoc
-
 \clearpage
+\section{问题重述与数据}
+题目要求解决四个递进任务：单点往返运输能力和货箱组批；允许跨服务区访问时的路线与设备周转；加入山区遮挡及通信中继，保证运输全过程通信；在第三问任务固定时将服务区分为两个或三个独立执行组。基础数据包含调度中心$O_{01}$、15个服务区、80个不可拆货箱、A/B/C三型共8架运输机、2架中继机、共享电池、6个中继能源组件和30\,m DEM~\cite{problem}。时刻均以题目任务起点为零点，电能单位为kWh。
 
-\section{问题重述}
-
-\subsection{引言}   % 问题的背景
-山区洪涝灾害具有突发性强、地形复杂和基础设施易受损等特点。持续强降雨可能引发山洪、滑坡及道路塌方，并进一步造成道路、供电和通信设施同时中断，使部分受灾区域在短时间内难以通过传统地面交通获得物资补给。题目所描述的广西横州市镇龙乡洪涝灾害中，就曾出现断路、断电、断网以及大量群众受困的情况，食品、饮用水、药品及抢修设备需要依靠徒步或空中方式运入灾区。 因此，利用受地面道路条件影响较小的无人机开展应急物资运输，对提高山区灾害救援效率具有重要意义。
-
-然而，山区无人机救援并非简单的物资配送问题。一方面，复杂地形会影响无人机的飞行高度、航程及能源消耗，不同货箱的重量、体积和配送时限也使货箱组批、路径规划、机型选择和电池周转相互制约；另一方面，山体遮挡可能导致运输无人机与固定网关之间通信中断，需要利用中继无人机提供持续通信保障。由此，运输任务、通信保障和有限装备资源之间形成了明显的耦合关系。题目也明确要求同时考虑载荷、地形净空、能源储备、任务时限及通信链路等多种因素。
-
-基于此，本文以题目给出的调度中心、15个服务区、80个不可拆货箱以及运输无人机、中继无人机、共享电池和DEM等数据为基础，围绕单点运输能力、多机多架次调度、运输与通信协同以及任务分区资源配置四个层次展开建模，在保证运输安全、配送时效和通信连续性的前提下，对有限无人机及能源资源进行合理配置，为山区洪涝灾害下的无人机应急救援提供定量化决策依据。
-\subsection{问题的提出}
-
-%\subsubsection{问题的提出内容一}
-
-\noindent 根据题目给定的调度中心、服务区、货箱需求、DEM地形数据、运输与中继无人机参数、电池资源及通信链路参数，需要依次解决以下四个相互递进的问题。
-
-\textbf{问题一：} 单点往返运输能力与货箱组批。针对不同机型在各服务区执行
-$O_{01}\rightarrow S_i\rightarrow O_{01}$
-往返任务的场景，结合DEM地形、载荷和能耗约束，确定各机型的\textbf{最大安全载荷}。在货箱不可拆分的条件下，优化\textbf{货箱组批方案}，并分析返航安全余量变化对运输能力和组批结果的影响。
-
-\textbf{问题二：} 异构无人机多点多架次运输调度。在允许单架次访问多个服务区的条件下，综合考虑载荷、配送时限、无人机数量及共享电池周转等约束，联合优化\textbf{货箱组批、访问顺序、无人机分配和架次时序}，以提高配送及时性并降低任务完成时间、能耗和架次数。
-
-\textbf{问题三：} 通信约束下的运输与中继联合调度。在问题二的基础上引入山区地形遮挡和通信链路约束，当运输无人机与固定网关 $G_{01}$ 无法直连时，通过中继无人机提供通信保障。联合优化\textbf{运输任务与中继无人机的悬停位置、服务时段及能源配置}，保证运输全过程通信连续，并兼顾时效与能耗。
-
-\textbf{问题四：} 救援任务分区与资源配置。在保持问题三运输与通信任务关系不变的条件下，将 $15$ 个服务区分别划分为 $2$ 个和 $3$ 个任务组。比较不同分区方案下的\textbf{资源需求、资源冗余、工作量均衡及库存缺口}，确定更合理的分区与资源配置方案。
-
-\clearpage
-\section{模型的假设}
-
-\begin{enumerate}
-\item 忽略实际加工误差对设计的影响；
-\item 木条与圆桌面之间的交接处缝隙较小，可忽略；
-\item 钢筋强度足够大，不弯曲；
-\item 假设地面平整。
-\end{enumerate}
-
-
-\section{符号说明}
-
-\begin{table}[htp!]
+由DEM像元求每条直飞航段的最高地面高程，再生成候选架次及交付偏移量。问题二的排程成为问题三的初始运输方案；问题四只读取问题三已经确定的任务与保障关系。四问使用同一物理参数回代，计算链条见图~\ref{fig:overall-flow}。
+\begin{figure}[htbp]
 \centering
-\renewcommand\arraystretch{1.2} %定义表格高度
-\newcolumntype{L}{>{\quad}X}
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\newcolumntype{C}{>{\centering \arraybackslash}X}
-\newcolumntype{R}{>{\raggedright \arraybackslash}X}
-\begin{tabularx}{0.9\textwidth}{|P{1cm}|L|}
-  \hline %\toprule
-  符号    &   \quad 意义 \\
-  \hline %\midrule
-  %\rowcolor[gray]{0.90}
-  $ a $  &  符号1的意义    \\
-  \hline
-  $ b $  &  符号2的意义    \\
-  \hline
-  $ c $  &  符号3的意义符号3的意义    \\
-  \hline
-  $ d $  &  符号4的意义    \\
-  \hline
-  $ e $  &  符号5的意义     \\
-  \hline
-  $ f $  &  符号6的意义符号6的意义    \\
-  \hline
-  $ g $  &  符号7的意义     \\
-  \hline
-  $ h $  &  符号8的意义     \\
-  \hline
-  $ i $  &  符号9的意义符号9的意义     \\
-  \hline
+\includegraphics[width=0.94\textwidth]{figures/flow_overall_model.pdf}
+\caption{四个问题从基础数据、运输物理模型到排程、通信验证及分区配置的衔接}
+\label{fig:overall-flow}
+\end{figure}
 
-  $ k $  &  符号10的意义     \\
-  \hline
-  $ l $  &  符号11的意义    \\
-  \hline
-  $ m $  &  符号12的意义    \\
-  \hline
-  $ n $  &  符号13的意义    \\
-  \hline
-  $ p $  &  符号14的意义    \\
-  \hline
-  $ q $  &  符号15的意义    \\
-  \hline %\bottomrule
-\end{tabularx}
-\end{table}
-
-
-%\begin{tabularx}{\textwidth-18pt}{XXX}
-%\hline
-%Input & Output& Action return \\
-%\hline
-%DNF &  simulation & jsp\\
-%\hline
-%\end{tabularx}
-
-
-\section{模型的建立}
-
-\subsection{问题一分析}
-题目要求建立模型描述折叠桌的动态变化图，由于在折叠时用力大小的不同，我们不能描述在某一时刻折叠桌的具体形态，但我们可以用每根木条的角度变化来描述折叠桌的动态变化。首先，我们知道折叠桌前后左右对称，我们可以运用几何知识求出四分之一木条的角度变化。最后，根据初始时刻和最终形态两种状态求出桌腿木条开槽的长度
-
-
-\subsection{算法示例}
-
-数学建模求解算法示例：
-\begin{center}
-\begin{minipage}{0.8\textwidth}
-\begin{algorithm}[H]%[!htp]
-\caption{算法的名字} %算法的名字
-{\bf 输入:} %算法的输入， \hspace*{0.02in}用来控制位置，同时利用 \\ 进行换行
-input parameters A, B, C\\
-{\bf 输出:} %算法的结果输出
-output result
-\begin{algorithmic}[1]
-\State some description 算法介绍 % \State 后写一般语句
-\For{condition} % For 语句，需要和EndFor对应
-  \State ...
-  \If{condition} % If 语句，需要和EndIf对应
-    \State ...
-  \Else
-    \State ...
-  \EndIf
-\EndFor
-\While{condition} % While语句，需要和EndWhile对应
-  \State ...
-\EndWhile
-\State \Return result
-\end{algorithmic}
-\end{algorithm}
-\end{minipage}
-\end{center}
-\vspace{2ex}
-
-\section{表格}
-
-\subsection{表格}
-
-使用 tabular 环境, 如下表格: 表~\ref{tab:foo}. 通过 \verb|autoref| 引用表格: \autoref{tab:foo}.
-
-这里可使用命令 \verb|\tabcolsep| 和 \verb|\arraystretch| 分别控制列间距和行间距.
-
-\begin{table}[htp!]
-\centering
-\setlength{\tabcolsep}{12pt}  % 6pt standard
-\renewcommand{\arraystretch}{1.2}
-\caption{学术活动安排样例}
-\label{tab:foo}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{日期}  & \textbf{地点} & \textbf{活动名称} & \textbf{备注} \\ \hline
-2024年8月1日      & 上海       & 学术研讨会      & 主题：人工智能 \\ \hline
-2024年8月15日    & 北京       & 学术交流会      & 重点：数学建模 \\ \hline
-2024年9月1日      & 深圳       & 研究研讨会      & 主题：数据科学 \\ \hline
-2024年10月15日  & 广州       & 创新论坛         & 重点：科技创新 \\ \hline
-\end{tabular}
-\end{table}
-
-
-\clearpage
-
-三线表
-\begin{table}[htp!]
-\newcolumntype{L}{X}
-\newcolumntype{C}{>{\centering \arraybackslash}X}
-\newcolumntype{R}{>{\raggedright \arraybackslash}X}
-\centering
-\caption{某校学生升高体重样本}
-\label{tab:heightweight}
-\begin{tabularx}{0.9\textwidth}{CCCC}
+\section{统一假设与物理模型}
+\subsection{符号与边界}
+记货箱、候选运输架次、运输机型集合为$\mathcal B,\mathcal P,\mathcal G$。箱$b$的质量、体积、优先系数、期望时刻和硬截止时刻分别为$m_b,v_b,w_b,D_b,H_b$；架次$p$的任务开始（准备开始）时刻、箱$b$的交付偏移和返航时刻为$s_p,\delta_{pb},F_p$。第二、三问反复使用的符号列于表~\ref{tab:symbols-q23}。每箱不可拆且只交付一次，每个运输架次均从$O_{01}$出发并返回。到服务区交接完成后，才扣除对应货箱质量。题面未分别展开水平能耗和爬升能耗，本文以等效航程换算水平电耗，并以重力势能除以效率计入爬升电耗；下降不另计附加电耗。题面未限定单架中继的并发接入数，故按可共享覆盖点处理。
+\begin{table}[htbp]
+\centering\small
+\caption{第二、三问主要符号}
+\label{tab:symbols-q23}
+\begin{tabularx}{0.95\textwidth}{@{}lXl@{}}
 \toprule
-序号 & 年龄 & 身高 & 体重 \\
+符号 & 含义 & 单位\\
 \midrule
-001 & 15 & 156 & 42 \\
-002 & 16 & 158 & 45 \\
-003 & 14 & 162 & 48 \\
-004 & 15 & 163 & 50 \\
-\cmidrule{2-4}
-平均 & 15 & 159.75 & 46.25 \\
+$\mathcal P,\ B_p$ & 候选运输架次集合、候选$p$承运的货箱集合 & ---\\
+$s_p,\ d_p,\ \delta_{pb}$ & 架次准备开始时刻、作业时长、货箱交付偏移 & s\\
+$C_b,\ D_b,\ H_b$ & 交付时刻、期望时刻、硬截止时刻 & s\\
+$E_p,\ \rho_g$ & 运输架次能耗、机型返航电量比例下限 & kWh，1\\
+$N_g^{\rm drone},N_g^{\rm bat}$ & 同型运输机和共享电池库存 & 架，块\\
+$L^{\max}_{a\leftrightarrow b},L_{ab}(t)$ & 双向允许路径损耗、实际路径损耗 & dB\\
+$A_{ab}(t), I_r(t)$ & 链路可用指示量、中继服务指示量 & 0或1\\
+$[\sigma_r,\tau_r]$ & 中继$r$建链后的服务窗口 & s\\
+$E_r^{\rm relay}$ & 一次中继架次的总电耗 & kWh\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-% 某行业产量与生产费用的数据
-% \begin{table}[htp!]
-% \centering
-% \caption{某行业产量与生产费用的数据}%\label{}
-% \newcolumntype{Y}{>{\centering\arraybackslash}X}
-% \newcolumntype{Z}{!{\vline}@{\color{white}\vrule width \doublerulesep}!{\vrule}}%自定义列格式(双线)
-% \begin{tabularx}{0.94\textwidth}{c|c|YZc|c|Y}
-% \Xhline{0.9pt}
-% 企业编号&  产量(台)&生产费用(万元)&企业编号&产量(台)&生产费用(万元)\\\Xcline{1-3}{0.6pt}\Xcline{4-6}{0.6pt}
-% 1 & 40 & 130 & 7&  84&  165\\
-% 2 & 42 & 150 & 8&  100&  170\\
-% 3 & 50 & 155 & 9&  116&  167\\
-% 4 & 55 & 140 & 10&  125&  180\\
-% 5 & 65 & 150 & 11&  130&  175\\
-% 6 & 78 & 154 & 12&  140&  185\\\Xhline{0.72pt}
-% \end{tabularx}
-% \end{table}
+\subsection{航段时间、能耗和充电}
+机型$g$在载重$q$时的等效航程按题给关系计算：
+\begin{equation}
+L_g(q)=L_g(0)-[L_g(0)-L_g(Q_g)](q/Q_g)^{3/2}.
+\end{equation}
+直飞航段$i\to j$的巡航海拔为经过DEM像元的最高地面高程加50\,m。中心作业高度取地面，服务区取地面加30\,m。令$d_{ij}$为水平距离，$h_{ij}^{+},h_{ij}^{-}$为爬升、下降量，则
+\begin{align}
+t_{gij}&=h_{ij}^{+}/v_g^{\uparrow}+d_{ij}/v_g^c+h_{ij}^{-}/v_g^{\downarrow},\\
+e_{gij}(q)&=E_g^{\rm use}d_{ij}/L_g(q)
++9.81(m_g^0+q)h_{ij}^{+}/(3.6\times10^6\eta_g).
+\end{align}
+$E_g^{\rm use}$为额定可用电能，$m_g^0$为空机质量，$\eta_g$为爬升效率。各航段电耗求和为$E_p$，须满足$E_p\le(1-\rho_g)E_g^{\rm use}$，并满足机型载重、体积上限。架次还计入准备、逐箱装载与服务区卸载。箱$b$在交接结束时送达，故$C_b=s_p+\delta_{pb}$。
 
-研究生数学建模2019年F题结果示例
-\begin{table}[htp!]
-\centering
-\caption{问题1结果1 (左) 与 问题2结果 (右)}
-\begin{minipage}[h]{0.48\linewidth}
-\renewcommand\arraystretch{1.2} %定义表格高度
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\begin{tabularx}{0.9\textwidth}{|Y|Y|Y|}
-  \hline
-  数据集1  &  数据集1 & 数据集2  \\
- \hline
-  A问题1   & A问题1 &  A问题1     \\
-  \hline
-  503   &  503     & 163     \\
-  294   &  200     & 114      \\
-  91    &  80      & 8     \\
-  607   &  237     & 309      \\
-  540   &  170     & 305    \\
-  250   &  278     & 123    \\
-  340   &  369     & 45      \\
-  277   &  214     & 160    \\
-  B     &  397     & 92    \\
-        &  B       & 93    \\
-        &          & 61        \\
-        &          & 292       \\
-        &          & B         \\
-104861  & 103518   & 109342 \\
-\hline
-\end{tabularx}
-\end{minipage}
-\begin{minipage}[h]{0.48\linewidth}
-\renewcommand\arraystretch{1.2} %定义表格高度
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\begin{tabularx}{0.9\textwidth}{|Y|Y|Y|}
-  \hline
-  数据集1  &  数据集1 & 数据集2  \\
-  \hline
-  A问题2  &  A问题2  & A问题2    \\
-  \hline
-   503    & 503     & 163  \\
-  294    & 200     & 114   \\
-   91     & 80     & 8   \\
-   607    & 237     & 309   \\
-   540    & 170    & 305  \\
-   250    & 278    & 123  \\
-   340    & 369     & 45   \\
-   277    & 214    & 160  \\
-  B      & 397   & 92 \\
-        &  B     &  93      \\
-         &         &  61      \\
-        &         &   292     \\
-        &         &   B     \\
- 104917  &  103563  &109427 \\
-\hline
-\end{tabularx}
-\end{minipage}
+返航电量比例$u_p=1-E_p/E_g^{\rm use}$。若$T_g^{\rm full}$为题给完全充电时间，则
+\begin{equation}
+T_g^{\rm chg}(u)=
+\begin{cases}
+T_g^{\rm full}[0.65(0.90-u)/0.90+0.35],&u<0.90,\\
+0.35T_g^{\rm full}(1-u)/0.10,&u\geq0.90.
+\end{cases}
+\label{eq:charge}
+\end{equation}
+同一实体机在返航前、同一共享电池在充满前均不能再次投入任务。
+
+\section{问题一：单点安全载荷与组批}
+对于机型$g$和服务区$a$，单点往返安全载荷为
+\begin{equation}
+q_{ga}^{\max}=\max\{0\leq q\leq Q_g:
+e_{g,O_{01}a}(q)+e_{g,aO_{01}}(0)\leq(1-\rho_g)E_g^{\rm use}\}.
+\end{equation}
+能耗随载荷单调不减，故在额定载荷不可行时二分求阈值。再按各区物资类别箱数向量$s$枚举满足质量、体积和能量约束的批次$k$及机型$g$，令
+\begin{equation}
+\mathbf F_a(s)=\mathop{\mathrm{lexmin}}_{g,\;0<k\leq s}
+\{\mathbf F_a(s-k)+(1,e_a(g,k),t_a(g,k))\},
+\end{equation}
+依次比较架次数、总电耗、累计作业时间。逐区回溯后得到18架次，总能耗为59.131\,kWh，累计作业时间为32776.016\,s。逐箱回代无违规。在给定数据下，把返航余量提高至30\%使最少架次增至20；提高至40\%时现有机型不能完成全部货箱。
+
+\section{问题二的建模与求解}
+\subsection{问题二分析}
+问题一把各服务区分开组批，因而未涉及实体无人机和电池在时间上的竞争。问题二允许同一架次访问多个服务区；一条路线的箱数、访问顺序和机型一经改变，沿途载荷、送达时刻及返航电量都会随之变化。即使若干架次分别满足航程约束，同时起飞也可能超过同型运输机或共享电池的库存。因此，本问须同时决定“哪些架次执行”和“何时由哪套设备执行”。
+
+本文把单架次的空间与物理计算放在候选路线预处理中，把货箱覆盖、时限和资源周转放在整数排程中处理。前者保留多点访问的可能性，后者使运输机与电池的占用时段能够统一比较。图~\ref{fig:q2-resources}展示最终方案的两类资源时间轴；其中浅色区间是电池返航后充电及保守预留时间，不能作为下一架次的可用时间。
+
+\subsection{基本约定与候选架次构造}
+记$\mathcal B$为80个不可拆货箱集合，$\mathcal P$为预处理得到的候选运输架次。一个候选$p$包含货箱集合$B_p$、机型$g_p$和有序服务区序列$(a_1,\ldots,a_k)$，其路径为$O_{01}\to a_1\to\cdots\to a_k\to O_{01}$。同一服务区的货箱在一次停靠中交接；每个架次从满电池出发，到中心返航后才可更换或复用资源。货箱交付时刻取对应服务区卸载和交接结束时刻。
+
+\subsubsection{逐航段载荷、时间和能源}
+设$p$在航段$j$开始前尚未交付的货箱质量为$q_{pj}$，则$q_{p1}=\sum_{b\in B_p}m_b$，每到达一个服务区后扣除该区本架次交付的货箱质量。由统一航段模型计算
+\begin{equation}
+d_p=t^{\rm prep}_{g_p}+|B_p|t^{\rm load}_{g_p}
+ \;+\sum_{j\in p}t_{g_p,j}
+ \;+\sum_{a\in p}\bigl(t^{\rm service}_{g_p}+|B_p\cap B_a|t^{\rm unload}_{g_p}\bigr),
+\qquad E_p=\sum_{j\in p}e_{g_p,j}(q_{pj}).
+\label{eq:q2-route-physics}
+\end{equation}
+交付偏移$\delta_{pb}$按同一时间线累计到箱$b$完成交接为止。候选只有在起飞质量、体积、逐段航迹和$E_p\le(1-\rho_{g_p})E_{g_p}^{\rm use}$均成立时才保留；即使立即开始准备也无法满足硬时限的候选同样剔除。这样做比对整条路线只使用一个平均载荷更准确，特别是跨区架次在首站卸货后的后续航段。
+
+候选池先纳入问题一的单区组批、单箱和同区双箱方案，再用固定随机种子的受限组批构造更多组合，至多访问三个服务区，并对同一货箱组合尝试其他可行机型。相同“机型—货箱集合—访问顺序”去重后，排程器面对3988条有限候选路线。这个规模是计算设计，不代表全部可能路线均已穷举。
+
+\subsection{货箱覆盖、时限与共享资源模型}
+\subsubsection{一次交付和时限}
+令$x_p\in\{0,1\}$表示是否执行候选$p$，$s_p\in\mathbb Z_{\geq0}$为其准备开始时刻。任何货箱恰由一条选中路线交付：
+\begin{equation}
+\sum_{p:\,b\in B_p}x_p=1,\qquad b\in\mathcal B.
+\label{eq:q2-cover}
+\end{equation}
+箱$b$在被选中的架次$p$中完成交接的实际时刻为$C_b=s_p+\delta_{pb}$。对具有硬截止时刻$H_b$的首批保障箱及医疗箱施加$C_b\le H_b$；题给期望时刻$D_b$用于衡量迟到，令$T_b=\max\{0,C_b-D_b\}$。当同一箱同时受到首批保障和医疗时限约束时，取较早的硬截止时刻。未设置硬截止的箱可以迟于$D_b$，但会付出加权迟到代价。
+
+\subsubsection{运输机与共享电池的双区间占用}
+记机型$g$现有运输机数和电池数为$N_g^{\rm drone},N_g^{\rm bat}$，本题分别为A型$4/6$、B型$2/4$、C型$2/4$。运输机占用到实际返航，电池则还须经历式~\eqref{eq:charge}给出的分段充电。为在整数秒排程中保守处理非整数时长，定义
+\begin{equation}
+\widehat d_p=\lceil d_p\rceil,\qquad
+\widehat b_p=\left\lceil d_p+T_{g_p}^{\rm chg}
+\left(1-\frac{E_p}{E_{g_p}^{\rm use}}\right)\right\rceil.
+\label{eq:q2-reserved-length}
+\end{equation}
+选择架次$p$时，运输机占用$[s_p,s_p+\widehat d_p)$，电池占用$[s_p,s_p+\widehat b_p)$。对每种机型和任意时刻$t$，两类并发数分别不得超过其库存：
+\begin{align}
+\sum_{p:g_p=g}x_p\mathbf 1_{[s_p,s_p+\widehat d_p)}(t)
+&\le N_g^{\rm drone},\\
+\sum_{p:g_p=g}x_p\mathbf 1_{[s_p,s_p+\widehat b_p)}(t)
+&\le N_g^{\rm bat}.
+\label{eq:q2-cumulative}
+\end{align}
+整数模型中两组区间分别用可选区间与累积容量约束表达。求解后再按区间不重叠原则把任务匹配至具体机号、电池号，并以未取整的物理时刻复核。此时表~\ref{tab:q2-result}中的完工时间按实际返航计算，与整数目标中的向上取整完工值略有差别。
+
+\subsection{优化目标与求解方法}
+\subsubsection{整数化加权目标}
+本问同时关心送达及时性、最后返航时间、能耗和架次数。为使求解器能够直接比较不同候选路线，采用代码中\texttt{balanced}配置的单一整数目标。设$\widehat C_b=s_p+\lceil\delta_{pb}\rceil$、$\widehat T_b=\max(0,\widehat C_b-D_b)$，并令$\widehat M=\max_{p:x_p=1}(s_p+\widehat d_p)$，则
+\begin{equation}
+\min\;100\widehat M
++\sum_{b\in\mathcal B}w_b\bigl(\widehat C_b+100\widehat T_b\bigr)
++\sum_{p\in\mathcal P}x_p\left[10\,\operatorname{round}(1000E_p)+10000\right].
+\label{eq:q2-objective}
+\end{equation}
+这里$w_b$是题给优先系数。式~\eqref{eq:q2-objective}是加权和，并非严格字典序；报告“迟到为零”是求得排程的事实，不应理解为目标函数强制零迟到。能耗项以Wh取整，所有系数均为本次计算采用的权重，不把它们解释成真实货币成本。
+
+\subsubsection{候选池求解与固定路线重排}
+CP-SAT先在有限候选池内联合选择路线和任务开始时刻，原始排程目标值为4290638。随后固定24条选中路线和货箱分配，只重排整数秒开始时刻及两类容量资源。新目标值为4281382，较原排程减少9256（约0.216\%）。此固定路线子问题的求解状态为\texttt{OPTIMAL}，目标值与下界同为4281382。
+
+为考察更换组批和访问顺序的可能改进，还进行了20轮大邻域重建：每轮移出5--9条当前路线，补入相关替代路线和部分成对合并路线，给CP-SAT 8\,s搜索时间，随机种子为20260923。20轮均未接受更优解；因此，本次已实现的目标值改善来自前述\emph{固定路线重排}，不能归因于大邻域搜索。“固定路线最优”也仅针对这24条路线、整数秒开始时刻和给定资源模型，不证明3988条候选池或全部可行路线上的全局最优。
+
+\subsection{计算结果与分析}
+\subsubsection{运输任务与机型分工}
+表~\ref{tab:q2-result}给出正式方案。24个架次交付80箱，A、B、C型分别执行10、8、6架次；其中C型6架次承运39箱，体现大载重机型的组批能力。仅两条架次访问两个服务区：\texttt{Q2-009}沿$S009\to S012$运行，\texttt{Q2-020}沿$S011\to S014$运行。跨区比例较小，说明在给定地形、时限和能源条件下，多点访问并非对每批货箱都合算。
+
+\begin{table}[htbp]
+\centering\small
+\caption{问题二正式运输方案的汇总结果}
+\label{tab:q2-result}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+指标 & A型 & B型 & C型\\
+\midrule
+运输架次 & 10 & 8 & 6\\
+交付货箱数 & 20 & 21 & 39\\
+运输能耗/kWh & 27.125 & 17.716 & 24.740\\
+\midrule
+\multicolumn{3}{@{}l}{全部货箱/全部架次} & 80 / 24\\
+\multicolumn{3}{@{}l}{加权迟到/迟到箱数} & 0 / 0\\
+\multicolumn{3}{@{}l}{运输返航完工时间/s} & 6997.523\\
+\multicolumn{3}{@{}l}{总运输能耗/kWh} & 69.580\\
+\multicolumn{3}{@{}l}{最小返航电量比例} & 23.088\%\\
+\multicolumn{3}{@{}l}{最小硬时限剩余时间/s} & 220.525\\
+\bottomrule
+\end{tabular}
 \end{table}
 
-\clearpage
-\begin{table}[htp!]
-%\small
+图~\ref{fig:q2-resources}按具体机号和电池号绘制排程。前8个架次在任务起点同时开始准备，之后的任务由已返航运输机及可用电池接续执行。若只看运输机的空闲而忽略下方浅色充电区间，就会高估可同时出动的能力；本图也给出了同型电池在不同实体机之间周转的实际安排。
+\begin{figure}[htbp]
 \centering
-\renewcommand\arraystretch{1.2} %定义表格高度
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\caption{问题3结果}
-\begin{tabularx}{0.9\textwidth}{|Y|Y|Y|Y|Y|Y|}
-  \hline %定义表格宽度
-  数据集1  &  数据集1  &  \multicolumn{2}{c|}{数据集2 (无问题点)}  & \multicolumn{2}{c|}{数据集2 (有问题点)} \\
-  \hline
-  A问题3   & A问题3   &  \multicolumn{2}{c|}{A问题3}    &  \multicolumn{2}{c|}{A问题3}      \\
-  \hline
-  503      & 503     & 169      & 73      & 169     & 73   \\
-  \hline
-  69       & 69      & 322      & 249     & 322     & 249   \\
-  \hline
-  506      & 506      & 270     & 274     & 270     & 274   \\
-  \hline
-  371      & 371      & 89      & 12      & 89      & 12   \\
-  \hline
-  183      & 183      & 236     & 216     & 236     & 216  \\
-  \hline
-  194      & 194      & 132     & 16      & 132     & 16   \\
-  \hline
-  450      & 450      & 53      & 282     & 53      & 282   \\
-  \hline
-  286      & 113      & 112     & 84      & 112     & 141  \\
-  \hline
-  485      & 485      &  268    & 287     & 268     & 291 \\
-  \hline
- \red{B (9D)}~~     & 248      & 250     & 99      & 250     &161 \\
- \hline
-   & \red{B (10D)}   & 243     & \red{B (21D)}   & 243    & \red{B (21D)} \\
-   \hline
-    &          &         &         &         &       \\
-    \hline
-  104861m  & 103518m  &         & 168924m  &         &161650m \\
-\hline
-\end{tabularx}
-\end{table}
+\includegraphics[width=0.96\textwidth]{figures/result_q2_resources.pdf}
+\caption{问题二正式方案的运输机与共享电池占用时间轴；浅色部分为返航后的电池充电和保守预留区间}
+\label{fig:q2-resources}
+\end{figure}
 
+\subsubsection{送达时效与安全余量}
+80箱均在期望时刻前交付，加权迟到为零；按优先系数加权的平均交付时刻为2766.981\,s。具有硬截止时刻的货箱在图~\ref{fig:q2-slack}中均位于零线右侧。最紧的是饮用水箱\texttt{S012-\allowbreak{}WAT-01}，仍提前220.525\,s。若临时延迟相关架次，应首先复查此箱的硬时限。所有架次最小返航电量比例为23.088\%。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.86\textwidth]{figures/result_q2_hard_deadline_margin.pdf}
+\caption{问题二各服务区有限硬时限货箱的送达余量；圈示最紧的\texttt{S012-WAT-01}}
+\label{fig:q2-slack}
+\end{figure}
 
-\clearpage
+\subsection{正确性与最优性范围检验}
+由正式逐箱交付表检查，80个货箱各出现一次且无重复、漏投；由逐航段记录重新累加航时与能耗，并核对质量、体积及返航电量；由具体机号和电池号检查任务区间、充电区间不重叠。逐箱硬时限违反数和资源冲突数均为零。固定路线CP-SAT证书给出目标值与下界相等，证明的是这组路线的整数秒排程最优；整数时间模型采用向上取整的资源区间，正式物理结果再以连续实数时刻回代。候选池有限且大邻域搜索未取得新解，故完整第二问仍作为已验证可行方案报告。第三问将在此运输方案的基础上加入连续通信约束，并允许为保障通信重新安排部分运输时刻。
+
+\section{问题三的建模与求解}
 \subsection{问题三分析}
+问题二的24架次排程满足运输与电池周转约束，却没有检查飞行过程中能否持续与固定网关$G_{01}$通信。山区遮挡使“起飞点、服务区两端可连通”不能推出整条航迹可连通；中继又占用两架中继机和六个能源组件，其建链、悬停及充电会反过来限制运输任务开始时刻。本问因而在已有货箱分配的基础上联动调整运输时序、中继位置和服务窗口，要求每一条运输轨迹的全部需通信时段都存在有效双向链路。
 
-题目要求制作软件的意思就是客户给定折叠桌高度、桌面边缘线的形状大小和桌脚边缘线的大致形状，将这些信息输入程序就得到客户想要的桌子。我们在求解最优设计加工参数时，自行给定桌面边缘线形状（椭圆、相交圆等），桌脚边缘线形状，折叠桌高度，应用第二问的非线性规划模型，用MATLAB软件绘制折叠桌截面图，得到自己设计的创意平板折叠桌。
+初始第二问排程的直连失效比例在不同架次间差异明显，见图~\ref{fig:q3-direct-gap}。图中比例是预计算网格上的诊断量，并非最终连续通信证明。中继位置若只为一个架次选择，可能产生大量短窗口；若能覆盖多条轨迹，就有机会减少中继起降和组件占用。因此，求解中把覆盖能力与任务时序同时考虑。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{figures/raw_q3_q2_direct_outages.pdf}
+\caption{问题二初始运输架次的网格化直连失效比例；通信约束尚未施加}
+\label{fig:q3-direct-gap}
+\end{figure}
 
+\subsection{通信链路与连续覆盖模型}
+\subsubsection{双向链路预算}
+对端点$a,b$，由发射功率、收发增益、系统损耗和接收灵敏度计算两个方向的允许路径损耗，并取较小值作为双向门槛。若题给8\,dB通信裕量已计入接收门槛$P_{{\rm th},a}$、$P_{{\rm th},b}$，则
+\begin{equation}
+L^{\max}_{a\leftrightarrow b}
+=\min\!\left\{
+P_a+G_a^t+G_b^r-L_{\rm sys}-P_{{\rm th},b},\;
+P_b+G_b^t+G_a^r-L_{\rm sys}-P_{{\rm th},a}
+\right\}.
+\label{eq:q3-budget}
+\end{equation}
+式中发射功率与接收门槛以dBm计，天线增益以dBi计，系统损耗与路径损耗以dB计。给定时刻$t$两端点三维距离$D_{ab}(t)$（km）、工作频率$f$（MHz），用DEM判定视线是否被地形遮挡，记遮挡指示量为$z_{ab}(t)$，则
+\begin{equation}
+L_{ab}(t)=32.45+20\log_{10}f+20\log_{10}D_{ab}(t)
++L_{\rm obs}z_{ab}(t),\qquad
+A_{ab}(t)=\mathbf1\!\left\{L_{ab}(t)\le L^{\max}_{a\leftrightarrow b}\right\}.
+\label{eq:q3-link}
+\end{equation}
+这里$L_{\rm obs}$是题给遮挡附加损耗。运输机位置按准备后爬升、水平巡航、下降和服务区交接阶段分段计算，而非把整条路线视为一根静态直线。
 
-\section{模型评价}
+\subsubsection{直连或单中继两跳保障}
+记运输机$p$的通信需求时间集合为$\mathcal T_p$。若中继任务$r$已完成建链并处于悬停服务窗口，令$I_r(t)=1$；否则为0。对所有$p$及$t\in\mathcal T_p$，要求
+\begin{equation}
+A_{pG}(t)=1
+\quad\text{或}\quad
+\exists r:\ I_r(t)A_{pr}(t)A_{rG}(t)=1.
+\label{eq:q3-cover}
+\end{equation}
+因此，两跳链路必须在\emph{同一时刻}同时成立，不能分别用不同时刻的可达性代替。模型只使用固定网关直连或“运输机—中继—网关”两跳，不引入多中继转发。题目没有给出单架中继的并发接入上限；在这一数据边界下，同一中继服务窗可同时保障多架运输机。
 
-这里是模型评价
+\subsection{中继任务与能源资源模型}
+\subsubsection{候选悬停点与预筛}
+候选点以服务区、中心至服务区航线上的四分点和中点及服务区附近点为基础，并在部分位置枚举不同离地高度。每个位置均由DEM取得地面高程，悬停高度不超过题给上限。候选点需同时满足中继至网关的双向回传链路、往返飞行能量和返航余量。对每条运输轨迹上的直连缺口，预计算可由哪些候选点接入；图~\ref{fig:q3-sites}列出覆盖初始失联采样较多的一组候选点，说明位置选择直接影响后续可合并的服务窗口数量。该图用于筛选和解释搜索，不作为最终连续可行性的证据。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{figures/process_q3_candidate_coverage.pdf}
+\caption{候选中继点对初始运输轨迹直连失效采样点的覆盖数量；每个候选点独立统计}
+\label{fig:q3-sites}
+\end{figure}
 
+\subsubsection{一次中继架次的时间与电量}
+一条中继架次从$O_{01}$起飞，经历准备、往程、建链、悬停服务、返程和周转。设候选点为$k_r$，建链后服务窗口为$[\sigma_r,\tau_r]$，则其电耗写为
+\begin{equation}
+E_r^{\rm relay}=E_r^{\rm flight}
++\frac{P_{\rm hover}+P_{\rm comm}}{3600}
+\bigl(T_{\rm link}+\tau_r-\sigma_r\bigr).
+\label{eq:q3-relay-energy}
+\end{equation}
+$E_r^{\rm flight}$由往返水平飞行功率和爬升势能共同计算；$P_{\rm hover},P_{\rm comm}$以kW计，式中时间以s计，因此除以3600后得到kWh。服务项含建链时间，避免漏计建链期间的悬停与通信耗电。中继电池返航后须保有规定比例电量。两架实体中继机的任务区间加上周转时间不得重叠；六个能源组件在其所执行任务返航并完成分段充电前不得复用。可行候选服务窗还须覆盖需要它的运输机失联时段，并在窗口两端留出预设时间缓冲。
 
-%参考文献   手工录入
-%\begin{thebibliography}{9}%宽度9
-% \bibitem{bib:one} ....
-% \bibitem{bib:two} ....
-%\end{thebibliography}
+\subsection{联合求解与时间细化}
+\subsubsection{搜索状态与排序}
+以问题二的24条架次和原有货箱分配为输入。为使先投送硬时限更紧的饮用水箱，跨区架次\texttt{Q2-009}的访问顺序由$S009\to S012$调整为$S012\to S009$，并重新计算逐段载荷、航时、能耗、交付偏移和电池就绪时刻。除此之外，本次搜索保留选中的运输路线集合，主要调整其任务先后顺序与开始时刻。
 
-%采用bibtex方案
-\cite{mittelbach_latex_2004,wright_latex3_2009,beeton_unicode_2008,vieth_experiences_2009}
+先用10\,s网格标记各运输轨迹的网关直连缺口以及各候选中继点的两跳可覆盖关系。搜索状态记录：已排运输架次、未排架次、具体运输机及电池就绪时刻、已启用中继任务、两架中继机及六个组件的就绪时刻。扩展一个运输架次时，尝试直接连通、复用或延长已有中继窗，以及新建中继任务；同时检查硬时限、能源和资源可行性。对未来紧急架次的最早可能迟到构造排序下界，并把可用候选点稀少的任务提前考虑；每层最多保留160个多样化状态。该有限宽度束搜索寻求可行的高质量方案，不给出全局最优界。
 
-\bibliographystyle{gmcm}
-\bibliography{reference}
+完整候选随后用原始DEM和精确视线判定逐秒复查，并按“加权迟到、联合完工时间、总能耗、总架次数”的顺序比较已验证方案。束搜索中间方案使用9个中继架次，但出现13箱迟到、加权迟到499378.079。进一步针对本实例的9个具体运输架次进行局部开始时刻调整，延长首个中继窗并重设最后一个中继任务，得到5个中继架次的正式方案；这一步是对已知实例的时间窗口细化，并非通用自动优化器。调整后的运输与中继任务全部重新接受物理、时限、资源及通信检验。
 
+\subsubsection{连续时间通信证书}
+逐秒检查只覆盖采样时刻，不能排除两采样点之间的短暂掉线。为消除这一缺口，按运输轨迹的运动阶段端点、中继服务窗端点及需要时的递归二分点划分时间。每个小区间内运输机位置是时间的仿射函数；对固定网关或悬停中继，整段视线的空间扫掠区域可用端点构成的三角形界定。将该区域与DEM像元逐一求交，保守确定整段是否有遮挡；同时对区间内最大三维距离取上界，代入式~\eqref{eq:q3-link}得到链路裕量下界。若直连不能在整段得到证明，再检查是否有同一中继两段链路均可整段证明；仍未决时继续二分。
 
-\clearpage
-%附录
-\begin{appendices}
-%\setcounter{page}{1} %如果需要可以自行重置页码。
-\section{MATLAB 源程序}
-\renewcommand{\thesubsection}{A\thinskip.\thinskip\arabic{subsection}}
-\subsection{第1问程序}
-\vspace{-2ex}
+正式证书把全部36198.242\,s运输通信需求划为1317个已证区间，未决区间为零。证明方法中，966个区间使用遮挡最坏情形的损耗界，351个区间采用DEM扫掠净空判定，合计检查194870个DEM像元。图~\ref{fig:q3-cert}展示两类区间的数量。证书的最小保守链路裕量下界仅0.008976\,dB；它证明的是题给DEM、分段仿射轨迹和既定链路预算下的连续可行性，不代表存在足够的实地环境扰动余量。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.73\textwidth]{figures/process_q3_certificate_methods.pdf}
+\caption{连续通信证书中两种区间证明方法的使用次数}
+\label{fig:q3-cert}
+\end{figure}
 
-\begin{Matlab}{code.m}
-clear all
-kk=2;
-[mdd,ndd]=size(dd);
-while ~isempty(V)
-    [tmpd,j]=min(W(i,V));
-    tmpj=V(j);
-    for k=2:ndd
-        [tmp1,jj]=min(dd(1,k)+W(dd(2,k),V));
-        tmp2=V(jj);
-        tt(k-1,:)=[tmp1,tmp2,jj];
-    end
-    tmp=[tmpd,tmpj,j;tt];
-    [tmp3,tmp4]=min(tmp(:,1));
-    if tmp3==tmpd,
-        ss(1:2,kk)=[i;tmp(tmp4,2)];
-    else
-        tmp5=find(ss(:,tmp4)~=0);
-        tmp6=length(tmp5);
-        if dd(2,tmp4)==ss(tmp6,tmp4)
-            ss(1:tmp6+1,kk)=[ss(tmp5,tmp4);tmp(tmp4,2)];
-        else, ss(1:3,kk)=[i;dd(2,tmp4);tmp(tmp4,2)];
-        end
-    end
-    dd=[dd,[tmp3;tmp(tmp4,2)]];
-    V(tmp(tmp4,3))=[];
-    [mdd,ndd]=size(dd);kk=kk+1;
-end;
-S=ss; D=dd(1,:);
-\end{Matlab}
-\vspace{2ex}
+\subsection{联合调度结果与分析}
+\subsubsection{中间方案与正式方案}
+表~\ref{tab:q3-result}把问题二运输基线、束搜索中间解和最终验证方案并列。第二问没有通信约束，因此其零迟到只能作为运输基线，不是第三问的可行目标值。正式方案仍用24个运输架次交付全部80箱，额外执行5个中继架次；联合完工时间8772.339\,s，以最后完成的运输或中继返航为准。总能耗73.835\,kWh，其中中继任务消耗4.215\,kWh。
+\begin{table}[htbp]
+\centering\small
+\caption{问题二基线与问题三搜索结果比较}
+\label{tab:q3-result}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+指标 & 问题二基线 & 束搜索中间解 & 正式验证方案\\
+\midrule
+运输架次 & 24 & 24 & 24\\
+中继架次 & 0 & 9 & 5\\
+迟到箱数 & 0 & 13 & 1\\
+加权迟到/优先系数$\cdot$s & 0 & 499378.079 & 8546.904\\
+联合完工时间/s & 6997.523 & 13262.942 & 8772.339\\
+运输能耗/kWh & 69.580 & --- & 69.621\\
+中继能耗/kWh & --- & --- & 4.215\\
+总能耗/kWh & 69.580 & 75.309 & 73.835\\
+硬时限违反/通信中断 & 未检通信 & 0 / 0 & 0 / 0\\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\clearpage
-\section{Python 源程序}
-\renewcommand{\thesubsection}{B\thinskip.\thinskip\arabic{subsection}}
-\subsection{第2问程序}
-\vspace{-2ex}
-\begin{Python}{mip1.py}
-# This example formulates and solves the following simple MIP model:
-#  maximize
-#        x +   y + 2 z
-#  subject to
-#        x + 2 y + 3 z <= 4
-#        x +   y       >= 1
-#        x, y, z binary
+图~\ref{fig:q3-timeline}显示两类任务相互穿插：首个中继窗在较长时间内保持服务，其他四次中继集中补齐特定时段的直连缺口。表~\ref{tab:q3-relay}给出具体中继机、组件、位置和建链后的服务窗口；例如\texttt{R02}先后执行4次任务，但相邻任务的返航、周转和组件就绪要求仍逐项满足。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/result_q3_joint_timeline.pdf}
+\caption{第三问运输与中继任务的联合时间安排；$T1$--$T24$为运输架次，$R1$--$R5$为中继架次}
+\label{fig:q3-timeline}
+\end{figure}
+\begin{table}[htbp]
+\centering\small
+\caption{第三问五个中继架次的建链后服务窗口}
+\label{tab:q3-relay}
+\begin{tabular}{@{}llllrr@{}}
+\toprule
+架次 & 中继机 & 组件 & 悬停点 & 开始/s & 结束/s\\
+\midrule
+1 & R01 & RE01 & LS015-0.75 & 827.593 & 7169.953\\
+2 & R02 & RE02 & S010-H50 & 732.084 & 1484.108\\
+3 & R02 & RE03 & NS013 & 2887.432 & 3786.714\\
+4 & R02 & RE02 & LS004-0.75 & 5305.070 & 6143.617\\
+5 & R02 & RE04 & S010-H50 & 7623.693 & 8266.037\\
+\bottomrule
+\end{tabular}
+\end{table}
 
-# import gurobipy as gp
-from gurobipy import * #GRB
-try:
-    # Create a new model
-    m = Model("mip1")
-    # Create variables
-    x = m.addVar(vtype=GRB.BINARY, name="x")
-    y = m.addVar(vtype=GRB.BINARY, name="y")
-    z = m.addVar(vtype=GRB.BINARY, name="z")
-    # Set objective
-    m.setObjective(x + y + 2 * z, GRB.MAXIMIZE)
-    # Add constraint: x + 2 y + 3 z <= 4
-    m.addConstr(x + 2 * y + 3 * z <= 4, "c0")
-    # Add constraint: x + y >= 1
-    m.addConstr(x + y >= 1, "c1")
-    # Optimize model
-    m.optimize()
-    for v in m.getVars():
-        print('%s %g' % (v.varName, v.x))
-    print('Obj: %g' % m.objVal)
+\subsubsection{交付代价与通信保障}
+逐箱结果如图~\ref{fig:q3-box}。80箱均唯一交付。仅食品箱\texttt{S014-\allowbreak{}FOD-01}晚于期望时刻854.690\,s；其优先系数为10，形成8546.904优先系数秒的加权迟到，但不违反硬时限。其余箱均不晚于期望时刻送达。为等待中继建链或复用已有服务窗，联合方案调整了运输时序，因而与问题二的零迟到基线不同。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.84\textwidth]{figures/result_q3_box_delivery.pdf}
+\caption{问题三80箱的实际与期望交付时刻；虚线表示两者相等}
+\label{fig:q3-box}
+\end{figure}
 
-except GurobiError as e:
-    print('Error code ' + str(e.errno) + ': ' + str(e))
+正式逐秒记录包含36400个运输机采样时刻，其中21717个由网关直连，14683个由中继保障，未出现无链路的采样点。连续证书进一步覆盖这些采样点之间的全部36198.242\,s需求时间，未决区间为零；逐架次返航余量、硬时限、运输机及电池、中继机及能源组件均通过回代。需要强调的是，束宽、候选点位置和时间细化均限制了搜索空间，正式方案是经严格验证的可行启发式解；最小保守链路裕量较小，若实际DEM、定位或传播损耗偏离输入，应重新计算中继位置和服务窗口。
 
-except AttributeError:
-    print('Encountered an attribute error')
-\end{Python}
+\section{问题四：固定任务分区}
+若两服务区出现在同一运输架次，或由同一已确定中继架次实际保障，则在任务图连边。利用问题三连续证书中的实际保障关系，可得三个不可拆连通块：$\{S001\}$、$\{S006\}$以及其余13个服务区。分区不得拆分、复制或重排问题三任务。对两个、三个非空无标号组枚举划分，按固定任务占用区间最大并发数配置各组运输机、同型电池、中继机与组件；资源组间不可借用，组内同型设备可重新编号。
 
-\end{appendices}
+两个独立组时，现有库存至少缺少1架C型运输机和1块C型电池，共2项；三个独立组时各缺少2，共4项。该结果仅是固定第三问任务及共享中继绑定规则下的配置需求，不是允许重新规划第三问后的理论下界。
 
+\section{模型评价与结果复现}
+模型能从正式排程逐箱、逐架次回代唯一交付、硬时限、载重、地形能耗、返航余量和资源占用。问题二固定路线整数排程具有CP-SAT最优证书，问题三有连续时间通信证书，因而比仅做离散采样的可行性声明更强。问题一动态规划限于单点组批结构；问题二候选路线有限；问题三候选站点、搜索宽度有限，且最终包含本实例时间细化，因此不宣称四问联合全局最优。通信证书最小裕量较小，实际部署仍需考虑定位与高程误差、天气和未建模干扰。
 
+本文数值以附带结果目录中的第二问汇总文件、第三问正式排程及连续通信证书为准；逐箱、逐架次CSV也随项目提供。问题三求解代码和束搜索中间解可用于复算表~\ref{tab:q3-result}。
+\begin{thebibliography}{9}
+\bibitem{problem} 赛题组．山区洪涝灾害下无人机运输与通信协同优化：题目说明、附录及配套数据，2026．
+\end{thebibliography}
 \end{document}

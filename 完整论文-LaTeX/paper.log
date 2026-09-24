@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.9.23)  23 SEP 2026 12:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.9.23)  24 SEP 2026 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**./paper.tex
-(paper.tex
+**c:/Users/xwz/Desktop/华为杯数学建模/2026/中文题目/D题/完整论文-LaTeX/paper.tex
+(c:/Users/xwz/Desktop/华为杯数学建模/2026/中文题目/D题/完整论文-LaTeX/paper.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (gmcmthesis.cls
@@ -1267,530 +1267,68 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@ppsavesec=\count391
 \c@@ppsaveapp=\count392
 ))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
-Package: mdframed 2013/07/01 1.9b: mdframed
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
-Package: zref-abspage 2026-03-07 v2.37 Module abspage for zref (HO)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
-Package: zref-base 2026-03-07 v2.37 Module base for zref (HO)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-Package zref Info: New property list: main on input line 767.
-Package zref Info: New property: default on input line 768.
-Package zref Info: New property: page on input line 769.
-)
-\c@abspage=\count393
-Package zref Info: New property: abspage on input line 67.
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
-Package: needspace 2025/03/13 v1.3e reserve vertical space
-)
-\mdf@templength=\skip114
-\c@mdf@globalstyle@cnt=\count394
-\mdf@skipabove@length=\skip115
-\mdf@skipbelow@length=\skip116
-\mdf@leftmargin@length=\skip117
-\mdf@rightmargin@length=\skip118
-\mdf@innerleftmargin@length=\skip119
-\mdf@innerrightmargin@length=\skip120
-\mdf@innertopmargin@length=\skip121
-\mdf@innerbottommargin@length=\skip122
-\mdf@splittopskip@length=\skip123
-\mdf@splitbottomskip@length=\skip124
-\mdf@outermargin@length=\skip125
-\mdf@innermargin@length=\skip126
-\mdf@linewidth@length=\skip127
-\mdf@innerlinewidth@length=\skip128
-\mdf@middlelinewidth@length=\skip129
-\mdf@outerlinewidth@length=\skip130
-\mdf@roundcorner@length=\skip131
-\mdf@footenotedistance@length=\skip132
-\mdf@userdefinedwidth@length=\skip133
-\mdf@needspace@length=\skip134
-\mdf@frametitleaboveskip@length=\skip135
-\mdf@frametitlebelowskip@length=\skip136
-\mdf@frametitlerulewidth@length=\skip137
-\mdf@frametitleleftmargin@length=\skip138
-\mdf@frametitlerightmargin@length=\skip139
-\mdf@shadowsize@length=\skip140
-\mdf@extratopheight@length=\skip141
-\mdf@subtitleabovelinewidth@length=\skip142
-\mdf@subtitlebelowlinewidth@length=\skip143
-\mdf@subtitleaboveskip@length=\skip144
-\mdf@subtitlebelowskip@length=\skip145
-\mdf@subtitleinneraboveskip@length=\skip146
-\mdf@subtitleinnerbelowskip@length=\skip147
-\mdf@subsubtitleabovelinewidth@length=\skip148
-\mdf@subsubtitlebelowlinewidth@length=\skip149
-\mdf@subsubtitleaboveskip@length=\skip150
-\mdf@subsubtitlebelowskip@length=\skip151
-\mdf@subsubtitleinneraboveskip@length=\skip152
-\mdf@subsubtitleinnerbelowskip@length=\skip153
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.st
-y (C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-c
-ommon.tex
-\pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen312
-\pgfutil@tempdimb=\dimen313
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-l
-atex.def
-\pgfutil@abb=\box77
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.co
-de.tex
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
-Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
-))
-Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.st
-y
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.st
-y
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.
-code.tex
-Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.c
-ode.tex
-\pgfkeys@pathtoks=\toks33
-\pgfkeys@temptoks=\toks34
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysli
-braryfiltered.code.tex
-\pgfkeys@tmptoks=\toks35
-))
-\pgf@x=\dimen314
-\pgf@y=\dimen315
-\pgf@xa=\dimen316
-\pgf@ya=\dimen317
-\pgf@xb=\dimen318
-\pgf@yb=\dimen319
-\pgf@xc=\dimen320
-\pgf@yc=\dimen321
-\pgf@xd=\dimen322
-\pgf@yd=\dimen323
-\w@pgf@writea=\write4
-\r@pgf@reada=\read2
-\c@pgf@counta=\count395
-\c@pgf@countb=\count396
-\c@pgf@countc=\count397
-\c@pgf@countd=\count398
-\t@pgf@toka=\toks36
-\t@pgf@tokb=\toks37
-\t@pgf@tokc=\toks38
-\pgf@sys@id@count=\count399
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
-File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
-)
-Driver file for pgf: pgfsys-xetex.def
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-
-xetex.def
-File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-
-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-
-common-pdf.def
-File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-)
-\pgfsys@objnum=\count400
-)))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyss
-oftpath.code.tex
-File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count401
-\pgfsyssoftpath@bigbuffer@items=\count402
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysp
-rotocol.code.tex
-File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.
-code.tex
-Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.t
-ex
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.co
-de.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.
-code.tex
-\pgfmath@dimen=\dimen324
-\pgfmath@count=\count403
-\pgfmath@box=\box78
-\pgfmath@toks=\toks39
-\pgfmath@stack@operand=\toks40
-\pgfmath@stack@operation=\toks41
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.basic.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.trigonometric.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.random.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.comparison.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.base.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.round.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.misc.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctio
-ns.integerarithmetics.code.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.co
-de.tex)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.c
-ode.tex
-\c@pgfmathroundto@lastzeros=\count404
-))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.te
-x)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorep
-oints.code.tex
-File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen325
-\pgf@picmaxx=\dimen326
-\pgf@picminy=\dimen327
-\pgf@picmaxy=\dimen328
-\pgf@pathminx=\dimen329
-\pgf@pathmaxx=\dimen330
-\pgf@pathminy=\dimen331
-\pgf@pathmaxy=\dimen332
-\pgf@xx=\dimen333
-\pgf@xy=\dimen334
-\pgf@yx=\dimen335
-\pgf@yy=\dimen336
-\pgf@zx=\dimen337
-\pgf@zy=\dimen338
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorep
-athconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen339
-\pgf@path@lasty=\dimen340
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorep
-athusage.code.tex
-File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen341
-\pgf@shorten@start@additional=\dimen342
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcores
-copes.code.tex
-File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box79
-\pgf@hbox=\box80
-\pgf@layerbox@main=\box81
-\pgf@picture@serial@count=\count405
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreg
-raphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen343
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoret
-ransformations.code.tex
-File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen344
-\pgf@pt@y=\dimen345
-\pgf@pt@temp=\dimen346
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreq
-uick.code.tex
-File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreo
-bjects.code.tex
-File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorep
-athprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorea
-rrows.code.tex
-File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen347
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcores
-hade.code.tex
-File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen348
-\pgf@sys@shading@range@num=\count406
-\pgf@shadingcount=\count407
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorei
-mage.code.tex
-File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoree
-xternal.code.tex
-File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box82
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorel
-ayers.code.tex
-File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoret
-ransparency.code.tex
-File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorep
-atterns.code.tex
-File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorer
-df.code.tex
-File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulesh
-apes.code.tex
-File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box83
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulepl
-ot.code.tex
-File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp
--version-0-65.sty
-Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen349
-\pgf@nodesepend=\dimen350
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp
--version-1-18.sty
-Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.c
-ode.tex))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.t
-ex))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.co
-de.tex
-Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen351
-\pgffor@skip=\dimen352
-\pgffor@stack=\toks42
-\pgffor@toks=\toks43
-))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\
-tikz.code.tex
-Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrar
-yplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count408
-\pgfplotmarksize=\dimen353
-)
-\tikz@lastx=\dimen354
-\tikz@lasty=\dimen355
-\tikz@lastxsaved=\dimen356
-\tikz@lastysaved=\dimen357
-\tikz@lastmovetox=\dimen358
-\tikz@lastmovetoy=\dimen359
-\tikzleveldistance=\dimen360
-\tikzsiblingdistance=\dimen361
-\tikz@figbox=\box84
-\tikz@figbox@bg=\box85
-\tikz@tempbox=\box86
-\tikz@tempbox@bg=\box87
-\tikztreelevel=\count409
-\tikznumberofchildren=\count410
-\tikznumberofcurrentchild=\count411
-\tikz@fig@count=\count412
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulema
-trix.code.tex
-File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count413
-\pgfmatrixcurrentcolumn=\count414
-\pgf@matrix@numberofcolumns=\count415
-)
-\tikz@expandcount=\count416
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/
-libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\md-frame-1.mdf
-File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
-)
-\mdf@frametitlebox=\box88
-\mdf@footnotebox=\box89
-\mdf@splitbox@one=\box90
-\mdf@splitbox@two=\box91
-\mdf@splitbox@save=\box92
-\mdfsplitboxwidth=\skip154
-\mdfsplitboxtotalwidth=\skip155
-\mdfsplitboxheight=\skip156
-\mdfsplitboxdepth=\skip157
-\mdfsplitboxtotalheight=\skip158
-\mdfframetitleboxwidth=\skip159
-\mdfframetitleboxtotalwidth=\skip160
-\mdfframetitleboxheight=\skip161
-\mdfframetitleboxdepth=\skip162
-\mdfframetitleboxtotalheight=\skip163
-\mdffootnoteboxwidth=\skip164
-\mdffootnoteboxtotalwidth=\skip165
-\mdffootnoteboxheight=\skip166
-\mdffootnoteboxdepth=\skip167
-\mdffootnoteboxtotalheight=\skip168
-\mdftotallinewidth=\skip169
-\mdfboundingboxwidth=\skip170
-\mdfboundingboxtotalwidth=\skip171
-\mdfboundingboxheight=\skip172
-\mdfboundingboxdepth=\skip173
-\mdfboundingboxtotalheight=\skip174
-\mdf@freevspace@length=\skip175
-\mdf@horizontalwidthofbox@length=\skip176
-\mdf@verticalmarginwhole@length=\skip177
-\mdf@horizontalspaceofbox=\skip178
-\mdfsubtitleheight=\skip179
-\mdfsubsubtitleheight=\skip180
-\c@mdfcountframes=\count417
-
-****** mdframed patching \endmdf@trivlist
-
-****** -- success******
-
-\mdf@envdepth=\count418
-\c@mdf@env@i=\count419
-\c@mdf@env@ii=\count420
-\c@mdf@zref@counter=\count421
-Package zref Info: New property: mdf@pagevalue on input line 895.
-) (C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2026-09-08 v3.5.12 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count422
-\l__siunitx_number_exponent_fixed_int=\count423
-\l__siunitx_number_min_decimal_int=\count424
-\l__siunitx_number_min_integer_int=\count425
-\l__siunitx_number_round_precision_int=\count426
-\l__siunitx_number_lower_threshold_int=\count427
-\l__siunitx_number_upper_threshold_int=\count428
-\l__siunitx_number_group_first_int=\count429
-\l__siunitx_number_group_size_int=\count430
-\l__siunitx_number_group_min_int=\count431
-\l__siunitx_number_group_minimum_int=\count432
-\l__siunitx_compound_count_int=\count433
+\l__siunitx_number_uncert_offset_int=\count393
+\l__siunitx_number_exponent_fixed_int=\count394
+\l__siunitx_number_min_decimal_int=\count395
+\l__siunitx_number_min_integer_int=\count396
+\l__siunitx_number_round_precision_int=\count397
+\l__siunitx_number_lower_threshold_int=\count398
+\l__siunitx_number_upper_threshold_int=\count399
+\l__siunitx_number_group_first_int=\count400
+\l__siunitx_number_group_size_int=\count401
+\l__siunitx_number_group_min_int=\count402
+\l__siunitx_number_group_minimum_int=\count403
+\l__siunitx_compound_count_int=\count404
 
 (C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations
 .sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
-\l__siunitx_table_tmp_box=\box93
-\l__siunitx_table_tmp_dim=\dimen362
-\l__siunitx_table_column_width_dim=\dimen363
-\l__siunitx_table_integer_box=\box94
-\l__siunitx_table_decimal_box=\box95
-\l__siunitx_table_uncert_box=\box96
-\l__siunitx_table_before_box=\box97
-\l__siunitx_table_after_box=\box98
-\l__siunitx_table_before_dim=\dimen364
-\l__siunitx_table_carry_dim=\dimen365
-\l__siunitx_unit_tmp_int=\count434
-\l__siunitx_unit_position_int=\count435
-\l__siunitx_unit_total_int=\count436
-\l__siunitx_sexagesimal_tmp_dim=\dimen366
-\l__siunitx_sexagesimal_marker_box=\box99
-\l__siunitx_sexagesimal_unit_box=\box100
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
-Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
-\everycr=\toks44
-\minrowclearance=\skip181
-\rownum=\count437
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocod
-e.sty
-Package: algpseudocode 
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx
-.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count438
-\c@ALG@rem=\count439
-\c@ALG@nested=\count440
-\ALG@tlm=\skip182
-\ALG@thistlm=\skip183
-\c@ALG@Lnr=\count441
-\c@ALG@blocknr=\count442
-\c@ALG@storecount=\count443
-\c@ALG@tmpcounter=\count444
-\ALG@tmplength=\skip184
-)
-Document Style - pseudocode environments for use with the `algorithmicx' style
-)
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
-Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count445
-\float@exts=\toks45
-\float@box=\box101
-\@float@everytoks=\toks46
-\@floatcapt=\box102
-)
-\@float@every@algorithm=\toks47
-\c@algorithm=\count446
+\l__siunitx_table_tmp_box=\box77
+\l__siunitx_table_tmp_dim=\dimen312
+\l__siunitx_table_column_width_dim=\dimen313
+\l__siunitx_table_integer_box=\box78
+\l__siunitx_table_decimal_box=\box79
+\l__siunitx_table_uncert_box=\box80
+\l__siunitx_table_before_box=\box81
+\l__siunitx_table_after_box=\box82
+\l__siunitx_table_before_dim=\dimen314
+\l__siunitx_table_carry_dim=\dimen315
+\l__siunitx_unit_tmp_int=\count405
+\l__siunitx_unit_position_int=\count406
+\l__siunitx_unit_total_int=\count407
+\l__siunitx_sexagesimal_tmp_dim=\dimen316
+\l__siunitx_sexagesimal_marker_box=\box83
+\l__siunitx_sexagesimal_unit_box=\box84
 )
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 51.
-
-No file paper.aux.
+h' as default language. on input line 17.
+ (paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1798,67 +1336,68 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 51.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 51.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 51.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 51.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 51.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 51.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 51.
-LaTeX Font Info:    Redeclaring math accent \check on input line 51.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 51.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 51.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 51.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 51.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 51.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 17.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 17.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 17.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 17.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 17.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 17.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 17.
+LaTeX Font Info:    Redeclaring math accent \check on input line 17.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 17.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 17.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 17.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 17.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 17.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 51.
+(Font)              `operators' in the math version `normal' on input line 17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/texgyretermes(0)/m/n on input line 5
-1.
+(Font)                  OT1/cmr/m/n --> TU/texgyretermes(0)/m/n on input line 1
+7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 51.
+(Font)              `operators' in the math version `bold' on input line 17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/texgyretermes(0)/m/n on input line 
-51.
+17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/texgyretermes(0)/m/n --> TU/texgyretermes(0)/m/n on 
-input line 51.
+input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/texgyretermes(0)/m/it on input line
- 51.
+ 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/texgyretermes(0)/b/n on input line 
-51.
+17.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/texgyreheros(0)/m/n on input line 5
-1.
+(Font)                  OT1/cmss/m/n --> TU/texgyreheros(0)/m/n on input line 1
+7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/texgyrecursor(0)/m/n on input line 
-51.
+17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/texgyretermes(0)/m/n --> TU/texgyretermes(0)/b/n on 
-input line 51.
+input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/texgyretermes(0)/b/it on input lin
-e 51.
+e 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/texgyreheros(0)/b/n on input line 
-51.
+17.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/texgyrecursor(0)/b/n on input line 
-51.
+17.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1893,17 +1432,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count447
+\c@lstlisting=\count408
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 51.
-\@outlinefile=\write5
-\openout5 = `paper.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
+Package hyperref Info: Link coloring OFF on input line 17.
+(paper.out) (paper.out)
+\@outlinefile=\write4
+\openout4 = `paper.out'.
 
 
 (C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\transl
@@ -1912,7 +1448,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 51.
+or `english'. on input line 17.
 File: figures/logo.pdf Graphic file (type pdf)
 <use figures/logo.pdf>
 File: figures/title.pdf Graphic file (type pdf)
@@ -1971,103 +1507,13 @@ Package fontspec Info:
 
  [1
 
-]
-LaTeX Font Info:    Font shape `TU/texgyretermes(0)/m/sl' in size <12.045> not 
-available
-(Font)              Font shape `TU/texgyretermes(0)/m/it' tried instead on inpu
-t line 72.
- [2]
-No file paper.toc.
-\tf@toc=\write6
-\openout6 = `paper.toc'.
+] (paper.toc [2])
+\tf@toc=\write5
+\openout5 = `paper.toc'.
 
-[3]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 83.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 83.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 89.
-
-[4
-
-] [5]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 176.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 176.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 180.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 180.
-
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 186.
-[6
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 213.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 213.
-
-
-LaTeX Warning: Reference `tab:foo' on page 7 undefined on input line 215.
-
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolFang-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
-
-LaTeX Font Info:    Font shape `TU/texgyrecursor(0)/m/n' will be
-(Font)              scaled to size 12.99814pt on input line 215.
-
-Package fontspec Info: 
-(fontspec)             Font family 'FandolFang-Regular(0)' created for font
-(fontspec)             'FandolFang-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
-t;"
-
-
-LaTeX Warning: Reference `tab:foo' on page 7 undefined on input line 215.
-
+ [3]
+File: figures/flow_overall_model.pdf Graphic file (type pdf)
+<use figures/flow_overall_model.pdf>
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2092,125 +1538,500 @@ t;"
 (fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
 
 
-[7] [8
-
-] [9
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 380.
-
-
-Package natbib Warning: Citation `mittelbach_latex_2004' on page 10 undefined o
-n input line 397.
-
-
-Package natbib Warning: Citation `wright_latex3_2009' on page 10 undefined on i
-nput line 397.
-
-
-Package natbib Warning: Citation `beeton_unicode_2008' on page 10 undefined on 
-input line 397.
-
-
-Package natbib Warning: Citation `vieth_experiences_2009' on page 10 undefined 
-on input line 397.
-
-No file paper.bbl.
-[10
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 409.
+(hyperref)                removed on input line 43.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 409.
+(hyperref)                removed on input line 43.
 
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 66.
+
+[4
+
+] [5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 112.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 112.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 112.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 112.
+
+[6]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 125.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 125.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 126.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 134.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 134.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 134.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 134.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 153.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 153.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 153.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 153.
+
 
 Package fontspec Info: 
-(fontspec)             Font family 'CourierNew(0)' created for font 'Courier
-(fontspec)             New' with options [].
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolFang-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+LaTeX Font Info:    Font shape `TU/texgyrecursor(0)/m/n' will be
+(Font)              scaled to size 12.99814pt on input line 154.
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolFang-Regular(0)' created for font
+(fontspec)             'FandolFang-Regular' with options
+(fontspec)             [Script={CJK},Extension={.otf}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Courier
-(fontspec)             New/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Courier
-(fontspec)             New/B/OT:script=latn;language=dflt;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Courier
-(fontspec)             New/I/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Courier
-(fontspec)             New/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
+t;"
 
-
-[11
-
-]
+[7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 447.
+(hyperref)                removed on input line 163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 0.60228pt
-(hyperref)                removed on input line 447.
-
-(C:\Users\xwz\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
-LaTeX Font Info:    Font shape `TU/texgyrecursor(0)/m/n' will be
-(Font)              scaled to size 11.37337pt on input line 449.
+(hyperref)                removed on input line 163.
 
 
-Package natbib Warning: There were undefined citations.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 163.
 
-[12
 
-] (paper.aux)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 163.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 168.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 168.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 169.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 169.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 169.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 169.
+
+File: figures/result_q2_resources.pdf Graphic file (type pdf)
+<use figures/result_q2_resources.pdf>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 202.
+
+File: figures/result_q2_hard_deadline_margin.pdf Graphic file (type pdf)
+<use figures/result_q2_hard_deadline_margin.pdf>
+[8] [9]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 211.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 211.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 215.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 215.
+
+File: figures/raw_q3_q2_direct_outages.pdf Graphic file (type pdf)
+<use figures/raw_q3_q2_direct_outages.pdf>
+[10]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 226.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 226.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 227.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 227.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 227.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 227.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 246.
+
+[11]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 256.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 256.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 257.
+
+File: figures/process_q3_candidate_coverage.pdf Graphic file (type pdf)
+<use figures/process_q3_candidate_coverage.pdf>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 266.
+
+[12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 276.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 276.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 277.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 277.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 277.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 277.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 284.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 284.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 284.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 284.
+
+[13]
+File: figures/process_q3_certificate_methods.pdf Graphic file (type pdf)
+<use figures/process_q3_certificate_methods.pdf>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 295.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 295.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 296.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 296.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 296.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 296.
+
+File: figures/result_q3_joint_timeline.pdf Graphic file (type pdf)
+<use figures/result_q3_joint_timeline.pdf>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 343.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 343.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 343.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 0.60228pt
+(hyperref)                removed on input line 343.
+
+File: figures/result_q3_box_delivery.pdf Graphic file (type pdf)
+<use figures/result_q3_box_delivery.pdf>
+[14] [15] [16] [17] (paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026/08/21>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `paper.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D588B6136CE90BE097DCACFA641F382C;1934.
+Package rerunfilecheck Info: File `paper.out' has not changed.
+(rerunfilecheck)             Checksum: 078F5EA1F5AF51A43A678FA6C3104473;5805.
  )
-(\end occurred when \iftrue on line 54 was incomplete) 
+(\end occurred when \iftrue on line 18 was incomplete) 
 Here is how much of TeX's memory you used:
- 38209 strings out of 402986
- 848367 string characters out of 5448917
- 1651057 words of memory out of 5000000
- 66323 multiletter control sequences out of 15000+600000
- 637806 words of font info for 142 fonts, out of 8000000 for 9000
+ 26619 strings out of 402986
+ 612195 string characters out of 5448917
+ 1005913 words of memory out of 5000000
+ 54950 multiletter control sequences out of 15000+600000
+ 643378 words of font info for 160 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,14n,128p,536b,1387s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,12n,128p,587b,1098s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper.pdf (13 pages).
+Output written on paper.pdf (18 pages).
