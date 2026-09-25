@@ -1,0 +1,77 @@
+\contentsline {section}{\numberline {1}问题重述}{6}{section.1}%
+\contentsline {subsection}{\numberline {1\hskip 0.05em\relax .\hskip 0.05em\relax 1}引言}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1\hskip 0.05em\relax .\hskip 0.05em\relax 2}问题的提出}{6}{subsection.1.2}%
+\contentsline {section}{\numberline {2}模型假设与符号说明}{8}{section.2}%
+\contentsline {subsection}{\numberline {2\hskip 0.05em\relax .\hskip 0.05em\relax 1}模型假设}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2\hskip 0.05em\relax .\hskip 0.05em\relax 2}符号说明}{8}{subsection.2.2}%
+\contentsline {section}{\numberline {3}问题一的建模与求解}{9}{section.3}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 1}问题一分析}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 2}基本约定}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 3}航段时间与能耗模型}{10}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 1}基于DEM的航段净空模型}{10}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 2}载荷相关等效航程与运输能耗}{10}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 3}飞行时间与单架次作业时间}{11}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 4}单点往返最大安全载荷模型}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 5}货箱组批优化模型}{12}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 1}可行组批约束}{12}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 2}多目标优化与优先关系}{13}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 6}精确动态规划求解方法}{13}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 7}计算结果与分析}{14}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 7\hskip 0.05em\relax .\hskip 0.05em\relax 1}三种机型的最大安全载荷}{14}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 7\hskip 0.05em\relax .\hskip 0.05em\relax 2}最优货箱组批方案}{15}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 7\hskip 0.05em\relax .\hskip 0.05em\relax 3}架次数、能耗与作业时间的权衡}{18}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 7\hskip 0.05em\relax .\hskip 0.05em\relax 4}返航安全余量敏感性分析}{19}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 7\hskip 0.05em\relax .\hskip 0.05em\relax 5}方案可行性与求解精确性检验}{19}{subsubsection.3.7.5}%
+\contentsline {subsection}{\numberline {3\hskip 0.05em\relax .\hskip 0.05em\relax 8}问题一求解结果总结与讨论}{21}{subsection.3.8}%
+\contentsline {section}{\numberline {4}问题二的建模与求解}{22}{section.4}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 1}问题二分析}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 2}基本约定与候选架次构造}{23}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 2\hskip 0.05em\relax .\hskip 0.05em\relax 1}逐航段载荷、时间和能源}{23}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 2\hskip 0.05em\relax .\hskip 0.05em\relax 2}有限候选池的构造}{24}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 3}货箱覆盖、时限与共享资源模型}{25}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 1}一次交付和时限}{25}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 2}运输机与共享电池的双区间占用}{25}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 4}优化目标与求解方法}{26}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 1}整数化加权目标}{26}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 2}候选池求解与固定路线重排}{26}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 5}计算结果与分析}{27}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 1}运输任务与机型分工}{27}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 2}送达时效与安全余量}{28}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 6}正确性与最优性范围检验}{28}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4\hskip 0.05em\relax .\hskip 0.05em\relax 7}问题二求解结果总结与讨论}{30}{subsection.4.7}%
+\contentsline {section}{\numberline {5}问题三的建模与求解}{30}{section.5}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 1}问题三分析}{30}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 2}通信链路与连续覆盖模型}{30}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 2\hskip 0.05em\relax .\hskip 0.05em\relax 1}双向链路预算}{31}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 2\hskip 0.05em\relax .\hskip 0.05em\relax 2}直连或单中继两跳保障}{31}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 3}中继任务与能源资源模型}{32}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 1}候选悬停点与预筛}{32}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 2}一次中继架次的时间与电量}{33}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 4}联合求解与时间细化}{33}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 1}搜索状态与排序}{34}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 4\hskip 0.05em\relax .\hskip 0.05em\relax 2}连续时间通信证书}{35}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 5}联合调度结果与分析}{37}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 1}中间方案与正式方案}{37}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 5\hskip 0.05em\relax .\hskip 0.05em\relax 2}交付代价与通信保障}{38}{subsubsection.5.5.2}%
+\contentsline {subsection}{\numberline {5\hskip 0.05em\relax .\hskip 0.05em\relax 6}问题三求解结果总结与讨论}{40}{subsection.5.6}%
+\contentsline {section}{\numberline {6}问题四的建模与求解}{41}{section.6}%
+\contentsline {subsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 1}问题四分析}{41}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 2}建模思路与固定任务边界}{41}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 3}模型建立：不可拆分单元与设备配置}{42}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 1}由任务依赖确定可分组单元}{42}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 2}由任务区间计算组内最少设备数}{42}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 3\hskip 0.05em\relax .\hskip 0.05em\relax 3}库存缺口与作业量评价}{43}{subsubsection.6.3.3}%
+\contentsline {subsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 4}求解过程}{43}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 5}枚举结果与配置分析}{44}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 6}适用范围与实施含义}{45}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6\hskip 0.05em\relax .\hskip 0.05em\relax 7}问题四求解结果总结与讨论}{46}{subsection.6.7}%
+\contentsline {section}{\numberline {7}模型评价}{46}{section.7}%
+\contentsline {subsection}{\numberline {7\hskip 0.05em\relax .\hskip 0.05em\relax 1}模型的主要优势}{46}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7\hskip 0.05em\relax .\hskip 0.05em\relax 2}结果验证与安全裕量}{47}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7\hskip 0.05em\relax .\hskip 0.05em\relax 3}适用范围与结果复核}{49}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7\hskip 0.05em\relax .\hskip 0.05em\relax 4}局限与改进方向}{49}{subsection.7.4}%
+\contentsline {section}{附录 \numberline {A}MATLAB 源程序}{50}{appendix.1.A}%
+\contentsline {subsection}{\numberline {A\,.\,1}第1问程序}{50}{subsection.1.A.1}%
+\contentsline {section}{附录 \numberline {B}Python 源程序}{51}{appendix.1.B}%
+\contentsline {subsection}{\numberline {B\,.\,1}第2问程序}{51}{subsection.1.B.1}%
+\contentsfinish 

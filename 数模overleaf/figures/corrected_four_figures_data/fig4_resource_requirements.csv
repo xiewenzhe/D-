@@ -1,0 +1,9 @@
+﻿resource,stock,two_groups,three_groups,two_group_shortage,three_group_shortage
+drone_A,4,4,4,0,0
+drone_B,2,2,2,0,0
+drone_C,2,3,4,1,2
+battery_A,6,6,6,0,0
+battery_B,4,4,4,0,0
+battery_C,4,5,6,1,2
+relay,2,2,2,0,0
+relay_component,6,3,3,0,0
