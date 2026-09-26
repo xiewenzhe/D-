@@ -1,0 +1,21 @@
+{
+  "weighted_tardiness_s": 3927.615750149298,
+  "joint_makespan_s": 8947.338661139183,
+  "energy_kwh": 69.80956133334291,
+  "relay_energy_kwh": 4.085880200474828,
+  "total_energy_kwh": 73.89544153381775,
+  "sorties": 24,
+  "relay_sorties": 5,
+  "hard_deadline_violations": 0,
+  "resource_conflicts": 0,
+  "relay_resource_conflicts": 0,
+  "communication_breaks": 0,
+  "continuous_validation_passed": true,
+  "continuous_min_margin_lower_bound_db": 0.00897600853298286,
+  "changes": {
+    "Q2_020_reversed_start_s": 6350,
+    "sampled_direct_gap_first_offset_s": 845.0044672638248
+  },
+  "q4_two_group_shortage": 2,
+  "q4_three_group_shortage": 4
+}

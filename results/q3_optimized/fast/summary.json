@@ -1,0 +1,22 @@
+{
+  "weighted_tardiness_s": 4219.459043266106,
+  "joint_makespan_s": 8339.594146008207,
+  "energy_kwh": 69.62086339630387,
+  "relay_energy_kwh": 4.085880200474828,
+  "total_energy_kwh": 73.70674359677871,
+  "sorties": 24,
+  "relay_sorties": 5,
+  "hard_deadline_violations": 0,
+  "resource_conflicts": 0,
+  "relay_resource_conflicts": 0,
+  "communication_breaks": 0,
+  "continuous_validation_passed": true,
+  "continuous_min_margin_lower_bound_db": 0.00897600853298286,
+  "changes": {
+    "mission_3_launch_advance_s": 29.482142105815,
+    "Q2_019_advance_s": 232.33378741631913,
+    "mission_4_and_Q2_020_advance_s": 432.74451513097665
+  },
+  "q4_two_group_shortage": 2,
+  "q4_three_group_shortage": 4
+}

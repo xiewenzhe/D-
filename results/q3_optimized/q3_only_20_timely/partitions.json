@@ -1,0 +1,27 @@
+{
+  "validation": {
+    "passed": false,
+    "reason": "Q3 fixed transport and relay missions form only 2 indivisible groups"
+  },
+  "components": [
+    [
+      "S001"
+    ],
+    [
+      "S002",
+      "S003",
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ]
+  ]
+}
